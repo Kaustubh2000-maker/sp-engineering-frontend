@@ -7,8 +7,6 @@ function App() {
     <>
       <Navbar />
       <LandingPage />
-      <LandingPage />
-      <LandingPage />
     </>
   );
 }
