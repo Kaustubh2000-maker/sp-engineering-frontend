@@ -1,0 +1,166 @@
+/* Main Hero Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Background Image */
+.hero-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  filter: brightness(1); /* Darkens the image for better text visibility */
+}
+
+/* Content Container */
+/* Default Hero Content */
+.hero-content {
+  position: absolute;
+  color: rgb(0, 0, 0);
+  z-index: 1;
+  max-width: 600px;
+}
+
+/* Centered Content for Fire Fighting */
+.content-center {
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Right-Aligned Content for Solar Energy */
+.content-right {
+  top: 47%;
+  right: 10%;
+  transform: translateY(-50%);
+  text-align: right;
+}
+
+/* Left-Aligned Content for HVAC */
+.content-left {
+  top: 47%;
+  left: 5%;
+  transform: translateY(-50%);
+  text-align: left;
+}
+
+/* Title (Centered) */
+.hero-title {
+  font-size: 4.2rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  color: #222;
+}
+
+/* Description (Below Title) */
+.hero-description {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  line-height: 2.2rem;
+
+  text-align: center;
+  color: #444 !important;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+/* Buttons Container */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Buttons */
+.hero-button {
+  padding: 0.8rem 1.6rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-button.primary {
+  background-color: #af0000; /* Red color for primary action */
+  color: white;
+}
+
+.hero-button.secondary {
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.hero-button.primary:hover {
+  background-color: #d43f3f;
+}
+
+.hero-button.secondary:hover {
+  background-color: white;
+  color: black;
+}
+
+.hero-energy-img {
+  display: block;
+  margin: 0 auto;
+  height: 5.2rem;
+  width: 15rem;
+
+  animation: contrastPulse 3s infinite alternate ease-in;
+  //   filter: hue-rotate(40deg);
+}
+
+@keyframes contrastPulse {
+  /* Fast, Alternating Blinks */
+  0%,
+  5% {
+    filter: contrast(50%);
+  } /* Dim */
+  7%,
+  12% {
+    filter: contrast(120%);
+  } /* Good Blink */
+  14%,
+  19% {
+    filter: contrast(100%);
+  } /* Normal */
+  21%,
+  26% {
+    filter: contrast(160%);
+  } /* Bright */
+  28%,
+  33% {
+    filter: contrast(50%);
+  } /* Dim Again */
+  35%,
+  40% {
+    filter: contrast(120%);
+  } /* Good Blink */
+  42%,
+  47% {
+    filter: contrast(100%);
+  } /* Back to Normal */
+  49%,
+  50% {
+    filter: contrast(140%);
+  } /* Final Strong Blink */
+
+  /* Hold Brightness After Flickering */
+  52%,
+  100% {
+    filter: contrast(140%);
+  } /* Sustained Bright Glow */
+}
+
+// // /////////////////////////////////////////

@@ -1,0 +1,86 @@
+/* Navbar Container */
+.navbar {
+  position: fixed; /* Sticks to the top but outside the normal flow */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 20rem;
+  z-index: 9999; /* Ensures it stays on top */
+
+  backdrop-filter: blur(0px);
+}
+
+/* Logo Styling */
+.navbar-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+/* Centered Links */
+.navbar-links {
+  display: flex;
+  list-style: none;
+  padding: 0 3rem;
+  gap: 4rem;
+  backdrop-filter: blur(2px); /* Subtle blur effect */
+}
+
+.navbar-links li {
+  display: inline;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: opacity 0.3s;
+}
+
+.navbar-links a:hover {
+  opacity: 1;
+}
+
+/* Login Button */
+.navbar-login {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.navbar-button {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  //   border-radius: ;
+  font-weight: 700;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  color: #af0000;
+}
+.login-button {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  //   border-radius: ;
+  font-weight: 700;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  color: white;
+  box-shadow: 0px 0px 30px rgb(255, 255, 255);
+  //   background: transparent;
+  background-color: #af0000; /* Red color for primary action */
+
+  transition: all 0.3s;
+}
+
+.login-button:hover {
+  background: #d43f3f;
+  color: white;
+}
