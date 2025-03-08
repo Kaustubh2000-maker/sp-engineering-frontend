@@ -31,7 +31,7 @@
   position: absolute;
   color: rgb(0, 0, 0);
   z-index: 1;
-  max-width: 600px;
+  max-width: 60rem;
 }
 
 /* Centered Content for Fire Fighting */
@@ -53,7 +53,7 @@
 /* Left-Aligned Content for HVAC */
 .content-left {
   top: 47%;
-  left: 5%;
+  left: 10%;
   transform: translateY(-50%);
   text-align: left;
 }
@@ -65,6 +65,7 @@
   font-weight: bold;
   margin-bottom: 3rem;
   color: #222;
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Description (Below Title) */
@@ -121,6 +122,7 @@
   margin: 0 auto;
   height: 5.2rem;
   width: 15rem;
+  margin-top: 1rem;
 
   animation: contrastPulse 3s infinite alternate ease-in;
   //   filter: hue-rotate(40deg);
@@ -154,7 +156,7 @@
   } /* Good Blink */
   42%,
   47% {
-    filter: contrast(100%);
+    filter: contrast(60%);
   } /* Back to Normal */
   49%,
   50% {
@@ -166,6 +168,19 @@
   100% {
     filter: contrast(140%);
   } /* Sustained Bright Glow */
+}
+
+.hero-product-info {
+  position: absolute;
+  width: 80rem;
+  height: 14rem;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  left: 50%;
+  bottom: 1%;
+
+  transform: translate(-50%, 0%);
 }
 
 // // /////////////////////////////////////////
