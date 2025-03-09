@@ -1,12 +1,14 @@
 import React from "react";
 
+import logoMain from "@assets/logos/logo-main.png";
+
 function Navbar() {
   return (
     <nav className="navbar">
-      {/* Logo Section */}
-      <div className="navbar-logo">LOGO</div>
+      <div>
+        <img className="navbar-logo" src={logoMain} />
+      </div>
 
-      {/* Centered Links */}
       <ul className="navbar-links">
         <li>
           <a href="#">Home</a>
@@ -22,7 +24,6 @@ function Navbar() {
         </li>
       </ul>
 
-      {/* Login Section */}
       <div className="navbar-login">
         <button className="navbar-button login-button">Login</button>
         <button className="navbar-button signin-button">Signup</button>
