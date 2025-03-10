@@ -13,9 +13,9 @@ function App() {
         <Navbar />
       </motion.div>
 
-      {/* <motion.div {...heroVisible}>
+      <motion.div {...heroVisible}>
         <LandingPage />
-      </motion.div> */}
+      </motion.div>
       {/* <Navbar />
       <LandingPage /> */}
     </>

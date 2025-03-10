@@ -7,15 +7,18 @@ import energyImage from "@assets/heroSection/hero-energy-name-1.png";
 import {
   heroSectionAnimation,
   heroSolarSunAnimation,
+  heroDataAnimation,
 } from "@animations/heroSectionAnimation";
 
 function HeroSection() {
   const [index, setIndex] = useState(0);
+  const [firstRender, setfirstRender] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % HERO_SERVICES.length);
-    }, 20000);
+      setfirstRender(false);
+    }, 10000);
     return () => clearInterval(interval);
   }, []);
 
@@ -49,7 +52,10 @@ function HeroSection() {
                 : "content-left"
             }`}
           >
-            <h1 className="hero-title">
+            <motion.h1
+              className="hero-title"
+              {...heroDataAnimation(index === 0, firstRender, "title")}
+            >
               {HERO_SERVICES[index].name === "fire" ? (
                 <>
                   {HERO_SERVICES[index].title}
@@ -59,7 +65,7 @@ function HeroSection() {
                         strings: ["[Fire Protection]"],
                         autoStart: true,
                         loop: true,
-                        delay: 150,
+                        delay: 100,
                       }}
                     />
                   </span>
@@ -72,22 +78,31 @@ function HeroSection() {
               ) : (
                 HERO_SERVICES[index].title
               )}
-            </h1>
+            </motion.h1>
 
             {/* Description */}
-            <p className="hero-description">
+            <motion.p
+              {...heroDataAnimation(index === 0, firstRender, "text")}
+              className="hero-description"
+            >
               {HERO_SERVICES[index].description}
-            </p>
+            </motion.p>
 
             {/* Buttons */}
             <div className="hero-buttons">
-              <button
+              <motion.button
                 className="hero-button primary"
                 style={{ backgroundColor: `${HERO_SERVICES[index].color}` }}
+                {...heroDataAnimation(index === 0, firstRender, "mainBtn")}
               >
                 {HERO_SERVICES[index].button.label}
-              </button>
-              <button className="hero-button secondary">Contact Us</button>
+              </motion.button>
+              <motion.button
+                className="hero-button secondary"
+                {...heroDataAnimation(index === 0, firstRender, "secBtn")}
+              >
+                Contact Us
+              </motion.button>
             </div>
           </div>
         </motion.div>

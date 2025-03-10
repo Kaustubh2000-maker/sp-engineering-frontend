@@ -9,7 +9,10 @@ import {
 function WelcomeOverlay() {
   return (
     <motion.div {...overlayAnimation} className="overlay-container">
-      <motion.div {...logoTextWrapperAnimation} className="logo-text-wrapper">
+      <motion.div
+        // {...logoTextWrapperAnimation}
+        className="logo-text-wrapper"
+      >
         <motion.img
           src="/src/assets/logos/logo.png"
           alt="SP Engineering Logo"
