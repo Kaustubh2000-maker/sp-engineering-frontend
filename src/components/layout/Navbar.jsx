@@ -1,6 +1,6 @@
 import React from "react";
 
-import logoMain from "@assets/logos/logo-main.png";
+import logoMain from "@logos/logo-main.png";
 
 function Navbar() {
   return (

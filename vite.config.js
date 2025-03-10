@@ -17,6 +17,7 @@ export default defineConfig({
       "@scss": path.resolve(__dirname, "src/scss"),
       "@utils": path.resolve(__dirname, "src/utils"),
       "@animations": path.resolve(__dirname, "src/animations"),
+      "@logos": path.resolve(__dirname, "src/assets/logos"),
     },
   },
 });

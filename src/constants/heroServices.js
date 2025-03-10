@@ -5,20 +5,20 @@ import hvacImage from "@assets/heroSection/33.jpg";
 import energyImage from "@assets/heroSection/hero-energy-name-1.png";
 
 export const HERO_SERVICES = [
-  //   {
-  //     id: "fire",
-  //     name: "fire",
-  //     title: "Safeguarding Your Business with Our Expert",
-  //     description:
-  //       "Fire hazards don’t wait, and neither should you. Our expert fire protection solutions ensure safety, keeping your workplace, employees, and assets secure at all times.",
-  //     image: firefightinImage,
-  //     alignment: "center",
-  //     color: "#af0000",
-  //     button: {
-  //       label: "Learn More",
-  //       path: "/services/fire",
-  //     },
-  //   },
+  {
+    id: "fire",
+    name: "fire",
+    title: "Safeguarding Your Business with Our Expert",
+    description:
+      "Fire hazards don’t wait, and neither should you. Our expert fire protection solutions ensure safety, keeping your workplace, employees, and assets secure at all times.",
+    image: firefightinImage,
+    alignment: "center",
+    color: "#af0000",
+    button: {
+      label: "Learn More",
+      path: "/products/fire",
+    },
+  },
   {
     id: "solar",
     name: "solar",
@@ -30,23 +30,23 @@ export const HERO_SERVICES = [
     color: "#21549c",
     button: {
       label: "Learn More",
-      path: "/services/solar",
+      path: "/products/solar",
     },
   },
-  //   {
-  //     id: "hvac",
-  //     name: "hvac",
-  //     title: "Optimized Climate Control for Industrial Environments",
-  //     description:
-  //       "Enhance productivity with our state-of-the-art industrial HVAC systems. Designed for factories, warehouses, and large facilities, our solutions provide efficient climate control and optimal air quality.",
-  //     image: hvacImage,
-  //     alignment: "left",
-  //     color: "#96c2ff",
-  //     button: {
-  //       label: "Learn More",
-  //       path: "/services/hvac",
-  //     },
-  //   },
+  {
+    id: "hvac",
+    name: "hvac",
+    title: "Optimized Climate Control for Industrial Environments",
+    description:
+      "Enhance productivity with our state-of-the-art industrial HVAC systems. Designed for factories, warehouses, and large facilities, our solutions provide efficient climate control and optimal air quality.",
+    image: hvacImage,
+    alignment: "left",
+    color: "#96c2ff",
+    button: {
+      label: "Learn More",
+      path: "/products/hvac",
+    },
+  },
 ];
 
 export const ENERGY_IMAGE = "@assets/heroSection/hero-energy-name-1.png";
