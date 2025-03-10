@@ -1,3 +1,35 @@
-.why-us-section {
-  background-color: red;
+.logos-and-whyus-section {
+}
+
+.logos-container {
+  padding: 1rem 10rem;
+  margin: 0 auto;
+  width: 120rem;
+}
+.logos-container--heading {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #666;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+}
+.logos-div {
+  margin-bottom: 2rem;
+  gap: 4rem;
+  justify-content: center;
+  gap: 5rem;
+}
+
+// .logos-div:nth-child(2) {
+// }
+
+// .logos-div:last-child {
+// }
+
+.featured-logo {
+  display: block;
+  width: 200px;
+  filter: grayscale(100%);
 }
