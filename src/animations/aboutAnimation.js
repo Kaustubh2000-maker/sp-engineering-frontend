@@ -30,7 +30,7 @@ export const aboutText = (delayAni) => ({
     opacity: 1,
     y: 0,
 
-    transition: { duration: 1, delay: 0 + delayAni, ease: "easeInOut" },
+    transition: { duration: 0.5, delay: 0 + delayAni, ease: "easeInOut" },
   },
   viewport: { once: true, amount: 1 },
 });

@@ -3,6 +3,7 @@
 @use "hero";
 @use "logosAndWhyus";
 @use "aboutUs";
+@use "whyUs";
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 * {
@@ -14,6 +15,7 @@
 html {
   font-size: 62.5%;
   font-family: Rubik, sans-serif;
+  scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar {

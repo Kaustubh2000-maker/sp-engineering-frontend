@@ -8,6 +8,8 @@
   // background-color: red;
 
   margin-bottom: 9.4rem;
+
+  // border-bottom: 1px solid #99999969;
 }
 
 .hero-section--animate {
@@ -42,7 +44,7 @@
 
 /* Centered Content for Fire Fighting */
 .content-center {
-  top: 47%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -50,7 +52,7 @@
 
 /* Right-Aligned Content for Solar Energy */
 .content-right {
-  top: 47%;
+  top: 50%;
   right: 10%;
   transform: translateY(-50%);
   text-align: right;
@@ -58,7 +60,7 @@
 
 /* Left-Aligned Content for HVAC */
 .content-left {
-  top: 47%;
+  top: 50%;
   left: 14%;
   transform: translateY(-50%);
   text-align: left;
@@ -105,6 +107,7 @@
   border-radius: 3px;
 
   will-change: transform, opacity;
+  border-radius: 10px;
 }
 
 .hero-button.primary {
