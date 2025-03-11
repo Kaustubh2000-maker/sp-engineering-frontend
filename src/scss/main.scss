@@ -2,7 +2,7 @@
 @use "navbar";
 @use "hero";
 @use "logosAndWhyus";
-
+@use "aboutUs";
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 * {
@@ -42,13 +42,12 @@ body {
   max-width: 130rem;
   margin: 0 auto;
   // background-color: red;
-  height: 100rem;
+  // height: 100vh;
 }
 
 // grid classes
 .grid {
   display: grid;
-  gap: 2rem;
 }
 .grid-4--col {
   grid-template-columns: repeat(4, 1fr);

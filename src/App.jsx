@@ -8,18 +8,16 @@ import { heroVisible, navVisible } from "./animations/appAnimation";
 function App() {
   return (
     <>
-      <WelcomeOverlay />
+      {/* <WelcomeOverlay />
       <motion.div {...navVisible}>
         <Navbar />
       </motion.div>
 
       <motion.div {...heroVisible}>
         <LandingPage />
-      </motion.div>
-      {/* <Navbar />
+      </motion.div> */}
+      <Navbar />
       <LandingPage />
-
-      <div className="empty-div"></div> */}
     </>
   );
 }

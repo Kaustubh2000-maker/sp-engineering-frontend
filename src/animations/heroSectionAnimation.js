@@ -15,13 +15,13 @@ export const heroSectionAnimation = {
 };
 
 export const heroDataAnimation = (index, firstRender, type) => {
-  const baseDelay = firstRender ? 4 : 0.2; // 5s if first, else 0.3s
+  const baseDelay = firstRender ? 4 : 0.1; // 5s if first, else 0.3s
   const delayMap = {
     title: baseDelay, // 5s (first) or 0.3s (next)
     other: baseDelay,
     text: baseDelay + 0.2, // 5.3s (first) or 0.6s (next)
-    mainBtn: baseDelay + 0.4, // 5.6s (first) or 0.9s (next)
-    secBtn: baseDelay + 0.6, // 5.9s (first) or 1.2s (next)
+    mainBtn: baseDelay + 0.3, // 5.6s (first) or 0.9s (next)
+    secBtn: baseDelay + 0.4, // 5.9s (first) or 1.2s (next)
   };
 
   return {

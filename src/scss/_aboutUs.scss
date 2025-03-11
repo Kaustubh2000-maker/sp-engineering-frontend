@@ -1,0 +1,79 @@
+.aboutUs-section {
+  //   background-color: red;
+  margin-bottom: 9.4rem;
+  padding: 0 8rem;
+}
+.about-grid {
+  //   background-color: green;
+
+  grid-template-columns: 1fr 1fr;
+  padding: 4rem 8rem;
+  gap: 5rem;
+}
+.about-image-div {
+}
+.about-img {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 30px;
+}
+.about-data {
+}
+.about-heading {
+  font-size: 4.2rem;
+  color: #333;
+  margin-bottom: 3.2rem;
+  letter-spacing: 1.5px;
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
+}
+.about-heading-logo {
+  margin-left: 1rem;
+  height: 4.2rem;
+  display: inline;
+}
+.about-subtopic-heading {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+}
+.about-subtopic-text {
+  font-size: 1.4rem;
+  margin-bottom: 4rem;
+  font-weight: 300;
+  color: #444;
+}
+
+.about-topics-div {
+  display: grid;
+  grid-template-columns: auto 1fr; /* First column auto-sized, second takes remaining space */
+  grid-auto-rows: auto;
+  gap: 2rem;
+  position: relative; /* Required for absolute positioning of bullet line */
+}
+
+.about-topics-div li {
+  width: 20px;
+  height: 20px;
+  list-style: none;
+  border-radius: 50%;
+  background: radial-gradient(white 30%, #ff8000 30%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 100;
+}
+
+.about-topic-block {
+  grid-column: 2;
+}
+
+.about-bullet-line {
+  position: absolute;
+  left: 9px; /* Center it on the bullets */
+  height: 75%;
+  border-left: 1px dotted black;
+}

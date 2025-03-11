@@ -18,7 +18,7 @@ function HeroSection() {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % HERO_SERVICES.length);
       setfirstRender(false);
-    }, 10000);
+    }, 15000);
     return () => clearInterval(interval);
   }, []);
 
