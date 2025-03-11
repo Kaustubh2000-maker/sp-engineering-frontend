@@ -1,14 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 
-export const useScrollAnimation = (threshold = 0.5) => {
+export const useScrollAnimation = (threshold = 0.3) => {
   const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef(null); // Fix: Ensure a valid ref
+  const ref = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true); // Fix: Ensures state updates only once
+          setIsVisible(true);
         }
       },
       { threshold }

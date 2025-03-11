@@ -17,7 +17,9 @@ function App() {
         <LandingPage />
       </motion.div>
       {/* <Navbar />
-      <LandingPage /> */}
+      <LandingPage />
+
+      <div className="empty-div"></div> */}
     </>
   );
 }

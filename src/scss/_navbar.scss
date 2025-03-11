@@ -40,46 +40,182 @@
   transition: opacity 0.3s;
 }
 
-// .navbar-links a:hover {
-// }
+.navbar-links a:hover {
+}
 
 /* Login Button */
-.navbar-login {
+.navbar-login-div {
   display: flex;
   gap: 3rem;
   align-items: center;
 }
 
-.navbar-button {
+.navbar-btn {
   text-transform: capitalize;
   font-size: 1.6rem;
   letter-spacing: 1px;
   cursor: pointer;
-  //   border-radius: ;
   font-weight: 700;
   padding: 0.8rem 1.6rem;
   border: none;
-  // color: #af0000;
-  color: #ff8000;
-  border-radius: 3px;
+  border-radius: 10px;
 }
-.login-button {
-  font-size: 1.6rem;
-  letter-spacing: 1px;
-  cursor: pointer;
-  //   border-radius: ;
-  font-weight: 700;
-  padding: 0.8rem 1.6rem;
-  border: none;
+.login-btn {
+  background-color: #ff8000;
   color: white;
-  box-shadow: 0px 0px 30px rgb(255, 255, 255);
-  //   background: transparent;
-  background-color: #ff8000; /* Red color for primary action */
-
+  border: 1px solid #ff8000;
   transition: all 0.3s;
+  position: relative;
 }
 
-.login-button:hover {
-  background: #d43f3f;
-  color: white;
+.signin-btn {
+  background-color: white;
+  color: #ff8000;
+
+  border: 1px solid #ff8000;
 }
+
+// .empty-div {
+//   width: 100px;
+//   height: 100px;
+//   position: relative;
+// }
+
+// .empty-div::before {
+//   content: "";
+//   position: absolute;
+//   top: -5px;
+//   left: -5px;
+//   width: 110%;
+//   height: 110%;
+//   border: 3px solid black;
+//   border-radius: 50%;
+//   clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%, 0 100%, 0 0, 50% 0);
+//   animation: drawCircular 2s linear forwards;
+// }
+
+// @keyframes drawCircular {
+//   0% {
+//     clip-path: polygon(
+//       50% 50%,
+//       50% 50%,
+//       50% 50%,
+//       50% 50%,
+//       50% 50%,
+//       50% 50%,
+//       50% 50%
+//     );
+//   }
+//   25% {
+//     clip-path: polygon(
+//       50% 50%,
+//       50% 0,
+//       100% 0,
+//       100% 50%,
+//       50% 50%,
+//       50% 50%,
+//       50% 50%
+//     );
+//   }
+//   50% {
+//     clip-path: polygon(
+//       50% 50%,
+//       50% 0,
+//       100% 0,
+//       100% 100%,
+//       50% 100%,
+//       50% 50%,
+//       50% 50%
+//     );
+//   }
+//   75% {
+//     clip-path: polygon(
+//       50% 50%,
+//       50% 0,
+//       100% 0,
+//       100% 100%,
+//       0 100%,
+//       0 50%,
+//       50% 50%
+//     );
+//   }
+//   100% {
+//     clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%, 0 100%, 0 0, 50% 0);
+//   }
+// }
+
+// .empty-div {
+//   width: 100px;
+//   height: 100px;
+//   position: relative;
+// }
+
+// .empty-div::before {
+//   content: "";
+//   position: absolute;
+//   top: -5px;
+//   left: -5px;
+//   width: 110%;
+//   height: 110%;
+//   border: 3px solid black;
+//   clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%, 0 100%, 0 0, 50% 0);
+//   animation: drawRectangle 2s linear forwards;
+// }
+
+// @keyframes drawRectangle {
+//   0% {
+//     clip-path: polygon(
+//       50% 50%,
+//       50% 50%,
+//       50% 50%,
+//       50% 50%,
+//       50% 50%,
+//       50% 50%,
+//       50% 50%
+//     );
+//   }
+//   25% {
+//     clip-path: polygon(
+//       50% 50%,
+//       0% 0%,
+//       100% 0%,
+//       100% 0%,
+//       50% 50%,
+//       50% 50%,
+//       50% 50%
+//     ); /* Top border */
+//   }
+//   50% {
+//     clip-path: polygon(
+//       50% 50%,
+//       0% 0%,
+//       100% 0%,
+//       100% 100%,
+//       100% 100%,
+//       50% 50%,
+//       50% 50%
+//     ); /* Right border */
+//   }
+//   75% {
+//     clip-path: polygon(
+//       50% 50%,
+//       0% 0%,
+//       100% 0%,
+//       100% 100%,
+//       0% 100%,
+//       0% 100%,
+//       50% 50%
+//     ); /* Bottom border */
+//   }
+//   100% {
+//     clip-path: polygon(
+//       50% 50%,
+//       0% 0%,
+//       100% 0%,
+//       100% 100%,
+//       0% 100%,
+//       0% 0%,
+//       50% 50%
+//     ); /* Left border (Complete Rectangle) */
+//   }
+// }

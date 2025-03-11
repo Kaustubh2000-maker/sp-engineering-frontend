@@ -1,4 +1,5 @@
 import React from "react";
+import { navLogin } from "@animations/navAnimation";
 
 import logoMain from "@logos/logo-main.png";
 
@@ -27,9 +28,9 @@ function Navbar() {
         </li>
       </ul>
 
-      <div className="navbar-login">
-        <button className="navbar-button login-button">Login</button>
-        <button className="navbar-button signin-button">Signup</button>
+      <div className="navbar-login-div">
+        <button className="navbar-btn signin-btn">Signup</button>
+        <button className="navbar-btn login-btn">Login</button>
       </div>
     </nav>
   );

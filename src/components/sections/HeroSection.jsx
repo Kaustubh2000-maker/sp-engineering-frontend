@@ -90,19 +90,22 @@ function HeroSection() {
 
             {/* Buttons */}
             <div className="hero-buttons">
-              <motion.button
-                className="hero-button primary"
-                style={{ backgroundColor: `${HERO_SERVICES[index].color}` }}
+              <motion.div
                 {...heroDataAnimation(index === 0, firstRender, "mainBtn")}
               >
-                {HERO_SERVICES[index].button.label}
-              </motion.button>
-              <motion.button
-                className="hero-button secondary"
+                <button
+                  className="hero-button primary"
+                  style={{ backgroundColor: `${HERO_SERVICES[index].color}` }}
+                >
+                  {HERO_SERVICES[index].button.label}
+                </button>
+              </motion.div>
+
+              <motion.div
                 {...heroDataAnimation(index === 0, firstRender, "secBtn")}
               >
-                Contact Us
-              </motion.button>
+                <button className="hero-button secondary">Contact Us</button>
+              </motion.div>
             </div>
           </div>
         </motion.div>
@@ -117,6 +120,42 @@ function HeroSection() {
           ></motion.div>
         </AnimatePresence>
       )}
+
+      <motion.div
+        className="hero-info-tab flex"
+        {...heroDataAnimation(index === 0, firstRender, "other")}
+      >
+        <div>
+          <h3 className="hero-tab-heading">
+            14 + <br />
+            <span className="hero-tab--mini-heading">
+              {" "}
+              industry <br />
+              Projects
+            </span>
+          </h3>
+        </div>
+        <div>
+          <h3 className="hero-tab-heading">
+            10+ <br />
+            <span className="hero-tab--mini-heading">
+              Happy <br />
+              Clients
+            </span>
+          </h3>
+        </div>
+        <div>
+          <h3 className="hero-tab-heading">
+            5+ <br />
+            <span className="hero-tab--mini-heading">
+              Years of <br />
+              Experience
+            </span>
+          </h3>
+        </div>
+      </motion.div>
+
+      {/* <div className="hero-quote-div"></div> */}
     </div>
   );
 }

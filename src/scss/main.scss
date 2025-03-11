@@ -19,6 +19,24 @@ html {
 html::-webkit-scrollbar {
   display: none;
 }
+
+// for no scrol for first 5 secs
+body {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+@keyframes enableScroll {
+  to {
+    overflow: auto;
+    pointer-events: all;
+  }
+}
+
+body {
+  animation: enableScroll 0s linear 5s forwards;
+}
+
 //handy classes
 .container {
   max-width: 130rem;

@@ -31,5 +31,4 @@ function LogosAndWhyUs() {
     </>
   );
 }
-
 export default LogosAndWhyUs;
