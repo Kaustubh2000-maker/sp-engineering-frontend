@@ -1,7 +1,7 @@
 import React from "react";
 import { navLogin } from "@animations/navAnimation";
 
-import logoMain from "@logos/logo-main.png";
+import logoMain from "@logos/logo-no-bg.png";
 
 function Navbar() {
   return (

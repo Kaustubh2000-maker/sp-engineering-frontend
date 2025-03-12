@@ -68,7 +68,7 @@
 
 /* Title (Centered) */
 .hero-title {
-  font-size: 4.2rem;
+  font-size: 4.4rem;
   text-align: center;
   font-weight: bold;
   margin: 0 0 3rem 0;
@@ -91,14 +91,14 @@
 /* Buttons Container */
 .hero-buttons {
   display: flex;
-  gap: 15px;
+  gap: 1.5rem;
   justify-content: center;
 }
 
 /* Buttons */
 .hero-button {
   // display: block;
-  padding: 0.8rem 1.6rem;
+  padding: 1.2rem 2.4rem;
   font-size: 1.6rem;
   font-weight: bold;
   border: none;
@@ -116,6 +116,7 @@
   background-color: #96c2ff;
   background-color: #ff8000;
   color: white;
+  border: 1px solid white;
 }
 
 .hero-button.secondary {

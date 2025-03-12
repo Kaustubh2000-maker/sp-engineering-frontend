@@ -8,7 +8,7 @@ export const aboutHeading = {
     opacity: 1,
     transition: { duration: 1, delay: 0, ease: "easeIn" },
   },
-  viewport: { once: true, amount: 1 },
+  viewport: { once: true, amount: 0.5 },
 };
 
 export const aboutImg = {
@@ -32,7 +32,7 @@ export const aboutText = (delayAni) => ({
 
     transition: { duration: 0.5, delay: 0 + delayAni, ease: "easeInOut" },
   },
-  viewport: { once: true, amount: 1 },
+  viewport: { once: true, amount: 0.5 },
 });
 
 export const aboutBullet = (delayAni = 0.2) => ({
@@ -46,7 +46,7 @@ export const aboutBullet = (delayAni = 0.2) => ({
 
     transition: { duration: 1, delay: 0 + delayAni, ease: "easeInOut" },
   },
-  viewport: { once: true, amount: 1 },
+  viewport: { once: true, amount: 0.5 },
 });
 
 export const aboutBulletLine = (delayAni = 0) => ({
@@ -62,5 +62,5 @@ export const aboutBulletLine = (delayAni = 0) => ({
 
     transition: { duration: 2, delay: 0 + delayAni, ease: "easeInOut" },
   },
-  viewport: { once: true, amount: 1 },
+  viewport: { once: true, amount: 0.5 },
 });

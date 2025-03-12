@@ -9,13 +9,15 @@
   align-items: center;
   z-index: 9999; /* Ensures it stays on top */
   padding: 1rem 15rem;
-  backdrop-filter: blur(0px);
+  backdrop-filter: blur(2px);
+  // background-color: white;
 }
 
 /* Logo Styling */
 .navbar-logo {
   display: block;
-  height: 5rem;
+  height: 7rem;
+  // width: 20rem;
 }
 
 /* Centered Links */
@@ -23,7 +25,7 @@
   display: flex;
   list-style: none;
   padding: 0 3rem;
-  gap: 4rem;
+  gap: 1rem;
   backdrop-filter: blur(2px); /* Subtle blur effect */
 }
 
@@ -38,6 +40,7 @@
   font-weight: 600;
   letter-spacing: 1px;
   transition: opacity 0.3s;
+  padding: 0.8rem 1.6rem;
 }
 
 .navbar-links a:hover {

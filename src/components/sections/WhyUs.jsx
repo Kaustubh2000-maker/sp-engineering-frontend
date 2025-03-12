@@ -4,6 +4,7 @@ import {
   whyUsText,
   whyUsBannerSecText,
   whyUsBannercircle,
+  whyUsCard,
 } from "@animations/whyusAnimation";
 
 function WhyUs() {
@@ -58,7 +59,7 @@ function WhyUs() {
               Why you must join with us ?
             </motion.h1>
 
-            <motion.div className="whyus-card">
+            <motion.div className="whyus-card" {...whyUsCard()}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -81,7 +82,7 @@ function WhyUs() {
               </p>
             </motion.div>
 
-            <motion.div className="whyus-card">
+            <motion.div className="whyus-card" {...whyUsCard()}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -104,7 +105,7 @@ function WhyUs() {
               </p>
             </motion.div>
 
-            <motion.div className="whyus-card">
+            <motion.div className="whyus-card" {...whyUsCard()}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
