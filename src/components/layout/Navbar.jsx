@@ -3,28 +3,35 @@ import { navLogin } from "@animations/navAnimation";
 
 import logoMain from "@logos/logo-no-bg.png";
 
-function Navbar() {
+import { navVisible } from "../../animations/appAnimation";
+
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
+function Navbar(props) {
+  console.log(props.firstEnter);
+
   return (
-    <nav className="navbar">
+    <motion.nav className="navbar" {...(props.firstEnter ? navVisible : {})}>
       <div>
         <img className="navbar-logo" src={logoMain} />
       </div>
 
       <ul className="navbar-links">
         <li>
-          <a href="#">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="#">Products</a>
+          <Link to="/products">Products</Link>
         </li>
         <li>
-          <a href="#">Services</a>
+          <Link to="/Services">Services</Link>
         </li>
         <li>
-          <a href="#">Projects</a>
+          <Link to="/Projects">Projects</Link>
         </li>
         <li>
-          <a href="#">About</a>
+          <Link to="/About">About</Link>
         </li>
       </ul>
 
@@ -32,7 +39,7 @@ function Navbar() {
         <button className="navbar-btn signin-btn">Signup</button>
         <button className="navbar-btn login-btn">Login</button>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
 

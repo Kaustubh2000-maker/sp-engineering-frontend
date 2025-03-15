@@ -6,21 +6,34 @@ import Footer from "./components/layout/Footer";
 
 import { delay, motion } from "framer-motion";
 import { heroVisible, navVisible } from "./animations/appAnimation";
-
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 function App() {
+  const [firstEnter, setfirstEnter] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setfirstEnter(false);
+    }, 5000);
+  }, []);
+
   return (
     <>
-      <WelcomeOverlay />
-      <motion.div {...navVisible}>
-        <Navbar />
-      </motion.div>
-
-      <motion.div {...heroVisible}>
-        <LandingPage />
-      </motion.div>
-      {/* <Navbar />
-      <LandingPage /> */}
-      <Footer />
+      <Router>
+        <Navbar firstEnter={firstEnter} />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                {firstEnter && <WelcomeOverlay />}
+                <LandingPage />
+              </>
+            }
+          />
+        </Routes>
+        <Footer />
+      </Router>
     </>
   );
 }

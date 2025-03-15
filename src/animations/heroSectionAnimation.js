@@ -15,7 +15,7 @@ export const heroSectionAnimation = {
 };
 
 export const heroDataAnimation = (index, firstRender, type) => {
-  const baseDelay = firstRender ? 4 : 0.1; // 5s if first, else 0.3s
+  const baseDelay = firstRender ? 0 : 0; // 5s if first, else 0.3s
   const delayMap = {
     title: baseDelay, // 5s (first) or 0.3s (next)
     other: baseDelay,

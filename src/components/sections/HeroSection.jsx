@@ -31,7 +31,7 @@ function HeroSection() {
           {...heroSectionAnimation}
         >
           {/* Background Image */}
-          <div
+          <motion.div
             className="hero-background"
             style={{
               backgroundImage: `url(${HERO_SERVICES[index].image})`,
@@ -39,7 +39,7 @@ function HeroSection() {
               backgroundPosition: "bottom",
               backgroundRepeat: "no-repeat",
             }}
-          ></div>
+          ></motion.div>
 
           {/* Hero Content */}
           <div
