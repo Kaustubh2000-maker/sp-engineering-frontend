@@ -7,8 +7,9 @@
   margin-bottom: 3rem;
   // background-color: red;
 
-  margin-bottom: 9.4rem;
+  margin-bottom: 12.8rem;
 
+  // box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
   // border-bottom: 1px solid #99999969;
 }
 
@@ -31,6 +32,7 @@
   background-position: bottom;
   background-repeat: no-repeat;
   filter: brightness(1); /* Darkens the image for better text visibility */
+  box-shadow: 10px 10px 10px black;
 }
 
 /* Content Container */
@@ -114,6 +116,7 @@
   background-color: #af0000;
   background-color: #21549c;
   background-color: #96c2ff;
+  background-color: rgb(255, 128, 0);
   background-color: #ff8000;
   color: white;
   border: 1px solid white;
@@ -266,28 +269,18 @@
 
 .hero-quote {
 }
+
 .hero-info-tab {
   position: absolute;
-  width: 80rem;
-  height: 17rem;
+  width: 90rem;
+  height: 14rem;
   background-color: transparent;
-  // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   padding: 2rem;
-
-  // left: 50%;
-  // bottom: 10%;
-  // transform: translate(-50%, 0%) !important;
-
-  // left: 50%;
-  // top: 90%;
-  // transform: translateX(-50%) !important;
-
-  // background-color: white;
-
   left: 50%;
   bottom: 0%;
-  margin-left: -40rem;
+  margin-left: -45rem;
 
   align-items: center;
   justify-content: space-around;

@@ -3,10 +3,14 @@
 import { animate, delay, time, transform } from "framer-motion";
 
 export const overlayAnimation = {
-  initial: { opacity: 1 },
+  initial: { opacity: 1, y: 0 }, // Start fully visible at normal position
   animate: {
-    opacity: 0,
-    transition: { duration: 0.5, delay: 3.5, ease: "easeInOut" },
+    opacity: [1, 0], // First fades out
+    y: [0, -500], // Then moves up
+    transition: {
+      opacity: { duration: 0.5, delay: 3.5, ease: "easeInOut" }, // Fades out first
+      y: { duration: 0.1, delay: 4, ease: "easeInOut" }, // Moves up after fade
+    },
   },
 };
 

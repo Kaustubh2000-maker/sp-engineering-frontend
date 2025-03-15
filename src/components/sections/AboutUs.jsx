@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import aboutImage from "@assets/about/about.png";
+import aboutImage from "@assets/about/about-2.png";
+import a11 from "@assets/toEdit/a11.png";
+import a22 from "@assets/toEdit/a22.png";
 import aboutLogo from "@assets/logos/logo.png";
 
 import {
@@ -10,6 +12,8 @@ import {
   aboutBullet,
   aboutBulletLine,
   aboutImg,
+  aboutImg_1,
+  aboutImg_2,
 } from "@animations/aboutAnimation.js";
 
 function AboutUs() {
@@ -17,13 +21,31 @@ function AboutUs() {
     <>
       <div className="aboutUs-section">
         <div className="about-grid container grid ">
-          <motion.div className="about-image-div " {...aboutImg}>
+          {/* <motion.div className="about-image-div " {...aboutImg}>
             <img src={aboutImage} alt="" className="about-img" />
-          </motion.div>
+          </motion.div> */}
+          <div className="about-img-div">
+            <div>
+              <motion.img
+                src={a11}
+                alt=""
+                className="about-img about-img--1"
+                {...aboutImg_1}
+              />
+            </div>
+            <div>
+              <motion.img
+                src={a22}
+                alt=""
+                className="about-img about-img--2"
+                {...aboutImg_2}
+              />
+            </div>
+          </div>
           <div className="about-data">
             <motion.h3 className="about-heading" {...aboutHeading}>
               About{" "}
-              {/* <img className="about-heading-logo" src={aboutLogo} alt="" />{" "} */}
+              <img className="about-heading-logo" src={aboutLogo} alt="" />{" "}
               <br />
               SP Engineering
             </motion.h3>

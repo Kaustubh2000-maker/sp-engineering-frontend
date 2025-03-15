@@ -129,7 +129,6 @@ function HeroSection() {
           <h3 className="hero-tab-heading">
             14 + <br />
             <span className="hero-tab--mini-heading">
-              {" "}
               industry <br />
               Projects
             </span>
@@ -156,6 +155,7 @@ function HeroSection() {
       </motion.div>
 
       {/* <div className="hero-quote-div"></div> */}
+      {/* <div className="line div"></div> */}
     </div>
   );
 }

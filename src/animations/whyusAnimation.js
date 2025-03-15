@@ -27,7 +27,7 @@ export const whyUsBannercircle = (type) => ({
   whileInView: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.5, ease: "easeInOut", delay: 0.2 },
+    transition: { duration: 1, ease: "easeInOut", delay: 0.2 },
   },
   viewport: { once: true, amount: 0.5 },
 });

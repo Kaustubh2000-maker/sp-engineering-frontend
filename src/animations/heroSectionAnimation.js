@@ -43,7 +43,7 @@ export const heroSolarSunAnimation = {
   animate: {
     left: 430,
     opacity: 1,
-    transition: { duration: 3, delay: 1 },
+    transition: { duration: 7, delay: 1 },
   },
   exit: { opacity: 0, transition: { duration: 0.3 } },
 };
