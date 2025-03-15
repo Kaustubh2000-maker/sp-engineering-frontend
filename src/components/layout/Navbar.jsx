@@ -9,8 +9,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 function Navbar(props) {
-  console.log(props.firstEnter);
-
   return (
     <motion.nav className="navbar" {...(props.firstEnter ? navVisible : {})}>
       <div>

@@ -27,7 +27,7 @@ function App() {
             element={
               <>
                 {firstEnter && <WelcomeOverlay />}
-                <LandingPage />
+                <LandingPage firstEnter={firstEnter} />
               </>
             }
           />

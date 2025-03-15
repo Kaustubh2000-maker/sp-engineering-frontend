@@ -4,10 +4,11 @@ import AboutUs from "@components/sections/AboutUs";
 import WhyUs from "@components/sections/WhyUs";
 import Projects from "@components/sections/Projects";
 
-function LandingPage() {
+function LandingPage(props) {
+  let firstEnter = props.firstEnter;
   return (
     <>
-      <HeroSection />
+      <HeroSection firstEnter={firstEnter} />
       <AboutUs />
       <Projects />
       <WhyUs />

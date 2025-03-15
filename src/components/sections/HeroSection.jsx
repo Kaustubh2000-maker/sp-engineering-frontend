@@ -6,19 +6,20 @@ import energyImage from "@assets/heroSection/hero-energy-name-1.png";
 
 import {
   heroSectionAnimation,
-  heroSolarSunAnimation,
   heroDataAnimation,
+  heroSolarSunAnimation,
 } from "@animations/heroSectionAnimation";
 
-function HeroSection() {
+function HeroSection(props) {
+  let firstEnter = props.firstEnter;
+  console.log(props.firstEnter, "from hero");
+
   const [index, setIndex] = useState(0);
-  const [firstRender, setfirstRender] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % HERO_SERVICES.length);
-      setfirstRender(false);
-    }, 15000);
+    }, 10000);
     return () => clearInterval(interval);
   }, []);
 
@@ -28,7 +29,7 @@ function HeroSection() {
         <motion.div
           className="hero-section--animate"
           key={index}
-          {...heroSectionAnimation}
+          {...heroSectionAnimation(firstEnter)}
         >
           {/* Background Image */}
           <motion.div
@@ -54,7 +55,7 @@ function HeroSection() {
           >
             <motion.h1
               className="hero-title"
-              {...heroDataAnimation(index === 0, firstRender, "title")}
+              {...heroDataAnimation(index === 0, firstEnter, "title")}
             >
               {HERO_SERVICES[index].name === "fire" ? (
                 <>
@@ -82,16 +83,15 @@ function HeroSection() {
 
             {/* Description */}
             <motion.p
-              {...heroDataAnimation(index === 0, firstRender, "text")}
+              {...heroDataAnimation(index === 0, firstEnter, "text")}
               className="hero-description"
             >
               {HERO_SERVICES[index].description}
             </motion.p>
 
-            {/* Buttons */}
             <div className="hero-buttons">
               <motion.div
-                {...heroDataAnimation(index === 0, firstRender, "mainBtn")}
+                {...heroDataAnimation(index === 0, firstEnter, "mainBtn")}
               >
                 <button
                   className="hero-button primary"
@@ -102,7 +102,7 @@ function HeroSection() {
               </motion.div>
 
               <motion.div
-                {...heroDataAnimation(index === 0, firstRender, "secBtn")}
+                {...heroDataAnimation(index === 0, firstEnter, "secBtn")}
               >
                 <button className="hero-button secondary">Contact Us</button>
               </motion.div>
@@ -123,7 +123,7 @@ function HeroSection() {
 
       <motion.div
         className="hero-info-tab flex"
-        {...heroDataAnimation(index === 0, firstRender, "other")}
+        {...heroDataAnimation(index === 0, firstEnter, "other")}
       >
         <div>
           <h3 className="hero-tab-heading">

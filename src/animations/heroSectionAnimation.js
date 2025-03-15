@@ -1,21 +1,21 @@
 import { animate, delay } from "framer-motion";
 
-export const heroSectionAnimation = {
+export const heroSectionAnimation = (firstEnter) => ({
   initial: { opacity: 0, scale: 1.05 },
   animate: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.5, ease: "easeInOut", delay: 0 },
+    transition: { duration: 0.5, ease: "easeInOut", delay: firstEnter ? 4 : 0 },
   },
   exit: {
     opacity: 0,
     scale: 1.05,
     transition: { duration: 0.5, ease: "easeInOut", delay: 0 },
   },
-};
+});
 
 export const heroDataAnimation = (index, firstRender, type) => {
-  const baseDelay = firstRender ? 0 : 0; // 5s if first, else 0.3s
+  const baseDelay = firstRender ? 4 : 0; // 5s if first, else 0.3s
   const delayMap = {
     title: baseDelay, // 5s (first) or 0.3s (next)
     other: baseDelay,
