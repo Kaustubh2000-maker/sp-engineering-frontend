@@ -6,8 +6,19 @@ import { nrmlScaleUp } from "../../animations/appAnimation";
 
 function Products(props) {
   let category = props.category;
-  console.log(category);
-
+  let imgAni = {
+    initial: { opacity: 0, scale: 0.9 },
+    animate: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.3 },
+    },
+    exit: {
+      opacity: 0,
+      scale: 0.9,
+      transition: { duration: 0.3 },
+    },
+  };
   const product = productsdata.find(
     (el) =>
       el.title.toLocaleLowerCase().replace(/\s+/g, "") ==
@@ -19,17 +30,20 @@ function Products(props) {
   }
 
   let { title, description, text, products, advantages } = product;
-  const [selectedProduct, setSelectedProduct] = useState(products[0]); // Default to first product
-  // let imagePath = `/src/assets/products/${category.toLowerCase()}/${selectedProduct}.png`;
+  const [selectedProduct, setSelectedProduct] = useState(products[0]);
 
   useEffect(() => {
-    setSelectedProduct(products[0]); // Reset to the first product of the new category
+    setSelectedProduct(products[0]);
   }, [category, products]);
 
   return (
     <>
       <AnimatePresence mode="wait">
-        <motion.div className="product-container" key={category}>
+        <motion.div
+          className="product-container"
+          key={category}
+          exit={{ opacity: 0, transition: { duration: 0.3 } }}
+        >
           <motion.h2 className="product-title" {...nrmlScaleUp()}>
             {title}
           </motion.h2>
@@ -51,7 +65,7 @@ function Products(props) {
           </div>
 
           <motion.h3 className="product-section-title" {...nrmlScaleUp(0.4)}>
-            Products
+            All basic service we that we provide
           </motion.h3>
           <div className="product-items-list-div">
             <div className="product-itmes-list">
@@ -62,27 +76,31 @@ function Products(props) {
                     selectedProduct === item ? "active" : ""
                   }`}
                   {...nrmlScaleUp(0.1)}
-                  onClick={() => setSelectedProduct(item)} // Update selected product on click
+                  onClick={() => setSelectedProduct(item)}
                 >
                   <p className="product-item">{item}</p>
                 </motion.div>
               ))}
             </div>
             <motion.div className="product-item-img-div" {...nrmlScaleUp()}>
-              <img
-                src={`/src/assets/products/${category.toLowerCase()}/${selectedProduct}.png`}
-                alt={selectedProduct}
-                className="product-img"
-              />
+              <AnimatePresence mode="wait">
+                <motion.img
+                  src={`/src/assets/products/${category.toLowerCase()}/${selectedProduct}.png`}
+                  alt={selectedProduct}
+                  className="product-img"
+                  key={selectedProduct}
+                  {...imgAni}
+                />
+              </AnimatePresence>
             </motion.div>
           </div>
 
           <motion.h3 className="product-section-title" {...nrmlScaleUp()}>
-            Advantages
+            benifits offered
           </motion.h3>
           <ul className="product-advantage-list">
             {advantages.map((advantage, index) => {
-              const [strongText, ...normalText] = advantage.split(" – "); // Splitting by '–'
+              const [strongText, ...normalText] = advantage.split(" – ");
               return (
                 <motion.li
                   key={index}

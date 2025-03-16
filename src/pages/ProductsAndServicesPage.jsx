@@ -7,6 +7,8 @@ function ProductsAndServicesPage() {
   let { category } = useParams();
   const location = useLocation();
 
+  // console.log(category, "from page");
+
   return (
     <>
       <div>

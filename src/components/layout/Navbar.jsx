@@ -54,7 +54,7 @@ function Navbar(props) {
         <li className="navbar-link navbar-dropdown">
           Services
           <div className="dropdown-div">
-            <Link className="dropdown-link" to="/services/fireConsultancy">
+            <Link className="dropdown-link" to="/services/fireconsultancy">
               Fire consultancy
             </Link>
             <Link className="dropdown-link" to="/services/epcm">
