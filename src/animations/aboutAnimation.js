@@ -21,27 +21,46 @@ export const aboutImg = {
   viewport: { once: true, amount: 0.4 },
 };
 
+// export const aboutImg_1 = {
+//   initial: { opacity: 0 },
+//   whileInView: {
+//     opacity: 1,
+//     transition: { duration: 1, ease: "easeInOut" },
+//   },
+//   viewport: { once: true, amount: 1 },
+// };
+// export const aboutImg_2 = {
+//   initial: { opacity: 0, scale: 0 },
+//   whileInView: {
+//     opacity: [0, 0.5, 1],
+//     scale: [0, 1.05, 1],
+//     transition: { duration: 3, ease: "easeInOut", times: [0, 0.4, 1] },
+//   },
+//   viewport: { once: true, amount: 1 },
+// };
+
 export const aboutImg_1 = {
   initial: { opacity: 0 },
   whileInView: {
     opacity: 1,
-    transition: { duration: 1, ease: "easeInOut" },
+    transition: { duration: 0.8, ease: "easeOut" }, // Shorter & smooth
   },
-  viewport: { once: true, amount: 0.4 },
+  viewport: { once: true, amount: 0.5 }, // Detect earlier to prevent lag
 };
+
 export const aboutImg_2 = {
-  initial: { opacity: 0, scale: 0 },
+  initial: { opacity: 0, scale: 0.8 }, // Start closer to final state
   whileInView: {
-    opacity: [0, 0.5, 1],
-    scale: [0, 1.05, 1],
-    transition: { duration: 3, ease: "easeInOut", times: [0, 0.4, 1] },
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 1.2, ease: "easeOut" }, // Faster, no unnecessary steps
   },
-  viewport: { once: true, amount: 0.4 },
+  viewport: { once: true, amount: 0.6 }, // Prevent unnecessary re-renders
 };
 
 export const aboutText = (delayAni) => ({
   initial: {
-    y: 50,
+    y: 20,
     opacity: 0,
   },
   whileInView: {

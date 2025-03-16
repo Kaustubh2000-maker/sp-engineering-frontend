@@ -8,17 +8,12 @@ import { motion, AnimatePresence, easeInOut } from "framer-motion";
 function LandingPage(props) {
   let firstEnter = props.firstEnter;
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={firstEnter}
-        exit={{ opacity: 0, transition: { duration: 1, ease: "easeInOut" } }}
-      >
-        <HeroSection firstEnter={firstEnter} />
-        <AboutUs />
-        <Projects />
-        <WhyUs />
-      </motion.div>
-    </AnimatePresence>
+    <motion.div>
+      <HeroSection firstEnter={firstEnter} />
+      <AboutUs />
+      <Projects />
+      <WhyUs />
+    </motion.div>
   );
 }
 

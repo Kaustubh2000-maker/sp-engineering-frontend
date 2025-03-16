@@ -27,21 +27,21 @@ html::-webkit-scrollbar {
 }
 
 // for no scrol for first 5 secs
-// body {
-//   overflow: hidden;
-//   pointer-events: none;
-// }
+body {
+  overflow: hidden;
+  pointer-events: none;
+}
 
-// @keyframes enableScroll {
-//   to {
-//     overflow: auto;
-//     pointer-events: all;
-//   }
-// }
+@keyframes enableScroll {
+  to {
+    overflow: auto;
+    pointer-events: all;
+  }
+}
 
-// body {
-//   animation: enableScroll 0s linear 4s forwards;
-// }
+body {
+  animation: enableScroll 0s linear 4s forwards;
+}
 
 //handy classes
 .container {
