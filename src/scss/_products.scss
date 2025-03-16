@@ -1,0 +1,107 @@
+.product-container {
+  margin: 0 auto;
+  margin-bottom: 12.8rem;
+  margin-top: 4.2rem;
+  width: 110rem;
+}
+.product-title {
+  font-size: 4.2rem;
+  text-align: center;
+  color: #333;
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 4.4rem;
+  letter-spacing: 2px;
+}
+
+.product-text-box {
+  margin-bottom: 4.4rem;
+}
+.product-description {
+  font-size: 1.8rem;
+  text-transform: none;
+  line-height: 1.5;
+  color: #444;
+  margin-bottom: 2rem;
+}
+.product-text {
+  font-size: 1.8rem;
+  text-transform: none;
+  line-height: 1.5;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.product-section-title {
+  font-size: 2.8rem;
+  margin-bottom: 3.2rem;
+  padding-left: 3rem;
+  color: #333;
+}
+.product-items-list-div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin-bottom: 3.2rem;
+  height: 50rem;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 6.4rem;
+}
+.product-itmes-list {
+  //   background-color: blue;
+  padding: 2.5rem;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  overflow: scroll;
+}
+.product-itmes-list::-webkit-scrollbar {
+  display: none;
+}
+.product-item-div {
+  width: 14rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.5s;
+}
+
+.product-item-div:hover {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+}
+.product-item {
+  font-size: 1.4rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.product-item-img-div {
+  background-color: rgb(235, 235, 235);
+  border-radius: 10px;
+  padding: 2rem;
+  height: 100%;
+}
+
+.product-img {
+  width: 47rem;
+  height: 41rem;
+  //   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+.product-advantage-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 1.6rem;
+  font-size: 1.8rem;
+}
+.product-advantage-item {
+  color: #444;
+  margin-left: 8rem;
+}

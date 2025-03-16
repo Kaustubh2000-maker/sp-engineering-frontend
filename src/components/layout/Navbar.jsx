@@ -6,29 +6,66 @@ import logoMain from "@logos/logo-no-bg.png";
 import { navVisible } from "../../animations/appAnimation";
 
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useParams, useLocation } from "react-router-dom";
 
 function Navbar(props) {
+  const locaion = useLocation();
+
+  // console.log(locaion.pathname);
+
+  let navStyle = {
+    style: {
+      backgroundColor: "white",
+      position: "relative",
+    },
+  };
+
   return (
-    <motion.nav className="navbar" {...(props.firstEnter ? navVisible : {})}>
+    <motion.nav
+      className="navbar"
+      {...(props.firstEnter && locaion.pathname == "/" ? navVisible : {})}
+      {...(locaion.pathname != "/" ? navStyle : {})}
+    >
       <div>
         <img className="navbar-logo" src={logoMain} />
       </div>
 
       <ul className="navbar-links">
-        <li>
+        <li className="navbar-link">
           <Link to="/">Home</Link>
         </li>
-        <li>
-          <Link to="/products">Products</Link>
+        <li className="navbar-link navbar-dropdown">
+          Products
+          <div className="dropdown-div">
+            <Link className="dropdown-link" to="/products/fireFightingSystems">
+              Fire Fighting Systems
+            </Link>
+            <Link className="dropdown-link" to="/products/solar">
+              Solar
+            </Link>
+            <Link className="dropdown-link" to="/products/hvac">
+              Hvac
+            </Link>
+            <Link className="dropdown-link" to="/products/storageTanks">
+              Storage Tanks
+            </Link>
+          </div>
         </li>
-        <li>
-          <Link to="/Services">Services</Link>
+        <li className="navbar-link navbar-dropdown">
+          Services
+          <div className="dropdown-div">
+            <Link className="dropdown-link" to="/services/fireConsultancy">
+              Fire consultancy
+            </Link>
+            <Link className="dropdown-link" to="/services/epcm">
+              EPCM services
+            </Link>
+          </div>
         </li>
-        <li>
+        <li className="navbar-link">
           <Link to="/Projects">Projects</Link>
         </li>
-        <li>
+        <li className="navbar-link">
           <Link to="/About">About</Link>
         </li>
       </ul>

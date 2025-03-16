@@ -8,6 +8,7 @@ import { delay, motion } from "framer-motion";
 import { heroVisible, navVisible } from "./animations/appAnimation";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import ProductsAndServicesPage from "./pages/ProductsAndServicesPage";
 function App() {
   const [firstEnter, setfirstEnter] = useState(true);
 
@@ -31,7 +32,16 @@ function App() {
               </>
             }
           />
+          <Route
+            path="/products/:category"
+            element={<ProductsAndServicesPage />}
+          />{" "}
+          <Route
+            path="/services/:category"
+            element={<ProductsAndServicesPage />}
+          />
         </Routes>
+
         <Footer />
       </Router>
     </>

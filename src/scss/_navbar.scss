@@ -32,8 +32,81 @@
 .navbar-links li {
   display: inline;
 }
-
+.navbar-link {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: opacity 0.3s;
+  padding: 0.8rem 1.6rem;
+}
 .navbar-links a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+// .navbar-dropdown {
+//   position: relative;
+// }
+// .dropdown-div {
+//   position: absolute;
+//   display: none;
+//   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+//   background-color: white;
+//   left: -12%;
+//   top: 100%;
+//   padding: 1rem 1.5rem;
+//   width: 20rem;
+//   // opacity: 0;
+//   // text-align: center;
+//   transition: all 0.4s;
+//   background-color: rgb(250, 250, 250);
+// }
+
+// .navbar-dropdown:hover .dropdown-div {
+//   display: block;
+//   // opacity: 1;
+//   // top: 100%;
+// }
+// .dropdown-link {
+//   display: block;
+//   text-decoration: none;
+//   color: rgb(0, 0, 0);
+//   font-size: 1.6rem;
+//   font-weight: 600;
+//   letter-spacing: 1px;
+//   transition: opacity 0.3s;
+//   padding: 0.8rem 1.6rem;
+// }
+.navbar-dropdown {
+  position: relative;
+}
+
+.dropdown-div {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
+  background-color: white;
+  left: -14%;
+  top: 100%;
+  padding: 1rem 1.5rem;
+  width: max-content;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  border-radius: 10px;
+  transform: translateY(20px);
+  // display: flex;
+}
+
+.navbar-dropdown:hover .dropdown-div {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-link {
+  display: block;
   text-decoration: none;
   color: rgb(0, 0, 0);
   font-size: 1.6rem;
@@ -78,147 +151,34 @@
   border: 1px solid #ff8000;
 }
 
-// .empty-div {
-//   width: 100px;
-//   height: 100px;
-//   position: relative;
-// }
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
 
-// .empty-div::before {
-//   content: "";
-//   position: absolute;
-//   top: -5px;
-//   left: -5px;
-//   width: 110%;
-//   height: 110%;
-//   border: 3px solid black;
-//   border-radius: 50%;
-//   clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%, 0 100%, 0 0, 50% 0);
-//   animation: drawCircular 2s linear forwards;
-// }
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  list-style: none;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-width: 180px;
+  border-radius: 5px;
+}
 
-// @keyframes drawCircular {
-//   0% {
-//     clip-path: polygon(
-//       50% 50%,
-//       50% 50%,
-//       50% 50%,
-//       50% 50%,
-//       50% 50%,
-//       50% 50%,
-//       50% 50%
-//     );
-//   }
-//   25% {
-//     clip-path: polygon(
-//       50% 50%,
-//       50% 0,
-//       100% 0,
-//       100% 50%,
-//       50% 50%,
-//       50% 50%,
-//       50% 50%
-//     );
-//   }
-//   50% {
-//     clip-path: polygon(
-//       50% 50%,
-//       50% 0,
-//       100% 0,
-//       100% 100%,
-//       50% 100%,
-//       50% 50%,
-//       50% 50%
-//     );
-//   }
-//   75% {
-//     clip-path: polygon(
-//       50% 50%,
-//       50% 0,
-//       100% 0,
-//       100% 100%,
-//       0 100%,
-//       0 50%,
-//       50% 50%
-//     );
-//   }
-//   100% {
-//     clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%, 0 100%, 0 0, 50% 0);
-//   }
-// }
+.dropdown-menu li {
+  padding: 10px;
+  white-space: nowrap;
+}
 
-// .empty-div {
-//   width: 100px;
-//   height: 100px;
-//   position: relative;
-// }
+.dropdown-menu li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
 
-// .empty-div::before {
-//   content: "";
-//   position: absolute;
-//   top: -5px;
-//   left: -5px;
-//   width: 110%;
-//   height: 110%;
-//   border: 3px solid black;
-//   clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%, 0 100%, 0 0, 50% 0);
-//   animation: drawRectangle 2s linear forwards;
-// }
-
-// @keyframes drawRectangle {
-//   0% {
-//     clip-path: polygon(
-//       50% 50%,
-//       50% 50%,
-//       50% 50%,
-//       50% 50%,
-//       50% 50%,
-//       50% 50%,
-//       50% 50%
-//     );
-//   }
-//   25% {
-//     clip-path: polygon(
-//       50% 50%,
-//       0% 0%,
-//       100% 0%,
-//       100% 0%,
-//       50% 50%,
-//       50% 50%,
-//       50% 50%
-//     ); /* Top border */
-//   }
-//   50% {
-//     clip-path: polygon(
-//       50% 50%,
-//       0% 0%,
-//       100% 0%,
-//       100% 100%,
-//       100% 100%,
-//       50% 50%,
-//       50% 50%
-//     ); /* Right border */
-//   }
-//   75% {
-//     clip-path: polygon(
-//       50% 50%,
-//       0% 0%,
-//       100% 0%,
-//       100% 100%,
-//       0% 100%,
-//       0% 100%,
-//       50% 50%
-//     ); /* Bottom border */
-//   }
-//   100% {
-//     clip-path: polygon(
-//       50% 50%,
-//       0% 0%,
-//       100% 0%,
-//       100% 100%,
-//       0% 100%,
-//       0% 0%,
-//       50% 50%
-//     ); /* Left border (Complete Rectangle) */
-//   }
-// }
+.dropdown-menu li:hover {
+  background: #f0f0f0;
+}

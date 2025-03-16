@@ -12,7 +12,6 @@ import {
 
 function HeroSection(props) {
   let firstEnter = props.firstEnter;
-  console.log(props.firstEnter, "from hero");
 
   const [index, setIndex] = useState(0);
 

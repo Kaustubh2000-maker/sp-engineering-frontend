@@ -12,7 +12,6 @@ function LandingPage(props) {
       <AboutUs />
       <Projects />
       <WhyUs />
-      {/* <LogosAndWhyUs /> */}
     </>
   );
 }
