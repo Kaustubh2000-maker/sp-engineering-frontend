@@ -10,6 +10,7 @@ import { heroVisible, navVisible } from "./animations/appAnimation";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ProductsAndServicesPage from "./pages/ProductsAndServicesPage";
+import ProjectsPage from "./pages/ProjectsPage";
 function App() {
   const [firstEnter, setfirstEnter] = useState(true);
 
@@ -40,7 +41,8 @@ function App() {
           <Route
             path="/services/:category"
             element={<ProductsAndServicesPage />}
-          />
+          />{" "}
+          <Route path="/projects" element={<ProjectsPage />} />
         </Routes>
 
         <Footer />

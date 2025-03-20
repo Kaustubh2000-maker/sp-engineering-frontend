@@ -6,7 +6,7 @@ import SieccImg from "@assets/projects/SIECC.jpg";
 
 import { projectCard, projectText } from "@animations/projectAnimation";
 
-function Products() {
+function ProjectsSection() {
   return (
     <>
       <section className="section-projects">
@@ -102,4 +102,4 @@ function Products() {
   );
 }
 
-export default Products;
+export default ProjectsSection;
