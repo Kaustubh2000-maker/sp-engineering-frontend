@@ -47,6 +47,14 @@ function Products(props) {
       `/src/assets/products/${category.toLowerCase()}/${selectedProduct}.png`
     ]?.default;
 
+  // <motion.img
+  //   src={imagePath}
+  //   alt={selectedProduct}
+  //   className="product-img"
+  //   key={selectedProduct}
+  //   {...imgAni}
+  // />;
+
   return (
     <>
       <AnimatePresence mode="wait">
@@ -95,6 +103,13 @@ function Products(props) {
             </div>
             <motion.div className="product-item-img-div" {...nrmlScaleUp()}>
               <AnimatePresence mode="wait">
+                {/* <motion.img
+                  src={`/src/assets/products/${category.toLowerCase()}/${selectedProduct}.png`}
+                  alt={selectedProduct}
+                  className="product-img"
+                  key={selectedProduct}
+                  {...imgAni}
+                /> */}
                 <motion.img
                   src={imagePath}
                   alt={selectedProduct}
