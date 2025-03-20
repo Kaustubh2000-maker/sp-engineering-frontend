@@ -6,6 +6,8 @@ import {
   textAnimation,
 } from "../../animations/welcomePageAnimation";
 
+import logo from "/src/assets/logos/logo.png";
+
 function WelcomeOverlay() {
   return (
     <motion.div {...overlayAnimation} className="overlay-container">
@@ -14,7 +16,7 @@ function WelcomeOverlay() {
         className="logo-text-wrapper"
       >
         <motion.img
-          src="/src/assets/logos/logo.png"
+          src={logo}
           alt="SP Engineering Logo"
           className="logo"
           {...logoAnimation}
