@@ -3,16 +3,6 @@ import { productsdata } from "../../constants/productsData";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { nrmlScaleUp } from "../../animations/appAnimation";
-// Import all images dynamically
-const images = import.meta.glob("/src/assets/products/**/*.png", {
-  eager: true,
-});
-
-// Construct the dynamic path
-const imagePath =
-  images[
-    `/src/assets/products/${category.toLowerCase()}/${selectedProduct}.png`
-  ]?.default;
 
 function Products(props) {
   let category = props.category;
@@ -45,6 +35,17 @@ function Products(props) {
   useEffect(() => {
     setSelectedProduct(products[0]);
   }, [category, products]);
+
+  // Import all images dynamically
+  const images = import.meta.glob("/src/assets/products/**/*.png", {
+    eager: true,
+  });
+
+  // Construct the dynamic path
+  const imagePath =
+    images[
+      `/src/assets/products/${category.toLowerCase()}/${selectedProduct}.png`
+    ]?.default;
 
   return (
     <>
