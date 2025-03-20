@@ -3,6 +3,16 @@ import { productsdata } from "../../constants/productsData";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { nrmlScaleUp } from "../../animations/appAnimation";
+// Import all images dynamically
+const images = import.meta.glob("/src/assets/products/**/*.png", {
+  eager: true,
+});
+
+// Construct the dynamic path
+const imagePath =
+  images[
+    `/src/assets/products/${category.toLowerCase()}/${selectedProduct}.png`
+  ]?.default;
 
 function Products(props) {
   let category = props.category;
@@ -85,12 +95,13 @@ function Products(props) {
             <motion.div className="product-item-img-div" {...nrmlScaleUp()}>
               <AnimatePresence mode="wait">
                 <motion.img
-                  src={`/src/assets/products/${category.toLowerCase()}/${selectedProduct}.png`}
+                  src={imagePath}
                   alt={selectedProduct}
                   className="product-img"
                   key={selectedProduct}
                   {...imgAni}
                 />
+                ;
               </AnimatePresence>
             </motion.div>
           </div>
