@@ -24,7 +24,7 @@ function ProjectsPage() {
             </div>
           ))}
         </div>
-
+        <div className="proj-data-view-section"></div>
         <div>{seletctedProject.name}</div>
         <div>{seletctedProject.location}</div>
       </div>
