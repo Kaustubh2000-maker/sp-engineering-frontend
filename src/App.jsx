@@ -45,7 +45,7 @@ function App() {
           <Route path="/projects" element={<ProjectsPage />} />
         </Routes>
 
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </>
   );

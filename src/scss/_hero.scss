@@ -2,10 +2,8 @@
 .hero-section {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 72rem;
   z-index: 0;
-  margin-bottom: 3rem;
-  // background-color: red;
 
   margin-bottom: 12.8rem;
 
@@ -194,24 +192,6 @@
   left: 27%;
   width: 200px;
   height: 200px;
-
-  // background-image: radial-gradient(
-  //   white 1%,
-  //   rgba(255, 255, 0, 0.4),
-  //   rgba(255, 255, 224, 0.8),
-  //   white,
-  //   white
-  // );
-  // background-image: radial-gradient(
-  //   white 1%,
-  //   yellow 3% 20% rgba(255, 128, 0, 0.4),
-  //   rgba(255, 128, 0, 0.9),
-  //   white 40%,
-  //   white,
-  //   white,
-  //   white
-  // );
-
   background-image: radial-gradient(
     white 1%,
     rgba(255, 255, 0, 0.4),
@@ -221,69 +201,23 @@
   );
 }
 
-.hero-quote-div {
-  height: 25rem;
-  width: 20rem;
-  position: relative;
-  display: block;
-  border-radius: 10px;
-  left: 10%;
-  top: -65%;
-  padding: 4rem;
-  transform: rotate(-10deg);
-  background-color: white;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
-}
-
-.hero-quote-div::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: block;
-  border-radius: 10px;
-  left: 0;
-  top: 0;
-  // border: 1px solid black;
-
-  background-color: black;
-  transform: rotate(3deg);
-  z-index: 2;
-}
-
-.hero-quote-div::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: block;
-  border-radius: 10px;
-  left: 0;
-  top: 0;
-
-  z-index: 3;
-  // border: 1px solid black;
-  background-color: rgb(255, 255, 255);
-}
-
-// .hero-quote {
-// }
-
 .hero-info-tab {
   position: absolute;
-  width: 90rem;
+  z-index: 100;
+  display: block;
+  width: 66%;
   height: 14rem;
   background-color: transparent;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   padding: 2rem;
-  left: 50%;
+  // margin: 0 auto;
+  margin-left: 17%;
   bottom: 0%;
-  margin-left: -45rem;
-
   align-items: center;
   justify-content: space-around;
   text-align: center;
+  display: none;
 }
 .hero-tab-heading {
   background: linear-gradient(to left, orange, orange, orange, red);
@@ -293,10 +227,20 @@
   font-weight: 500;
 
   display: flex;
+  align-items: center;
   gap: 2rem;
   text-transform: capitalize;
 }
+
+.hero-tab-heading h3 {
+  font-weight: 500;
+  font-size: 4.2rem;
+}
+
 .hero-tab-heading span {
   font-size: 2rem;
   color: #555;
+}
+
+@media screen and (max-width: 1250px) {
 }

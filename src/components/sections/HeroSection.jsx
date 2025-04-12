@@ -35,9 +35,6 @@ function HeroSection(props) {
             className="hero-background"
             style={{
               backgroundImage: `url(${HERO_SERVICES[index].image})`,
-              backgroundSize: "cover",
-              backgroundPosition: "bottom",
-              backgroundRepeat: "no-repeat",
             }}
           ></motion.div>
 
@@ -80,7 +77,6 @@ function HeroSection(props) {
               )}
             </motion.h1>
 
-            {/* Description */}
             <motion.p
               {...heroDataAnimation(index === 0, firstEnter, "text")}
               className="hero-description"
@@ -108,6 +104,41 @@ function HeroSection(props) {
             </div>
           </div>
         </motion.div>
+        <motion.div
+          className="hero-info-tab flex"
+          {...heroDataAnimation(index === 0, firstEnter, "other")}
+        >
+          <div>
+            <h3 className="hero-tab-heading">
+              <h3>500+</h3>
+              <span className="hero-tab--mini-heading">
+                industry <br />
+                Projects
+              </span>
+            </h3>
+          </div>
+          <div>
+            <h3 className="hero-tab-heading">
+              <h3>425+</h3>
+
+              <span className="hero-tab--mini-heading">
+                Happy <br />
+                Clients
+              </span>
+            </h3>
+          </div>
+          <div>
+            <h3 className="hero-tab-heading">
+              <h3>15+</h3>
+
+              <span className="hero-tab--mini-heading">
+                Years of <br />
+                Experience
+              </span>
+            </h3>
+          </div>
+        </motion.div>
+        {/* ///////////////////// */}
       </AnimatePresence>
 
       {HERO_SERVICES[index].name == "solar" && (
@@ -119,42 +150,6 @@ function HeroSection(props) {
           ></motion.div>
         </AnimatePresence>
       )}
-
-      <motion.div
-        className="hero-info-tab flex"
-        {...heroDataAnimation(index === 0, firstEnter, "other")}
-      >
-        <div>
-          <h3 className="hero-tab-heading">
-            14 + <br />
-            <span className="hero-tab--mini-heading">
-              industry <br />
-              Projects
-            </span>
-          </h3>
-        </div>
-        <div>
-          <h3 className="hero-tab-heading">
-            10+ <br />
-            <span className="hero-tab--mini-heading">
-              Happy <br />
-              Clients
-            </span>
-          </h3>
-        </div>
-        <div>
-          <h3 className="hero-tab-heading">
-            5+ <br />
-            <span className="hero-tab--mini-heading">
-              Years of <br />
-              Experience
-            </span>
-          </h3>
-        </div>
-      </motion.div>
-
-      {/* <div className="hero-quote-div"></div> */}
-      {/* <div className="line div"></div> */}
     </div>
   );
 }
