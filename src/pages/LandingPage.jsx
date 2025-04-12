@@ -10,9 +10,9 @@ function LandingPage(props) {
   return (
     <motion.div>
       <HeroSection firstEnter={firstEnter} />
-      {/* <AboutUs />
+      <AboutUs />
       <ProjectsSection />
-      <WhyUs /> */}
+      <WhyUs />
     </motion.div>
   );
 }

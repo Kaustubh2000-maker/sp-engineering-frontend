@@ -5,14 +5,14 @@
 .projects-box {
   // background-color: red;
   margin: 0 auto;
-  width: 120rem;
+  // width: 120rem;
   height: 45rem;
   margin-bottom: 2.2rem;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 4rem;
-  width: 110rem;
+  width: 80%;
   //   background-color: red;
 }
 .projects-heading-box {
