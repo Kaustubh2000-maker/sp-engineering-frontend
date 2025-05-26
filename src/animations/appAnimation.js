@@ -18,3 +18,9 @@ export const nrmlScaleUp = (delay) => ({
   whileInView: { opacity: 1, y: 0, transition: { duration: 1, delay } },
   viewport: { once: true, amount: 0.5 },
 });
+
+export const nrmlVisible = (delay) => ({
+  initial: { opacity: 0, y: 0 },
+  whileInView: { opacity: 1, y: 0, transition: { duration: 1, delay } },
+  viewport: { once: true, amount: 0.5 },
+});

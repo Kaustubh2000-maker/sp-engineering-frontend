@@ -68,7 +68,7 @@ function Footer() {
                 ></ion-icon>
                 <span className="footer-contact-span">Contact no.</span>
               </div>
-              +91 89831 61405
+              +91 91723 02137 <br /> +91 89831 61405
             </li>
           </ul>
         </div>

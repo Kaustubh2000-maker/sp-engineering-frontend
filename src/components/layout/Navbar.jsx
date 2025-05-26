@@ -71,14 +71,14 @@ function Navbar(props) {
             <Link to="/Projects">Projects</Link>
           </li>
           <li className="navbar-link">
-            <Link to="/About">About</Link>
+            <Link to="/About">About Us</Link>
           </li>
         </ul>
 
-        <div className="navbar-login-div">
+        {/* <div className="navbar-login-div">
           <button className="navbar-btn signin-btn">Signup</button>
           <button className="navbar-btn login-btn">Login</button>
-        </div>
+        </div> */}
       </motion.nav>
 
       {overlayOpen && (
@@ -137,13 +137,13 @@ function Navbar(props) {
               </li>
               <li>
                 <Link className="overlay-link--main" to="/about">
-                  About
+                  About Us
                 </Link>
               </li>
-              <div className="overlay-buttons">
+              {/* <div className="overlay-buttons">
                 <button className="navbar-btn signin-btn">Signup</button>
                 <button className="navbar-btn login-btn">Login</button>
-              </div>
+              </div> */}
             </ul>
           </div>
         </div>

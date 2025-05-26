@@ -1,6 +1,6 @@
 .proj-conatiner {
   width: 110rem;
-  height: 100rem;
+  height: max-content;
   margin: 0 auto;
   //   background-color: red;
   padding-top: 4rem;
@@ -12,7 +12,12 @@
   color: #333;
   margin-bottom: 3.2rem;
 }
+.proj-subheading {
+  font-size: 1.6rem;
+  color: #333;
 
+  margin-bottom: 4.8rem;
+}
 .proj-select-div {
   width: 100%;
   //   background-color: rgb(240, 240, 240);
@@ -26,27 +31,172 @@
   align-items: center;
   border-radius: 20px;
   justify-content: center;
+  margin-bottom: 8.4rem;
 }
 
 .proj-sel-card {
   background-color: white;
   display: block;
   width: 100%;
-  height: 8rem;
+  height: 10rem;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.5s;
+  transition: all 0.2s linear;
+}
+.proj-active-card {
+  box-shadow: 1px 1px 10px 4px rgba(0, 0, 0, 0.2);
+}
+.Proj-logo-img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .proj-sel-card:hover {
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  // box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
 .proj-sel-card p {
   font-size: 1.4rem;
   text-align: center;
+}
+
+.proj-data-view-section {
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  height: 45rem;
+  // background-color: RED;
+  margin-bottom: 8.4rem;
+}
+.proj-sel-databox {
+  // background-color: green;
+}
+.proj-sel-heading {
+  font-size: 3.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  // letter-spacing: 1px;
+}
+.proj-sel-location {
+  color: #777;
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+}
+.proj-sel-description {
+  font-size: 1.6rem;
+  color: #333;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: justify;
+  text-indent: 2rem;
+}
+.proj-sel-map {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.proj-mat-sec {
+  // background-color: red;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  padding: 4rem;
+  color: #333;
+  margin-bottom: 8.4rem;
+}
+.proj-mat-heading {
+  font-size: 3.4rem;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+
+  margin-bottom: 4rem;
+}
+// .proj-mat-bar-1 .label {
+//   color: blue;
+// }
+// .proj-mat-bar-2 {
+// }
+// .proj-mat-bar-3 {
+// }
+
+// .proj-mat-disc-box {
+// }
+.progress-bar-container {
+  margin-bottom: 3rem;
+}
+
+.progress-bar-label {
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.progress-bar-track {
+  background: #e0e0e0;
+  border-radius: 10px;
+  height: 3.2rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 8px;
+  position: relative;
+}
+
+.progress-bar-percentage {
+  position: absolute;
+  right: 10px;
+  font-size: 1.9rem;
+  top: 20%;
+  left: 45%;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Example color overrides based on className */
+.proj-mat-bar-1 .progress-bar-fill {
+  background-color: #ff9800 !important;
+}
+
+.proj-mat-bar-2 .progress-bar-fill {
+  background-color: #ff9800 !important;
+}
+
+.proj-mat-bar-3 .progress-bar-fill {
+  background-color: #ff9800 !important;
+}
+
+.proj-mat-disc-box {
+  padding: 3rem;
+  padding-top: 7rem;
+}
+.proj-mat-points-list {
+  list-style: none;
+}
+.proj-mat-point {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  display: flex;
+  text-align: center;
+  gap: 2rem;
+  // justify-content: center;
+}
+
+.proj-mat-point ion-icon {
+  color: #ff9800;
+  font-size: 3rem;
+  font-weight: 700;
 }
