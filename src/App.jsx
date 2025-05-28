@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ProductsAndServicesPage from "./pages/ProductsAndServicesPage";
 import ProjectsPage from "./pages/ProjectsPage";
+import AboutPage from "./pages/AboutPage";
 function App() {
   const [firstEnter, setfirstEnter] = useState(true);
 
@@ -43,6 +44,7 @@ function App() {
             element={<ProductsAndServicesPage />}
           />{" "}
           <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/About" element={<AboutPage />} />
         </Routes>
 
         <Footer />

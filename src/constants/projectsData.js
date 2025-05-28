@@ -130,18 +130,4 @@ export const projectsData = [
     mapLink:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3734.802608869488!2d72.94872137914079!3d20.596117131820588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0c2646f553721%3A0x818c94f740d27849!2sEcoplast%20Limited!5e0!3m2!1sen!2sin!4v1748235023804!5m2!1sen!2sin",
   },
-  // {
-  //   name: "Kolte Industries",
-  //   image: getImageByProjectName("Kolte Industries"),
-  //   location: "Jalgaon, Maharashtra",
-  //   description:
-  //     "Established in 2016, Kolte Industries (now VoltX Solar and Electricals LLP) provides solar solutions for commercial, industrial, and residential projects across India, promoting renewable energy adoption. The company has gained immense expertise in supplying and trading LED light housing, solar LED lights, and sheet metal press components, and is one of the leading sellers of listed products.",
-  // },
-  // {
-  //   name: "Patil Industries",
-  //   image: getImageByProjectName("Patil Industries"),
-  //   location: "Jalgaon, Maharashtra",
-  //   description:
-  //     "Patil Industries is known for manufacturing PVC pipes and related products, serving the construction and infrastructure sectors in the region. The company deals in SPM, material handling solutions, liquid filling systems, capping and labeling machines, packaging machines, and industrial storage solutions, catering to a wide range of industrial needs.",
-  // },
 ];
