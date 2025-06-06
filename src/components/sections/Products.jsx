@@ -86,7 +86,7 @@ function Products(props) {
                       <motion.p
                         key={index}
                         className="product-description"
-                        {...nrmlScaleUp(0.3 + index * 0.15)}
+                        {...nrmlScaleUp(0.3 + index * 0.1)}
                       >
                         {item}
                       </motion.p>
@@ -120,7 +120,7 @@ function Products(props) {
                       className="product-adv-item"
                       {...nrmlScaleUp()}
                     >
-                      <motion.div {...nrmlScaleUp(0.3 + index * 0.15)}>
+                      <motion.div {...nrmlScaleUp(0.3 + index * 0.1)}>
                         <ion-icon
                           class="product-adv-icon"
                           name={icon[index]}
