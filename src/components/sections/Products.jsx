@@ -140,7 +140,7 @@ function Products(props) {
             </div>
           </div>
           <div className="product-items-sec">
-            <motion.h3 className="product-section-title" {...nrmlScaleUp(0.4)}>
+            <motion.h3 className="product-section-title" {...nrmlScaleUp(0.2)}>
               All basic {title} service we that we provide
             </motion.h3>
             <div className="product-items-list-div">
