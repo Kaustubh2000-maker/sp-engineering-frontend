@@ -98,6 +98,7 @@
   border-radius: 10px;
   transform: translateY(20px);
   display: flex;
+  flex-direction: column;
 }
 
 .navbar-dropdown:hover .dropdown-div {

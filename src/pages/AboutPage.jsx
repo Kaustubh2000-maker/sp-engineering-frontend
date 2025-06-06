@@ -1,12 +1,13 @@
 import React from "react";
-import aboutImg from "./../assets/other/fire-2.jpg";
+import aboutImg from "./../assets/other/fire/fire-2.jpg";
 
-import fireImg from "./../assets/other/fire-1.jpg";
-import hvacImg from "./../assets/other/hvac-1.jpg";
-import solarImg from "./../assets/other/solar-1.jpg";
-import tankImg from "./../assets/other/tank-1.jpg";
-import fireImg2 from "./../assets/other/fire-3.jpg";
-import epcmImg from "./../assets/other/epcm-1.jpg";
+import fireImg from "./../assets/other/fire/fire-1.webp";
+import hvacImg from "./../assets/other/hvac/hvac-8.jpg";
+import solarImg from "./../assets/other/solar/solar-7.jpg";
+import tankImg from "./../assets/other/tank/tank-6.jpg";
+import fireImg2 from "./../assets/other/fire//fire-4.jpg";
+import epcmImg from "./../assets/other/epcm/epcm-1.jpg";
+
 // import hvacImg from "./../assets/other/hvac-1.jpg";
 
 function AboutPage() {

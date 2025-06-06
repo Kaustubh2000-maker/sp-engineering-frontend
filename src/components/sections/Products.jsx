@@ -3,6 +3,8 @@ import { productsdata } from "../../constants/productsData";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { nrmlScaleUp } from "../../animations/appAnimation";
+// import { image } from "framer-motion/dist/types/client";
+import fireMul from "./../../assets/other/tank/tank-multi.jpg";
 
 function Products(props) {
   let category = props.category;
@@ -29,7 +31,7 @@ function Products(props) {
     return <>no such product found </>;
   }
 
-  let { title, description, text, products, advantages } = product;
+  let { title, description, text, products, advantages, image, icon } = product;
   const [selectedProduct, setSelectedProduct] = useState(products[0]);
 
   useEffect(() => {
@@ -67,79 +69,119 @@ function Products(props) {
             {title}
           </motion.h2>
 
-          <div className="product-text-box">
-            <motion.p className="product-description" {...nrmlScaleUp(0.2)}>
-              {description}
-            </motion.p>
+          <div className="product-disc-box">
+            <div className="product-text-box">
+              <div className="product-text-img-div">
+                <div className="product-image-div">
+                  <motion.img
+                    className="product-image"
+                    src={image}
+                    alt=""
+                    {...nrmlScaleUp(0.5)}
+                  />
+                </div>
+                <div className="product-description-box">
+                  <div className="">
+                    {description.map((item, index) => (
+                      <motion.p
+                        key={index}
+                        className="product-description"
+                        {...nrmlScaleUp(0.3 + index * 0.15)}
+                      >
+                        {item}
+                      </motion.p>
+                    ))}
+                  </div>
+                </div>
+              </div>
 
-            {text.map((item, index) => (
-              <motion.p
-                key={index}
-                className="product-text"
-                {...nrmlScaleUp(0.3)}
-              >
-                {item}
-              </motion.p>
-            ))}
-          </div>
-
-          <motion.h3 className="product-section-title" {...nrmlScaleUp(0.4)}>
-            All basic service we that we provide
-          </motion.h3>
-          <div className="product-items-list-div">
-            <div className="product-itmes-list">
-              {products.map((item, index) => (
-                <motion.div
+              {text.map((item, index) => (
+                <motion.p
                   key={index}
-                  className={`product-item-div ${
-                    selectedProduct === item ? "active" : ""
-                  }`}
-                  {...nrmlScaleUp(0.1)}
-                  onClick={() => setSelectedProduct(item)}
+                  className="product-text"
+                  {...nrmlScaleUp(1)}
                 >
-                  <p className="product-item">{item}</p>
-                </motion.div>
+                  {item}
+                </motion.p>
               ))}
             </div>
-            <motion.div className="product-item-img-div" {...nrmlScaleUp()}>
-              <AnimatePresence mode="wait">
-                {/* <motion.img
+          </div>
+          <div className="product-adv-box">
+            <div className="product-adv-text-box">
+              <motion.h3 className="product-section-title" {...nrmlScaleUp()}>
+                Smart Solutions, Real Benefits
+              </motion.h3>
+              <ul className="product-adv-list">
+                {advantages.map((advantage, index) => {
+                  const [firstText, ...secondText] = advantage.split(" – ");
+                  return (
+                    <motion.li
+                      key={index}
+                      className="product-adv-item"
+                      {...nrmlScaleUp()}
+                    >
+                      <motion.div {...nrmlScaleUp(0.3 + index * 0.15)}>
+                        <ion-icon
+                          class="product-adv-icon"
+                          name={icon[index]}
+                        ></ion-icon>
+                      </motion.div>
+                      <motion.p {...nrmlScaleUp(0.3 + index * 0.1)}>
+                        <strong>{firstText}</strong> <br />
+                        {secondText}
+                      </motion.p>
+                    </motion.li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div className="product-adv-img-box">
+              <img src={fireMul} alt="" />
+            </div>
+          </div>
+          <div className="product-items-sec">
+            <motion.h3 className="product-section-title" {...nrmlScaleUp(0.4)}>
+              All basic {title} service we that we provide
+            </motion.h3>
+            <div className="product-items-list-div">
+              <div className="product-itmes-list">
+                {products.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className={`product-item-div ${
+                      selectedProduct === item ? "active" : ""
+                    }`}
+                    {...nrmlScaleUp(0.1)}
+                    onClick={() => setSelectedProduct(item)}
+                  >
+                    <p className="product-item">{item}</p>
+                  </motion.div>
+                ))}
+              </div>
+              <motion.div className="product-item-img-div" {...nrmlScaleUp()}>
+                <AnimatePresence mode="wait">
+                  {/* <motion.img
                   src={`/src/assets/products/${category.toLowerCase()}/${selectedProduct}.png`}
                   alt={selectedProduct}
                   className="product-img"
                   key={selectedProduct}
                   {...imgAni}
                 /> */}
-                <motion.img
-                  src={imagePath}
-                  alt={selectedProduct}
-                  className="product-img"
-                  key={selectedProduct}
-                  {...imgAni}
-                />
-                ;
-              </AnimatePresence>
-            </motion.div>
+                  <motion.img
+                    src={imagePath}
+                    alt={selectedProduct}
+                    className="product-img"
+                    key={selectedProduct}
+                    {...imgAni}
+                  />
+                  ;
+                </AnimatePresence>
+              </motion.div>
+            </div>
           </div>
-
-          <motion.h3 className="product-section-title" {...nrmlScaleUp()}>
-            benifits offered
-          </motion.h3>
-          <ul className="product-advantage-list">
-            {advantages.map((advantage, index) => {
-              const [strongText, ...normalText] = advantage.split(" – ");
-              return (
-                <motion.li
-                  key={index}
-                  className="product-advantage-item"
-                  {...nrmlScaleUp()}
-                >
-                  ✅ <strong>{strongText}</strong> - {normalText.join(" – ")}
-                </motion.li>
-              );
-            })}
-          </ul>
         </motion.div>
+
+        <div className="cta-box"></div>
       </AnimatePresence>
     </>
   );
