@@ -116,7 +116,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import ctaBg from "./../../assets/other/epcm/epcm-1.webp";
-import WhatsappLogo from "./../../assets/whatsApp.png";
+import WhatsappLogo from "./../../assets/WhatsApp.png";
 
 let serviceId = "service_h2xk0wt",
   templateId = "template_o3kz5mo",
