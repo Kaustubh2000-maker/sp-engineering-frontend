@@ -1,0 +1,157 @@
+.cta-sec {
+  position: relative;
+  padding: 4rem 2rem; /* padding on top/bottom and sides */
+  overflow: hidden;
+  margin-bottom: 12.8rem;
+}
+.cta-bg-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.cta-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(1px);
+  filter: brightness(40%);
+}
+
+.cta-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  //   background-color: blueviolet;
+  width: 120rem;
+  //   padding: 4rem;
+  margin: 0 auto;
+  gap: 4rem;
+}
+.cta-form-div {
+  //   background-color: blue;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  background-color: white;
+  padding: 4rem;
+}
+
+.cta-form-heading {
+  font-size: 3.2rem;
+  color: #ff8700;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 500;
+}
+.cta-form {
+}
+
+.cta-form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.cta-name-email {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  //   flex-direction: ;
+  justify-content: space-between;
+}
+.cta-label {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+.cta-required {
+  color: red;
+}
+.cta-input {
+  font-size: 1.8rem;
+  padding: 1rem;
+  color: #555;
+  border-radius: 10px;
+  border: 1px solid #555;
+}
+
+.cta-select {
+  font-size: 1.8rem;
+  padding: 1rem;
+  color: #555;
+  border-radius: 10px;
+}
+
+.cta-textarea {
+  font-size: 1.8rem;
+  padding: 1rem;
+  color: #555;
+  font-family: Rubik, sans-serif;
+  border-radius: 10px;
+}
+
+.cta-submit {
+  font-size: 1.8rem;
+  padding: 1rem;
+  color: white;
+  font-weight: 700;
+  background: linear-gradient(
+    to right bottom,
+    orange,
+    orange,
+    rgb(255, 45, 45)
+  );
+  border: none;
+  border-radius: 10px;
+}
+
+.cta-div-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cta-div-2-head-1 {
+  font-size: 2rem;
+  color: #ff8700;
+  color: #5bff97;
+
+  font-weight: 500;
+  margin-bottom: 2rem;
+  //   color: #fff;
+}
+.cta-div-2-head-2 {
+  font-size: 3.6rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+.cta-div-2-head-3 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+.cta-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  width: max-content;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: #25d366;
+  border-radius: 50px;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cta-whatsapp-btn:hover {
+  background-color: #1ebe5d;
+  transform: translateY(-2px);
+}
+
+.cta-whatsapp-btn:active {
+  background-color: #128c7e;
+  transform: translateY(0);
+}

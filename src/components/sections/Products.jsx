@@ -6,6 +6,8 @@ import { nrmlScaleUp } from "../../animations/appAnimation";
 // import { image } from "framer-motion/dist/types/client";
 import fireMul from "./../../assets/other/tank/tank-multi.jpg";
 
+import CtaForm from "./cta";
+
 function Products(props) {
   let category = props.category;
   let imgAni = {
@@ -181,7 +183,9 @@ function Products(props) {
           </div>
         </motion.div>
 
-        <div className="cta-box"></div>
+        <div>
+          <CtaForm />
+        </div>
       </AnimatePresence>
     </>
   );
