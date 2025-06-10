@@ -8,75 +8,90 @@ import tankImg from "./../assets/other/tank/tank-6.jpg";
 import fireImg2 from "./../assets/other/fire//fire-4.jpg";
 import epcmImg from "./../assets/other/epcm/epcm-1.jpg";
 
+import CtaForm from "@/components/sections/cta";
+import Testimonial from "@/components/sections/Testimonial";
+
 // import hvacImg from "./../assets/other/hvac-1.jpg";
+import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
+import Testimonials from "@/components/sections/Testimonial";
+
+const pieData = [
+  { name: "EPCM", value: 10 },
+  { name: "Fire Consultancy", value: 10 },
+  { name: "Storage Tanks", value: 20 },
+  { name: "HVAC", value: 20 },
+  { name: "Solar", value: 20 },
+  { name: "Fire Protection", value: 40 },
+];
+
+const COLORS = [
+  "#FFBB28",
+  "#FF8042",
+  "#00C49F",
+  "#6A4FB6",
+  "#0088FE",
+  "#D91E36",
+];
 
 function AboutPage() {
   return (
     <>
       <div>
         <h1 className="au-main-heading">
-          More than 20 sectors served and protected
+          Engineering the Future with Confidence
         </h1>
-
-        <div className="au-sectors-container">
-          <div className="au-sector-item sector-1">
-            <img className="au-sector-img" src={fireImg} alt="" />
-            <p className="au-sector-name">Fire Safety</p>
-          </div>
-          <div className="au-sector-item sector-2">
-            <img className="au-sector-img" src={hvacImg} alt="" />
-            <p className="au-sector-name">HVAC</p>
-          </div>
-          <div className="au-sector-item sector-3">
-            <img className="au-sector-img" src={solarImg} alt="" />
-
-            <p className="au-sector-name">Solar</p>
-          </div>
-          <div className="au-sector-item sector-4">
-            <img className="au-sector-img" src={tankImg} alt="" />
-
-            <p className="au-sector-name">Storage tanks</p>
-          </div>
-          <div className="au-sector-item sector-5">
-            <img className="au-sector-img" src={fireImg2} alt="" />
-
-            <p className="au-sector-name">Fire Consultancy</p>
-          </div>
-          <div className="au-sector-item sector-6">
-            <img className="au-sector-img" src={epcmImg} alt="" />
-            <p className="au-sector-name">EPCM Services</p>
-          </div>
-        </div>
 
         <div className="au-about-sp">
           <div className="au-about-sp-sub-div">
             <div>
-              <h3 className="au-about-sp-sub-heading">about sp engineering</h3>
+              <h3 className="au-about-sp-sub-heading">About SP Engineering</h3>
               <h2 className="au-about-sp-heading">
-                Engineering the Future with Confidence
+                Powering Progress Across 20+ Sectors
               </h2>
               <p className="au-about-sp-text">
-                SP Engineering, an ISO 9001 certified company, is a trusted
-                provider of comprehensive engineering solutions serving diverse
-                industries such as Oil & Gas, Chemical, Petrochemical,
-                Pharmaceutical, FMCG, Aviation, Power, and Warehousing. With a
-                commitment to quality, safety, and innovation, SP Engineering
-                delivers end-to-end turnkey services across Fire Protection &
-                Alarm Systems, HVAC Solutions, Bulk Storage Tanks, Solar Energy
-                Systems, and Asset Management. Backed by a team of skilled
-                professionals, advanced technology, and a customer-first
-                mindset, we have established ourselves as a preferred
-                engineering partner across India and internationally. From
-                concept to commissioning, every project reflects our core values
-                of excellence, reliability, and innovation.
+                SP Engineering, an ISO 9001-certified firm, is a trusted name in
+                delivering turnkey engineering solutions for critical industries
+                including Oil & Gas, Chemical, Pharma, FMCG, Aviation, Power,
+                and Warehousing. We specialize in Fire Protection Systems, HVAC,
+                Solar Energy, Storage Tanks, and Asset Management—blending
+                innovation with reliability. Our expert team, advanced tech, and
+                client-focused approach have earned us recognition across India
+                and beyond. Every project we deliver reflects our commitment to
+                safety, quality, and engineering excellence.
               </p>
             </div>
 
-            <div className="au-about-sp-photo">
-              <img className="au-about-img" src={aboutImg} alt="" />
+            <div className="au-about-sp-pie">
+              <ResponsiveContainer width="100%" height={300}>
+                <PieChart>
+                  <Pie
+                    data={pieData}
+                    cx="50%"
+                    cy="50%"
+                    innerRadius={95}
+                    outerRadius={110}
+                    startAngle={90}
+                    endAngle={450}
+                    dataKey="value"
+                    isAnimationActive={true}
+                    label={({ name }) => name}
+                    labelLine={false}
+                    labelClassName="au-pie-label" // ✅ Custom class
+                  >
+                    {pieData.map((entry, index) => (
+                      <Cell
+                        key={`cell-${index}`}
+                        fill={COLORS[index % COLORS.length]}
+                      />
+                    ))}
+                  </Pie>
+                </PieChart>
+              </ResponsiveContainer>
             </div>
           </div>
         </div>
+        <Testimonial />
+
         <div className="au-vision-card-div">
           <div className="au-vision-goal-card">
             <ion-icon class="au-vision-icon" name="eye-outline"></ion-icon>
@@ -96,7 +111,79 @@ function AboutPage() {
               technology, expertise, and continuous improvement.
             </p>
           </div>
+          <div className="au-stats">
+            <div className="au-stats-card">
+              <ion-icon class="au-stats-icon" name="ribbon-outline"></ion-icon>
+              <span className="au-stats-text">
+                10+
+                <br />
+                <span>years experience</span>
+              </span>
+            </div>{" "}
+            <div className="au-stats-card">
+              <ion-icon
+                class="au-stats-icon"
+                name="bag-check-outline"
+              ></ion-icon>
+              <span className="au-stats-text">
+                500+
+                <br />
+                <span>projects completed</span>
+              </span>
+            </div>{" "}
+            <div className="au-stats-card">
+              <ion-icon class="au-stats-icon" name="people-outline"></ion-icon>
+              <span className="au-stats-text">
+                300+
+                <br />
+                <span>Team build</span>
+              </span>
+            </div>{" "}
+            <div className="au-stats-card">
+              <ion-icon class="au-stats-icon" name="happy-outline"></ion-icon>
+              <span className="au-stats-text">
+                400+
+                <br />
+                <span>happy clients</span>
+              </span>
+            </div>
+          </div>
+          <div className="au-list-div">
+            <ul className="au-list-ul">
+              <li className="au-list-item">
+                <ion-icon name="chevron-forward-outline"></ion-icon>ISO 9001
+                Certified
+              </li>
+              <li className="au-list-item">
+                <ion-icon name="chevron-forward-outline"></ion-icon>End-to-End
+                Solutions
+              </li>
+              <li className="au-list-item">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+                Industry-Compliant Systems
+              </li>
+              <li className="au-list-item">
+                <ion-icon name="chevron-forward-outline"></ion-icon>Trusted by
+                Global Brands
+              </li>
+              <li className="au-list-item">
+                <ion-icon name="chevron-forward-outline"></ion-icon>Experienced
+                Engineering Team
+              </li>
+              <li className="au-list-item">
+                <ion-icon name="chevron-forward-outline"></ion-icon>Innovation &
+                Co-Creation
+              </li>
+              <li className="au-list-item">
+                <ion-icon name="chevron-forward-outline"></ion-icon>24/7 Support
+                Availability
+              </li>
+            </ul>
+          </div>
         </div>
+
+        <div></div>
+        <CtaForm />
       </div>
     </>
   );

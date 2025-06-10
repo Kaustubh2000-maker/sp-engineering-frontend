@@ -7,12 +7,17 @@ import {
   whyUsCard,
 } from "@animations/whyusAnimation";
 
+import whyusbg from "./../../assets/whyUs/bl-gradient.png";
+
 function WhyUs() {
   return (
     <>
       <div className="whyus-section">
         <div className="container whyus-grid">
           <div className="whyus-banner">
+            <div className="whyus-banner-bg">
+              <img src={whyusbg} className="whyus-banner-bg-img" alt="" />
+            </div>
             <div className="whyus-banner-text">
               <motion.h4 {...whyUsText("head", 0.2)}>
                 Building Excellence with Unmatched Expertise
