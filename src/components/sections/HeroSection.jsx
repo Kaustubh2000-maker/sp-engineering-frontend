@@ -59,7 +59,7 @@ function HeroSection(props) {
                   <span style={{ color: "#af0000" }}>
                     <Typewriter
                       options={{
-                        strings: ["[Fire Protection]"],
+                        strings: ["Fire Protection"],
                         autoStart: true,
                         loop: true,
                         delay: 100,

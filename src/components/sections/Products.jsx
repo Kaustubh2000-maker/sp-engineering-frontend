@@ -109,10 +109,10 @@ function Products(props) {
             </div>
           </div>
           <div className="product-adv-box">
+            <motion.h3 className="product-section-title" {...nrmlScaleUp()}>
+              Smart Solutions, Real Benefits
+            </motion.h3>
             <div className="product-adv-text-box">
-              <motion.h3 className="product-section-title" {...nrmlScaleUp()}>
-                Smart Solutions, Real Benefits
-              </motion.h3>
               <ul className="product-adv-list">
                 {advantages.map((advantage, index) => {
                   const [firstText, ...secondText] = advantage.split(" – ");

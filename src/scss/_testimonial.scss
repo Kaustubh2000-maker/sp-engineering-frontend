@@ -113,6 +113,15 @@
   content: "";
   position: absolute;
   background-color: #ff9700;
+
+  background: linear-gradient(
+    to left top,
+    rgba(255, 0, 0, 0.7),
+    orange,
+    orange,
+    orange
+  );
+
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
 
   width: 102%;
@@ -152,6 +161,8 @@
 .c p {
   font-size: 1.4rem;
   color: #555;
+  // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+
   // position: relative;
   // z-index: 10;
 }

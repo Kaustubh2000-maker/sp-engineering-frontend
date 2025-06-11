@@ -98,7 +98,7 @@
   position: absolute;
   height: 180px;
   width: 180px;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 50%;
   left: 50%;
   top: 50%;
@@ -111,7 +111,7 @@
   position: absolute;
   height: 200px;
   width: 200px;
-  border-left: 1px solid white;
+  border-left: 2px solid white;
 
   border-radius: 50%;
   top: 50%;
@@ -151,12 +151,12 @@
 }
 
 .whyus-heading {
-  font-size: 4.2rem;
+  font-size: 4.8rem;
   font-weight: 600;
   color: #333;
   grid-column: 1/-1;
   padding: 3rem;
-  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   text-transform: capitalize;
 }
 
@@ -184,20 +184,30 @@
   margin: 2rem;
   color: white;
   box-shadow: 0px 0px 0px 7px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(
+    to left top,
+    orange,
+    orange,
+    // orange,
+    rgba(255, 0, 0, 0.75)
+  );
 }
 .whyus-card-icon-1 {
   background-color: rgb(110, 110, 255);
+  // background-color: #ff8700;
 }
 .whyus-card-icon-2 {
   background-color: rgb(103, 255, 103);
+  // background-color: #ff8700;
 }
 .whyus-card-icon-3 {
   background-color: rgb(255, 112, 112);
+  // background-color: #ff8700;
 }
 .whyus-card-title {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 600;
-  color: #222;
+  color: #333;
   margin-bottom: 0.5rem;
 }
 

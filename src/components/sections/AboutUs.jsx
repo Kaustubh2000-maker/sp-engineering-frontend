@@ -2,8 +2,8 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import aboutImage from "@assets/about/about-2.png";
-import a11 from "@assets/toEdit/a11.png";
-import a22 from "@assets/toEdit/a22.png";
+import a11 from "@assets/about/a11.webp";
+import a22 from "@assets/about/a22.webp";
 import aboutLogo from "@assets/logos/logo.png";
 
 import {
