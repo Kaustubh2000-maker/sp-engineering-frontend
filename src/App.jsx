@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       <Router>
-        {/* <Navbar firstEnter={firstEnter} /> */}
+        <Navbar firstEnter={firstEnter} />
         <Routes>
           <Route
             path="/"
@@ -47,7 +47,7 @@ function App() {
           <Route path="/About" element={<AboutPage />} />
         </Routes>
 
-        {/* <Footer /> */}
+        <Footer />
       </Router>
     </>
   );
