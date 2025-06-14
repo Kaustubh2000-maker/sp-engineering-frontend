@@ -26,7 +26,7 @@ function App() {
       <Router>
         <Navbar firstEnter={firstEnter} />
         <Routes>
-          <Route
+          {/* <Route
             path="/"
             element={
               <>
@@ -44,7 +44,7 @@ function App() {
             element={<ProductsAndServicesPage />}
           />{" "}
           <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/About" element={<AboutPage />} />
+          <Route path="/About" element={<AboutPage />} /> */}
         </Routes>
 
         <Footer />
