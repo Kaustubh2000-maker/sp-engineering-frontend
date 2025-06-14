@@ -21,10 +21,16 @@ function AboutUs() {
     <>
       <AnimatePresence mode="wait">
         <div className="aboutUs-section">
-          <div className="about-grid container grid ">
+          <div className="about-grid">
             {/* <motion.div className="about-image-div " {...aboutImg}>
             <img src={aboutImage} alt="" className="about-img" />
           </motion.div> */}
+            <motion.h3 className="about-heading" {...aboutHeading}>
+              About{" "}
+              <img className="about-heading-logo" src={aboutLogo} alt="" />{" "}
+              <br className="about-head-br" />
+              SP Engineering
+            </motion.h3>
             <div className="about-img-div">
               <div>
                 <motion.img
@@ -43,13 +49,8 @@ function AboutUs() {
                 />
               </div>
             </div>
+
             <div className="about-data">
-              <motion.h3 className="about-heading" {...aboutHeading}>
-                About{" "}
-                <img className="about-heading-logo" src={aboutLogo} alt="" />{" "}
-                <br />
-                SP Engineering
-              </motion.h3>
               <div className="about-topics-div">
                 <motion.li {...aboutBullet(0)}></motion.li>
                 <div className="about-topic-block">
