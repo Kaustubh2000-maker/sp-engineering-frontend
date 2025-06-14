@@ -13,7 +13,7 @@ import ProductsAndServicesPage from "./pages/ProductsAndServicesPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import AboutPage from "./pages/AboutPage";
 function App() {
-  const [firstEnter, setfirstEnter] = useState(true);
+  const [firstEnter, setfirstEnter] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       <Router>
-        {/* <Navbar firstEnter={firstEnter} /> */}
+        <Navbar firstEnter={firstEnter} />
         <Routes>
           <Route
             path="/"
