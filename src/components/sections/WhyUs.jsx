@@ -13,7 +13,7 @@ function WhyUs() {
   return (
     <>
       <div className="whyus-section">
-        <div className="container whyus-grid">
+        <div className=" whyus-grid">
           <div className="whyus-banner">
             <div className="whyus-banner-bg">
               <img src={whyusbg} className="whyus-banner-bg-img" alt="" />

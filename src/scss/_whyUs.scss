@@ -1,19 +1,16 @@
 .whyus-section {
-  // padding: 0 15rem;
-  //   background-color: red;
   margin-bottom: 12.8rem;
-
-  background-color: rgb(249, 249, 249);
-
-  background: radial-gradient(rgb(249, 249, 249), white);
 }
 .whyus-grid {
   padding: 4rem 8rem 0 8rem;
+  max-width: 120rem;
+  margin: 0 auto;
 }
 .whyus-banner {
   //   background-color: red;
   width: 100%;
-  height: 23rem;
+  // height: 23rem;
+  padding: 2rem;
   background-size: cover;
   border-radius: 30px;
   background-attachment: fixed;
@@ -55,34 +52,18 @@
 }
 .whyus-banner-secondary {
   color: white;
-  border-color: blue;
 
   //   display: grid;
   //   grid-template-columns: repeat(3, 1fr);
   //   align-items: center;
   //   justify-content: center;
 
-  justify-self: center;
-
   display: flex;
+  justify-self: center;
   gap: 3rem;
   align-items: center;
 }
 
-// .whyus-b-sec-div {
-//   text-align: center;
-//   position: relative;
-//   width: 12rem;
-// }
-
-// .whyus-b-sec-div div {
-//   content: "";
-//   position: absolute;
-//   height: 18rem;
-//   width: 18rem;
-//   border: 1px solid white;
-//   border-radius: 50%;
-// }
 .whyus-b-sec-div {
   text-align: center;
   position: relative;
@@ -215,4 +196,383 @@
   font-size: 1.2rem;
   color: #555;
   line-height: 1.5;
+}
+
+@media (max-width: 1120px) {
+  .whyus-grid {
+    padding: 4rem 4rem 0 4rem;
+    max-width: 120rem;
+  }
+}
+@media (max-width: 1030px) {
+  .whyus-grid {
+    padding: 4rem 2rem 0 2rem;
+    max-width: 120rem;
+  }
+}
+@media (max-width: 960px) {
+  .whyus-grid {
+    padding: 4rem 2rem 0 2rem;
+  }
+  .whyus-banner {
+    grid-template-columns: 1fr;
+    height: max-content;
+    row-gap: 4rem;
+  }
+  .whyus-banner-text {
+    text-align: center;
+  }
+  .whyus-banner-secondary {
+    margin-bottom: 4rem;
+  }
+}
+@media (max-width: 960px) {
+  .whyus-heading-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .whyus-heading-cards :nth-child(4) {
+    grid-column: 1/-1;
+  }
+}
+
+@media (max-width: 590px) {
+  .whyus-grid {
+    padding: 2rem 0.5rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .whyus-grid {
+  }
+  .whyus-banner-text {
+    color: white;
+    padding: 2rem;
+    position: relative;
+  }
+
+  .whyus-banner-text h4 {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+  }
+  .whyus-banner-text p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: rgba(255, 255, 255, 0.852);
+  }
+  .whyus-banner-secondary {
+    color: white;
+    display: flex;
+    justify-self: center;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .whyus-b-sec-div {
+    text-align: center;
+    position: relative;
+    width: 12rem;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .whyus-b-sec-div div {
+    position: absolute;
+    height: 15rem;
+    width: 15rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    margin-left: -7.5rem;
+    margin-top: -7.5rem;
+  }
+
+  .whyus-b-sec-div:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    height: 18rem;
+    width: 18rem;
+    border-left: 1px solid white;
+
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .whyus-b-sec-div:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    height: 18rem;
+    width: 18rem;
+    border-right: 1px solid white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .whyus-b-sec-head {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  .whyus-b-sec-text {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+@media (max-width: 500px) {
+  .whyus-grid {
+  }
+  .whyus-banner {
+    padding: 1rem 0.5rem;
+    // height: max-content;
+    // margin-bottom: 1rem;
+  }
+  .whyus-banner-text {
+    padding: 2rem 0rem;
+    position: relative;
+  }
+
+  .whyus-banner-text h4 {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+  }
+  .whyus-banner-text p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: rgba(255, 255, 255, 0.852);
+  }
+  .whyus-banner-secondary {
+    color: white;
+    display: flex;
+    justify-self: center;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .whyus-b-sec-div {
+    text-align: center;
+    position: relative;
+    width: 9rem;
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .whyus-b-sec-div div {
+    position: absolute;
+    height: 12rem;
+    width: 12rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    margin-left: -6rem;
+    margin-top: -6rem;
+  }
+
+  .whyus-b-sec-div:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    height: 15rem;
+    width: 15rem;
+    border-left: 1px solid white;
+
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .whyus-b-sec-div:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    height: 15rem;
+    width: 15rem;
+    border-right: 1px solid white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .whyus-b-sec-head {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  .whyus-b-sec-text {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .whyus-heading {
+    font-size: 3.6rem;
+  }
+  .whyus-card {
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .whyus-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .whyus-heading-cards {
+    grid-template-columns: 1fr;
+    padding: 0rem 1xrem;
+  }
+
+  .whyus-card-icon {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 100%;
+    padding: 2rem;
+    margin: 2rem;
+  }
+  .whyus-card-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+
+  .whyus-card-description {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
+@media (max-width: 380px) {
+  .whyus-grid {
+  }
+  .whyus-banner {
+    padding: 1rem 0.5rem;
+    // height: max-content;
+    // margin-bottom: 1rem;
+  }
+  .whyus-banner-text {
+    padding: 2rem 0rem;
+    position: relative;
+  }
+
+  .whyus-banner-text h4 {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+  }
+  .whyus-banner-text p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: rgba(255, 255, 255, 0.852);
+  }
+  .whyus-banner-secondary {
+    color: white;
+    display: flex;
+    justify-self: center;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .whyus-b-sec-div {
+    text-align: center;
+    position: relative;
+    width: 9rem;
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .whyus-b-sec-div div {
+    position: absolute;
+    height: 11rem;
+    width: 11rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    margin-left: -5.5rem;
+    margin-top: -5.5rem;
+  }
+
+  .whyus-b-sec-div:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    height: 13rem;
+    width: 13rem;
+    border-left: 1px solid white;
+
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .whyus-b-sec-div:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    height: 13rem;
+    width: 13rem;
+    border-right: 1px solid white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .whyus-b-sec-head {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  .whyus-b-sec-text {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .whyus-heading {
+    font-size: 3.6rem;
+  }
+  .whyus-card {
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .whyus-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .whyus-heading-cards {
+    grid-template-columns: 1fr;
+    padding: 0rem 1xrem;
+  }
+
+  .whyus-card-icon {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 100%;
+    padding: 2rem;
+    margin: 2rem;
+  }
+  .whyus-card-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+
+  .whyus-card-description {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
 }
