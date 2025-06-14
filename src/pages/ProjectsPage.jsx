@@ -102,7 +102,7 @@ function ProjectsPage() {
   return (
     <>
       <AnimatePresence>
-        <div className="proj-conatiner">
+        <div className="proj-container">
           <motion.h2 className="proj-heading" {...nrmlScaleUp()}>
             Protecting & Powering Spaces: Our Key Projects
           </motion.h2>

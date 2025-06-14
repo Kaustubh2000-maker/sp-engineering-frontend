@@ -1,8 +1,8 @@
-.proj-conatiner {
-  width: 110rem;
-  height: max-content;
+.proj-container {
+  max-width: 120rem;
+  // height: max-content;
   margin: 0 auto;
-  //   background-color: red;
+  // background-color: red;
   padding-top: 4rem;
 }
 
@@ -190,7 +190,7 @@
   font-weight: 500;
   margin-bottom: 1.5rem;
   display: flex;
-  text-align: center;
+  // text-align: center;
   gap: 2rem;
   // justify-content: center;
 }
@@ -199,4 +199,10 @@
   color: #ff9800;
   font-size: 3rem;
   font-weight: 700;
+}
+
+@media (max-width: 400px) {
+  .proj-container {
+    max-width: 350rem;
+  }
 }

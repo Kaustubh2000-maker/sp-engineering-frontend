@@ -1,5 +1,5 @@
 .whyus-section {
-  padding: 0 15rem;
+  // padding: 0 15rem;
   //   background-color: red;
   margin-bottom: 12.8rem;
 
@@ -96,21 +96,21 @@
 
 .whyus-b-sec-div div {
   position: absolute;
-  height: 180px;
-  width: 180px;
+  height: 18rem;
+  width: 18rem;
   border: 2px solid white;
   border-radius: 50%;
   left: 50%;
   top: 50%;
-  margin-left: -90px;
-  margin-top: -90px;
+  margin-left: -9rem;
+  margin-top: -9rem;
 }
 
 .whyus-b-sec-div:nth-child(1)::after {
   content: "";
   position: absolute;
-  height: 200px;
-  width: 200px;
+  height: 20rem;
+  width: 20rem;
   border-left: 2px solid white;
 
   border-radius: 50%;
@@ -121,8 +121,8 @@
 .whyus-b-sec-div:nth-child(3)::after {
   content: "";
   position: absolute;
-  height: 200px;
-  width: 200px;
+  height: 20rem;
+  width: 20rem;
   border-right: 1px solid white;
   border-radius: 50%;
   top: 50%;

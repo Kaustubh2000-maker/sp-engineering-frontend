@@ -14,7 +14,7 @@ function LandingPage(props) {
       <HeroSection firstEnter={firstEnter} />
       <AboutUs />
       <Testimonials />
-      <ProjectsSection />
+      {/* <ProjectsSection /> */}
       <WhyUs />
       <CtaForm />
     </motion.div>
