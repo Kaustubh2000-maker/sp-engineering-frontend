@@ -201,15 +201,16 @@
     //   background-color: green;
 
     grid-template-columns: 1fr;
-    padding: 4rem 8rem;
+    padding: 4rem;
     gap: 2rem;
     row-gap: 1rem;
+    justify-items: center;
   }
 
   .about-heading {
     font-size: 4.2rem;
     color: #333;
-    margin-bottom: 2.8rem;
+    margin-bottom: 0rem;
     grid-row: 1;
   }
   .about-head-br {
@@ -225,21 +226,16 @@
   .about-img-div {
     grid-row: 2;
     // padding: 5rem;
+    justify-items: center;
   }
 
   .about-img-div div {
     position: relative;
-    width: 70%;
-    height: 100%;
+    width: 90%;
   }
 
-  .about-img-div div:nth-child(2) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    // background-color: red;
-  }
   .about-img {
+    padding-top: 0;
   }
   .about-img--1 {
   }
@@ -251,7 +247,7 @@
     grid-template-columns: auto 1fr; /* First column auto-sized, second takes remaining space */
     grid-auto-rows: auto;
     gap: 1rem;
-    // row-gap: 1rem;
+    max-width: 50rem;
   }
   .about-subtopic-heading {
     font-size: 1.6rem;
@@ -260,5 +256,51 @@
   .about-subtopic-text {
     font-size: 1.2rem;
     margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-grid {
+    padding: 1rem;
+  }
+  .about-heading {
+    font-size: 3.2rem;
+  }
+  .about-topics-div {
+    max-width: 40rem;
+  }
+  .about-subtopic-heading {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  .about-subtopic-text {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .about-grid {
+    padding: 1rem;
+  }
+  .about-heading {
+    font-size: 2.8rem;
+    letter-spacing: -0.5px;
+  }
+  .about-topics-div {
+    max-width: 40rem;
+  }
+  .about-subtopic-heading {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  .about-subtopic-text {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-img {
+    // height: 20rem;
+    width: 100%;
   }
 }

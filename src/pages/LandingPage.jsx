@@ -11,12 +11,12 @@ function LandingPage(props) {
   let firstEnter = props.firstEnter;
   return (
     <motion.div>
-      <HeroSection firstEnter={firstEnter} />
+      {/* <HeroSection firstEnter={firstEnter} /> */}
       <AboutUs />
-      <Testimonials />
-      <ProjectsSection />
-      <WhyUs />
-      <CtaForm />
+      {/* <Testimonials /> */}
+      {/* <ProjectsSection /> */}
+      {/* <WhyUs /> */}
+      {/* <CtaForm /> */}
     </motion.div>
   );
 }

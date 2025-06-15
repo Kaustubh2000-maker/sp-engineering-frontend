@@ -39,8 +39,6 @@ function AboutUs() {
                   className="about-img about-img--1"
                   {...aboutImg_1}
                 />
-              </div>
-              <div>
                 <motion.img
                   src={a22}
                   alt=""
