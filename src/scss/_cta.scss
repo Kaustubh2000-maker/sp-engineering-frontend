@@ -25,13 +25,13 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   //   background-color: blueviolet;
-  width: 120rem;
+  width: 100%;
+  max-width: 120rem;
   //   padding: 4rem;
   margin: 0 auto;
   gap: 4rem;
 }
 .cta-form-div {
-  //   background-color: blue;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
   border-radius: 30px;
   background-color: white;
@@ -158,4 +158,83 @@
 .cta-whatsapp-btn:active {
   background-color: #128c7e;
   transform: translateY(0);
+}
+
+@media (max-width: 1180px) {
+  .cta-box {
+    grid-template-columns: 1fr;
+    // padding: 4rem 8rem;
+    justify-items: center;
+    row-gap: 8rem;
+  }
+  .cta-form-div {
+    grid-row: 2;
+    width: 100%;
+    max-width: 70rem;
+  }
+  .cta-div-2 {
+  }
+}
+@media (max-width: 620px) {
+  .cta-sec {
+    padding: 4rem 0.5rem; /* padding on top/bottom and sides */
+  }
+  .cta-form-div {
+  }
+  .cta-div-2 {
+    max-width: 80%;
+  }
+  .cta-name-email {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-div-2-head-1 {
+    font-size: 1.8rem;
+  }
+  .cta-div-2-head-2 {
+    font-size: 2.8rem;
+  }
+  .cta-div-2-head-3 {
+    font-size: 1.5rem;
+  }
+  .cta-whatsapp-btn {
+    font-size: 1.6rem;
+  }
+
+  .cta-form-div {
+    padding: 2rem 1rem;
+  }
+
+  .cta-form-heading {
+    // font-size: 3.2rem;
+    font-size: 2.8rem;
+  }
+
+  .cta-form-group {
+  }
+  .cta-name-email {
+  }
+  .cta-label {
+    font-size: 1.4rem;
+  }
+  .cta-required {
+  }
+  .cta-input {
+    font-size: 1.4rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .cta-select {
+    font-size: 1.4rem;
+  }
+
+  .cta-textarea {
+    font-size: 1.4rem;
+  }
+
+  .cta-submit {
+    font-size: 1.6rem;
+  }
 }
