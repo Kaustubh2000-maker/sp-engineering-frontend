@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       <Router>
-        {/* <Navbar firstEnter={firstEnter} /> */}
+        <Navbar firstEnter={firstEnter} />
         <Routes>
           <Route
             path="/"
