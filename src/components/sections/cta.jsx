@@ -3,9 +3,13 @@ import emailjs from "@emailjs/browser";
 import ctaBg from "./../../assets/other/epcm/epcm-1.webp";
 import WhatsappLogo from "./../../assets/WhatsApp.png";
 
-let serviceId = "service_h2xk0wt",
-  templateId = "template_o3kz5mo",
-  publicApiKey = "WHWPKEtmLFTr18JHf";
+// let serviceId = "service_h2xk0wt",
+//   templateId = "template_o3kz5mo",
+//   publicApiKey = "WHWPKEtmLFTr18JHf";
+
+let serviceId = "service_1xl763u",
+  templateId = "template_y96ifj5",
+  publicApiKey = "l0HcvRF_ClwchiEnT";
 
 function CtaForm() {
   const formRef = useRef();
