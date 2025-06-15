@@ -16,7 +16,7 @@ function Testimonials() {
           <div className="testimonial-heading-box">
             <h4 className="testimonial-section-heading">Testimonial</h4>
             <h2 className="tesimonial-heading">
-              what people <br /> say about us !{" "}
+              what people <br /> say about us!{" "}
             </h2>
             <h3 className="tesimonial-subheading">
               <em> The impact we’ve made together. </em>
