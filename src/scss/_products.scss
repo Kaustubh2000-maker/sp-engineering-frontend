@@ -126,7 +126,7 @@
 .product-adv-box {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 4rem;
+  gap: 4rem;
   // background-color: beige;
   margin-bottom: 12.8rem;
 }

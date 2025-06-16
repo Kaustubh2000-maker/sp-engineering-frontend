@@ -3,6 +3,11 @@ import solarImg from "./../assets/other/solar/solar-8.jpg";
 import hvacImg from "./../assets/other/hvac//hvac-8.jpg";
 import tankImg from "./../assets/other/tank/tank-8.jpg";
 
+import fireMulti from "./../assets/other/fire/fire-multi.jpg";
+import solarMulti from "./../assets/other/solar/solar-multi.jpg";
+import hvacMulti from "./../assets/other/hvac/hvac-multi.jpg";
+import tankMulti from "./../assets/other/tank/tank-multi.jpg";
+
 export let productsdata = [
   {
     title: "Fire Fighting Systems",
@@ -41,6 +46,7 @@ export let productsdata = [
       "hourglass-outline",
       "build-outline",
     ],
+    multiImg: fireMulti,
   },
   {
     title: "Solar",
@@ -68,6 +74,7 @@ export let productsdata = [
       "document-outline",
       "business-outline",
     ],
+    multiImg: solarMulti,
   },
   {
     title: "HVAC",
@@ -106,6 +113,7 @@ export let productsdata = [
       "wallet-outline",
       "chevron-collapse-outline",
     ],
+    multiImg: tankMulti,
   },
   {
     title: "Storage Tanks",
@@ -142,5 +150,6 @@ export let productsdata = [
       "happy-outline",
       "wallet-outline",
     ],
+    multiImg: hvacMulti,
   },
 ];
