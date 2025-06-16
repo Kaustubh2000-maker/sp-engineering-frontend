@@ -103,16 +103,18 @@ function ProjectsPage() {
     <>
       <AnimatePresence>
         <div className="proj-container">
-          <motion.h2 className="proj-heading" {...nrmlScaleUp()}>
-            Protecting & Powering Spaces: Our Key Projects
-          </motion.h2>
-          <motion.p className="proj-subheading" {...nrmlScaleUp()}>
-            At SP Engineering, each project is a reflection of our commitment to
-            safety, precision, and excellence. From fire protection systems to
-            HVAC and solar solutions, our portfolio showcases the diverse spaces
-            we've empowered — on time, with quality, and with full customer
-            satisfaction.
-          </motion.p>
+          <div className="proj-heading-box">
+            <motion.h2 className="proj-heading" {...nrmlScaleUp()}>
+              Protecting & Powering Spaces: Our Key Projects
+            </motion.h2>
+            <motion.p className="proj-subheading" {...nrmlScaleUp()}>
+              At SP Engineering, each project is a reflection of our commitment
+              to safety, precision, and excellence. From fire protection systems
+              to HVAC and solar solutions, our portfolio showcases the diverse
+              spaces we've empowered — on time, with quality, and with full
+              customer satisfaction.
+            </motion.p>
+          </div>
 
           <motion.div className="proj-select-div" {...nrmlScaleUp()}>
             {projectsData.map((project, index) => (
@@ -178,19 +180,19 @@ function ProjectsPage() {
             <div>
               <h2 className="proj-mat-heading">Our Project Success Metrics</h2>
               <AnimatedProgressBar
-                className="proj-mat-bar-1"
+                className="proj-mat-bar-1 proj-mat-bar"
                 label="On-Time Delivery"
                 value={95}
                 color="#4caf50"
               />
               <AnimatedProgressBar
-                className="proj-mat-bar-2"
+                className="proj-mat-bar-2 proj-mat-bar"
                 label="Customer Satisfaction"
                 value={98}
                 color="#2196f3"
               />
               <AnimatedProgressBar
-                className="proj-mat-bar-3"
+                className="proj-mat-bar-3 proj-mat-bar"
                 label="Project Completion Rate"
                 value={95}
                 color="#ff9800"

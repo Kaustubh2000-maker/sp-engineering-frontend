@@ -15,6 +15,7 @@
 .proj-subheading {
   font-size: 1.6rem;
   color: #333;
+  text-align: justify;
 
   margin-bottom: 4.8rem;
 }
@@ -201,8 +202,125 @@
   font-weight: 700;
 }
 
-@media (max-width: 400px) {
-  .proj-container {
-    max-width: 350rem;
+@media (max-width: 1200px) {
+  .proj-heading-box {
+    padding: 0 4rem;
+  }
+  .proj-data-view-section {
+    height: max-content;
+  }
+}
+
+@media (max-width: 1125px) {
+  .proj-mat-sec {
+    gap: 2rem;
+  }
+  .proj-mat-heading {
+    font-size: 2.8rem;
+  }
+  .progress-bar-label {
+    font-size: 1.8rem;
+  }
+  .proj-mat-disc-box {
+    padding: 0;
+    align-items: center;
+    justify-items: center;
+  }
+}
+
+@media (max-width: 920px) {
+  .proj-select-div {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .proj-mat-point {
+  }
+}
+
+@media (max-width: 890px) {
+  .proj-data-view-section {
+    grid-template-columns: 1fr;
+    padding: 5rem;
+  }
+
+  .proj-sel-map {
+    height: 30rem;
+  }
+
+  .proj-mat-sec {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+  .proj-mat-heading {
+    text-align: center;
+  }
+
+  .proj-mat-bar {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .proj-mat-disc-box {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 675px) {
+  .proj-mat-bar {
+    width: 90%;
+  }
+}
+
+@media (max-width: 610px) {
+  .proj-heading-box {
+    padding: 2rem 1rem;
+  }
+  .proj-heading {
+    font-size: 3.2rem;
+  }
+  .proj-subheading {
+    font-size: 1.4rem;
+  }
+  .proj-select-div {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .proj-select-div {
+    height: 37rem;
+    overflow: scroll;
+  }
+  .proj-sel-card {
+    padding: 1rem;
+  }
+  .proj-data-view-section {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .proj-mat-sec {
+    padding: 2rem;
+  }
+  .proj-mat-bar {
+    width: 100%;
+  }
+  .proj-mat-point {
+    font-size: 1.5rem;
+  }
+  .proj-sel-heading {
+    font-size: 3.2rem;
+  }
+  .proj-sel-description {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .proj-heading-box {
+    padding: 0 1rem;
+  }
+  .proj-select-div {
+    grid-template-columns: 1fr 1fr;
   }
 }
