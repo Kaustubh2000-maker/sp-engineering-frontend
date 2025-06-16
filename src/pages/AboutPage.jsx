@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import aboutImg from "./../assets/other/fire/fire-2.jpg";
 
 import fireImg from "./../assets/other/fire/fire-1.webp";
@@ -15,25 +16,44 @@ import Testimonial from "@/components/sections/Testimonial";
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 import Testimonials from "@/components/sections/Testimonial";
 
-const pieData = [
-  { name: "EPCM", value: 10 },
-  { name: "Fire Consultancy", value: 10 },
-  { name: "Storage Tanks", value: 20 },
-  { name: "HVAC", value: 20 },
-  { name: "Solar", value: 20 },
-  { name: "Fire Protection", value: 40 },
-];
-
-const COLORS = [
-  "#FFBB28",
-  "#FF8042",
-  "#00C49F",
-  "#6A4FB6",
-  "#0088FE",
-  "#D91E36",
-];
-
 function AboutPage() {
+  const pieData = [
+    { name: "EPCM", value: 10 },
+    { name: "Fire Consultancy", value: 10 },
+    { name: "Storage Tanks", value: 20 },
+    { name: "HVAC", value: 20 },
+    { name: "Solar", value: 20 },
+    { name: "Fire Protection", value: 40 },
+  ];
+
+  const COLORS = [
+    "#FFBB28",
+    "#FF8042",
+    "#00C49F",
+    "#6A4FB6",
+    "#0088FE",
+    "#D91E36",
+  ];
+  const [radius, setRadius] = useState({ inner: 95, outer: 110 });
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+
+      if (width <= 420) {
+        setRadius({ inner: 40, outer: 55 });
+      } else if (width <= 580) {
+        setRadius({ inner: 60, outer: 75 });
+      } else {
+        setRadius({ inner: 95, outer: 110 });
+      }
+    };
+
+    handleResize(); // Initial setup
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
       <div>
@@ -68,8 +88,8 @@ function AboutPage() {
                     data={pieData}
                     cx="50%"
                     cy="50%"
-                    innerRadius={95}
-                    outerRadius={110}
+                    innerRadius={radius.inner}
+                    outerRadius={radius.outer}
                     startAngle={90}
                     endAngle={450}
                     dataKey="value"
@@ -182,7 +202,6 @@ function AboutPage() {
           </div>
         </div>
 
-        <div></div>
         <CtaForm />
       </div>
     </>

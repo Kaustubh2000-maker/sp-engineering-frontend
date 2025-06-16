@@ -8,7 +8,7 @@
 }
 
 .au-about-sp {
-  width: 120rem;
+  max-width: 120rem;
   margin: 0 auto;
   margin-bottom: 12.8rem;
 }
@@ -50,7 +50,7 @@
 }
 
 .au-vision-card-div {
-  width: 120rem;
+  max-width: 120rem;
   margin: 0 auto;
   display: grid;
   // justify-items: center;
@@ -60,7 +60,7 @@
 }
 
 .au-vision-goal-card {
-  width: 50rem;
+  max-width: 50rem;
   padding: 4rem;
   display: flex;
   flex-direction: column;
@@ -71,13 +71,15 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s;
+
+  // justify-self: center;
 }
 
 .au-vision-goal-card:nth-child(1) {
-  justify-self: right;
+  margin-left: auto;
 }
 .au-vision-goal-card:nth-child(2) {
-  justify-self: left;
+  margin-right: auto;
 }
 
 .au-vision-goal-card:hover {
@@ -123,7 +125,8 @@
   justify-items: center;
   gap: 2rem;
 
-  justify-self: right;
+  margin-left: auto;
+  // justify-self: right;
   width: 34rem;
   height: 34rem;
 }
@@ -187,4 +190,126 @@
   color: #ff9800;
   font-size: 3rem;
   font-weight: 700;
+}
+
+@media (max-width: 1200px) {
+  .au-main-heading {
+    font-size: 4.2rem;
+  }
+  .au-about-sp-heading {
+    font-size: 3.2rem;
+  }
+  .au-vision-card-div {
+    padding: 0 4rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  .au-about-sp-sub-div {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .au-main-heading {
+    font-size: 3.6rem;
+    margin-bottom: 0;
+  }
+  .au-vision-card-div {
+    gap: 2rem;
+  }
+  .au-vision-goal-card {
+    padding: 2rem;
+  }
+  .au-about-sp {
+    margin-bottom: 5rem;
+  }
+}
+
+@media (max-width: 780px) {
+  .au-vision-card-div {
+    row-gap: 5rem;
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
+  .au-vision-goal-card {
+    margin: 0 auto;
+  }
+  .au-stats {
+    margin: 0 auto;
+  }
+  .au-list-div {
+    margin: auto;
+  }
+}
+
+@media (max-width: 570px) {
+  .recharts-pie-label-text {
+    font-size: 1.2rem !important;
+  }
+  .au-about-sp {
+    margin-bottom: 2rem;
+  }
+  .au-about-sp-sub-div {
+    row-gap: 1rem;
+  }
+}
+@media (max-width: 450px) {
+  .au-main-heading {
+    font-size: 2.8rem;
+  }
+  .au-about-sp-sub-heading {
+    font-size: 1.6rem;
+  }
+  .au-about-sp-heading {
+    font-size: 2.2rem;
+  }
+  .au-about-sp-text {
+    font-size: 1.4rem;
+  }
+
+  .au-vision-goal-card {
+    padding: 1rem 1.5rem;
+  }
+  .au-vision-icon {
+    font-size: 6rem;
+  }
+  .au-vision-heading {
+    font-size: 2.2rem;
+  }
+
+  .au-stats {
+    gap: 1rem;
+    width: max-content;
+    height: max-content;
+  }
+
+  .au-stats-card {
+    max-width: 15rem;
+    max-height: 15rem;
+  }
+
+  .au-list-ul {
+    gap: 0.5rem;
+  }
+
+  .au-list-item {
+    font-size: 1.6rem;
+  }
+
+  .recharts-pie-label-text {
+    font-size: 1.2rem !important;
+  }
+  .au-about-sp-sub-div {
+    padding: 1rem;
+  }
+  .au-vision-card-div {
+    padding: 1rem;
+  }
+
+  .au-about-sp {
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+  }
 }
