@@ -113,7 +113,7 @@ export let productsdata = [
       "wallet-outline",
       "chevron-collapse-outline",
     ],
-    multiImg: tankMulti,
+    multiImg: hvacMulti,
   },
   {
     title: "Storage Tanks",
@@ -150,6 +150,6 @@ export let productsdata = [
       "happy-outline",
       "wallet-outline",
     ],
-    multiImg: hvacMulti,
+    multiImg: tankMulti,
   },
 ];

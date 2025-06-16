@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import { nrmlScaleUp } from "../../animations/appAnimation";
 // import { image } from "framer-motion/dist/types/client";
-import fireMul from "./../../assets/other/tank/tank-multi.jpg";
 
 import CtaForm from "./cta";
 
@@ -33,7 +32,16 @@ function Products(props) {
     return <>no such product found </>;
   }
 
-  let { title, description, text, products, advantages, image, icon } = product;
+  let {
+    title,
+    description,
+    text,
+    products,
+    advantages,
+    image,
+    icon,
+    multiImg,
+  } = product;
   const [selectedProduct, setSelectedProduct] = useState(products[0]);
 
   useEffect(() => {
@@ -138,7 +146,7 @@ function Products(props) {
               </ul>
             </div>
             <div className="product-adv-img-box">
-              <img src={fireMul} alt="" />
+              <img src={multiImg} alt="" />
             </div>
           </div>
           <div className="product-items-sec">

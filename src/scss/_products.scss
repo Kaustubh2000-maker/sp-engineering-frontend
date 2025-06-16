@@ -127,6 +127,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
+  align-items: center;
   // background-color: beige;
   margin-bottom: 12.8rem;
 }
@@ -149,6 +150,8 @@
 .product-adv-text-box {
   // background-color: red;
   height: 55rem;
+  display: flex;
+  align-items: center;
 }
 .product-adv-list {
   list-style: none;
