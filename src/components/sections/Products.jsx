@@ -142,10 +142,16 @@ function Products(props) {
             </div>
           </div>
           <div className="product-items-sec">
-            <motion.h3 className="product-section-title" {...nrmlScaleUp(0.2)}>
+            {/* <motion.h3 className="product-section-title" {...nrmlScaleUp(0.2)}>
               All basic {title} service we that we provide
-            </motion.h3>
+            </motion.h3> */}
             <div className="product-items-list-div">
+              <motion.h3
+                className="product-section-title"
+                {...nrmlScaleUp(0.2)}
+              >
+                All basic {title} service we that we provide
+              </motion.h3>
               <div className="product-itmes-list">
                 {products.map((item, index) => (
                   <motion.div
@@ -183,7 +189,9 @@ function Products(props) {
           </div>
         </motion.div>
 
-        <div>{/* <CtaForm /> */}</div>
+        <div>
+          <CtaForm />
+        </div>
       </AnimatePresence>
     </>
   );
