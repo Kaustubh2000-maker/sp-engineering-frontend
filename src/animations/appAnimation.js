@@ -13,7 +13,7 @@ export const heroVisible = {
   animate: { opacity: 1, transition: { duration: 0.3, delay: 4 } },
 };
 
-export const nrmlScaleUp = (delay) => ({
+export const nrmlScaleUp = (delay, opacity) => ({
   initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0, transition: { duration: 1, delay } },
   viewport: { once: true, amount: 0.5 },
@@ -22,5 +22,17 @@ export const nrmlScaleUp = (delay) => ({
 export const nrmlVisible = (delay) => ({
   initial: { opacity: 0, y: 0 },
   whileInView: { opacity: 1, y: 0, transition: { duration: 1, delay } },
+  viewport: { once: true, amount: 0.5 },
+});
+
+export const nrmlLeft = (delay) => ({
+  initial: { opacity: 0, x: -20 },
+  whileInView: { opacity: 1, x: 0, transition: { duration: 1, delay } },
+  viewport: { once: true, amount: 0.5 },
+});
+
+export const nrmlRight = (delay) => ({
+  initial: { opacity: 0, x: 20 },
+  whileInView: { opacity: 1, x: 0, transition: { duration: 1, delay } },
   viewport: { once: true, amount: 0.5 },
 });

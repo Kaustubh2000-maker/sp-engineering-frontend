@@ -96,7 +96,7 @@ function Products(props) {
                       <motion.p
                         key={index}
                         className="product-description"
-                        {...nrmlScaleUp(0.3 + index * 0.1)}
+                        {...nrmlScaleUp(0.3)}
                       >
                         {item}
                       </motion.p>
