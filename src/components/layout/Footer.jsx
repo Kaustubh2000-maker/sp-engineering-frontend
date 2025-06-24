@@ -49,7 +49,7 @@ function Footer() {
         </div>
         <div className="footer-about footer-div">
           <h3 className="footer-heading">Contact</h3>
-          <ul className="footer-ul">
+          <ul className="footer-ul footer-mail-contact">
             <li className="footer-li">
               <div>
                 <ion-icon

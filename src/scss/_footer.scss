@@ -130,4 +130,12 @@
   .footer-heading {
     text-align: center;
   }
+  .footer-mail-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+  .footer-mail-contact .footer-li {
+    padding: 0;
+  }
 }

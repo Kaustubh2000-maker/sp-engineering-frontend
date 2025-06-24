@@ -89,7 +89,11 @@ function Navbar(props) {
             </span>
             <ul className="overlay-links">
               <li>
-                <Link className="overlay-link--main" to="/">
+                <Link
+                  className="overlay-link--main"
+                  to="/"
+                  onClick={toggleOverlay}
+                >
                   Home
                 </Link>
               </li>
@@ -99,18 +103,28 @@ function Navbar(props) {
                   <Link
                     className="overlay-link--sec"
                     to="/products/fireFightingSystems"
+                    onClick={toggleOverlay}
                   >
                     Fire Fighting
                   </Link>
-                  <Link className="overlay-link--sec" to="/products/solar">
+                  <Link
+                    className="overlay-link--sec"
+                    to="/products/solar"
+                    onClick={toggleOverlay}
+                  >
                     Solar
                   </Link>
-                  <Link className="overlay-link--sec" to="/products/hvac">
+                  <Link
+                    className="overlay-link--sec"
+                    to="/products/hvac"
+                    onClick={toggleOverlay}
+                  >
                     HVAC
                   </Link>
                   <Link
                     className="overlay-link--sec"
                     to="/products/storageTanks"
+                    onClick={toggleOverlay}
                   >
                     Storage Tanks
                   </Link>
@@ -122,10 +136,15 @@ function Navbar(props) {
                   <Link
                     className="overlay-link--sec"
                     to="/services/fireconsultancy"
+                    onClick={toggleOverlay}
                   >
                     Fire Consultancy
                   </Link>
-                  <Link className="overlay-link--sec" to="/services/epcm">
+                  <Link
+                    className="overlay-link--sec"
+                    to="/services/epcm"
+                    onClick={toggleOverlay}
+                  >
                     EPCM Services
                   </Link>
                 </div>
