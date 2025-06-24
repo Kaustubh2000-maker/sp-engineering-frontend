@@ -36,7 +36,7 @@ function ProjectsSection() {
               >
                 Project Management Services & MEP Consulting
               </motion.p>
-              <motion.div {...projectText("sub1")}>
+              <motion.div className="project-btn-div" {...projectText("sub1")}>
                 <motion.a href="#" className="project-more-btn">
                   more
                 </motion.a>
@@ -60,7 +60,7 @@ function ProjectsSection() {
               >
                 Fire Water Storage Tank
               </motion.p>
-              <motion.div {...projectText("sub2")}>
+              <motion.div className="project-btn-div" {...projectText("sub2")}>
                 <motion.a href="#" className="project-more-btn">
                   more
                 </motion.a>
@@ -84,7 +84,7 @@ function ProjectsSection() {
               >
                 MEP Consulting
               </motion.p>
-              <motion.div {...projectText("sub3")}>
+              <motion.div className="project-btn-div" {...projectText("sub3")}>
                 <motion.a href="#" className="project-more-btn">
                   more
                 </motion.a>
@@ -93,9 +93,9 @@ function ProjectsSection() {
           </motion.div>
         </div>
         <div className="project-more-btn-div">
-          <a href="#" className="project-explore-btn">
+          <motion.a href="#" className="project-explore-btn">
             Explore Our Work &#8594;
-          </a>
+          </motion.a>
         </div>
       </section>
     </>

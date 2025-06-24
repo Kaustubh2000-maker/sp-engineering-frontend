@@ -82,9 +82,14 @@
 .project-data-box div {
   // margin: auto 2rem 1rem auto;
 }
+.project-btn-div {
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  padding: 1rem;
+}
 .project-more-btn:link,
 .project-more-btn:visited {
-  position: absolute;
   right: 10%;
   bottom: 10%;
   text-transform: capitalize;
