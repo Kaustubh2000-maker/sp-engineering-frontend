@@ -58,7 +58,7 @@ function Footer() {
                 ></ion-icon>
                 <span className="footer-contact-span">Email</span>
               </div>
-              rohitspengg@gmail.com
+              rohit@spengs.in
             </li>
             <li className="footer-li">
               <div>

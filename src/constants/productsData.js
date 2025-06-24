@@ -59,7 +59,7 @@ export let productsdata = [
       "With a lifespan of 25+ years, our solar panels offer low maintenance and high energy savings, making them a smart investment for the future. Whether you're looking for off-grid solutions or grid-connected systems, we provide customized solar setups tailored to your energy needs.",
     ],
     image: solarImg,
-    products: ["Solar Panels"],
+    products: ["Solar Panels", "solar grid"],
     advantages: [
       "Reduces Electricity Bills – Saves up to 70% on energy costs.",
       "Eco-Friendly Energy – Helps reduce carbon footprint.",
