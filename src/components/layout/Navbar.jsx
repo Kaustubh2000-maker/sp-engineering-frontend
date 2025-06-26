@@ -150,12 +150,20 @@ function Navbar(props) {
                 </div>
               </li>
               <li>
-                <Link className="overlay-link--main" to="/projects">
+                <Link
+                  className="overlay-link--main"
+                  to="/projects"
+                  onClick={toggleOverlay}
+                >
                   Projects
                 </Link>
               </li>
               <li>
-                <Link className="overlay-link--main" to="/about">
+                <Link
+                  className="overlay-link--main"
+                  to="/about"
+                  onClick={toggleOverlay}
+                >
                   About Us
                 </Link>
               </li>
