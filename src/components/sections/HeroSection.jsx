@@ -24,132 +24,134 @@ function HeroSection(props) {
 
   return (
     <div className="hero-section">
-      <AnimatePresence mode="wait">
-        <motion.div
-          className="hero-section--animate"
-          key={index}
-          {...heroSectionAnimation(firstEnter)}
-        >
-          {/* Background Image */}
-          <motion.div
-            className="hero-background"
-            style={{
-              backgroundImage: `url(${HERO_SERVICES[index].image})`,
-            }}
-          ></motion.div>
-
-          {/* Hero Content */}
-          <div
-            key={index}
-            className={`hero-content ${
-              HERO_SERVICES[index].alignment === "center"
-                ? "content-center"
-                : HERO_SERVICES[index].alignment === "right"
-                ? "content-right"
-                : "content-left"
-            }`}
+      {/* className="hero-bg-div solar" */}
+      <div
+        className={`hero-bg-div ${
+          HERO_SERVICES[index].name === "fire"
+            ? "fire"
+            : HERO_SERVICES[index].name === "solar"
+            ? "solar"
+            : null
+        }`}
+      >
+        {HERO_SERVICES[index].name === "solar" ? (
+          <img
+            src={HERO_SERVICES[index].image[1]}
+            className="hero-solar-bg-blob"
+          />
+        ) : null}
+      </div>
+      <div className="hero-grid">
+        <div key={index} className={`hero-content`}>
+          <motion.h1
+            className="hero-title"
+            {...heroDataAnimation(index === 0, firstEnter, "title")}
           >
-            <motion.h1
-              className="hero-title"
-              {...heroDataAnimation(index === 0, firstEnter, "title")}
+            {HERO_SERVICES[index].name === "fire" ? (
+              <>
+                {HERO_SERVICES[index].title}
+                <span style={{ color: "#af0000" }}>
+                  <Typewriter
+                    options={{
+                      strings: ["Fire Protection"],
+                      autoStart: true,
+                      loop: true,
+                      delay: 100,
+                    }}
+                  />
+                </span>
+              </>
+            ) : HERO_SERVICES[index].name === "solar" ? (
+              <>
+                {HERO_SERVICES[index].title}
+                <span style={{ color: "#21549c" }}>
+                  <Typewriter
+                    options={{
+                      strings: ["Solar Energy"],
+                      autoStart: true,
+                      loop: true,
+                      delay: 100,
+                    }}
+                  />
+                </span>
+              </>
+            ) : (
+              HERO_SERVICES[index].title
+            )}
+          </motion.h1>
+
+          <motion.p
+            {...heroDataAnimation(index === 0, firstEnter, "text")}
+            className="hero-description"
+          >
+            {HERO_SERVICES[index].description}
+          </motion.p>
+
+          <div className="hero-buttons">
+            <motion.div
+              {...heroDataAnimation(index === 0, firstEnter, "mainBtn")}
             >
-              {HERO_SERVICES[index].name === "fire" ? (
-                <>
-                  {HERO_SERVICES[index].title}
-                  <span style={{ color: "#af0000" }}>
-                    <Typewriter
-                      options={{
-                        strings: ["Fire Protection"],
-                        autoStart: true,
-                        loop: true,
-                        delay: 100,
-                      }}
-                    />
-                  </span>
-                </>
-              ) : HERO_SERVICES[index].name === "solar" ? (
-                <>
-                  {HERO_SERVICES[index].title}
-                  <img src={energyImage} className="hero-energy-img" alt="" />
-                </>
-              ) : (
-                HERO_SERVICES[index].title
-              )}
-            </motion.h1>
+              <button
+                className="hero-button primary"
+                style={{ backgroundColor: `${HERO_SERVICES[index].color}` }}
+              >
+                {HERO_SERVICES[index].button.label}
+              </button>
+            </motion.div>
 
-            <motion.p
-              {...heroDataAnimation(index === 0, firstEnter, "text")}
-              className="hero-description"
+            <motion.div
+              {...heroDataAnimation(index === 0, firstEnter, "secBtn")}
             >
-              {HERO_SERVICES[index].description}
-            </motion.p>
-
-            <div className="hero-buttons">
-              <motion.div
-                {...heroDataAnimation(index === 0, firstEnter, "mainBtn")}
-              >
-                <button
-                  className="hero-button primary"
-                  style={{ backgroundColor: `${HERO_SERVICES[index].color}` }}
-                >
-                  {HERO_SERVICES[index].button.label}
-                </button>
-              </motion.div>
-
-              <motion.div
-                {...heroDataAnimation(index === 0, firstEnter, "secBtn")}
-              >
-                <button className="hero-button secondary">Contact Us</button>
-              </motion.div>
-            </div>
+              <button className="hero-button secondary">Contact Us</button>
+            </motion.div>
           </div>
-        </motion.div>
+        </div>
+
+        <div className="hero-img-div">
+          <img
+            className="hero-img hero-img--1"
+            src={HERO_SERVICES[index].image[0]}
+            alt=""
+          />
+          {/* <img
+            className="hero-img hero-img--2"
+            src={HERO_SERVICES[index].image[1]}
+            alt=""
+          />
+          <img
+            className="hero-img hero-img--3"
+            src={HERO_SERVICES[index].image[2]}
+            alt=""
+          /> */}
+        </div>
+
         <motion.div
-          className="hero-info-tab flex"
+          className="hero-info-tab"
           {...heroDataAnimation(index === 0, firstEnter, "other")}
         >
-          <div>
-            <h3 className="hero-tab-heading">
-              <h3>500+</h3>
-              <span className="hero-tab--mini-heading">
-                industry <br />
-                Projects
-              </span>
-            </h3>
+          <div className="hero-info">
+            <h3 className="hero-info-head">500+</h3>
+            <span className="hero-info-sub">
+              {" "}
+              industry <br /> projects
+            </span>
           </div>
-          <div>
-            <h3 className="hero-tab-heading">
-              <h3>425+</h3>
-
-              <span className="hero-tab--mini-heading">
-                Happy <br />
-                Clients
-              </span>
-            </h3>
+          <div className="hero-info">
+            <h3 className="hero-info-head">380+</h3>
+            <span className="hero-info-sub">
+              {" "}
+              happy <br /> clients
+            </span>
           </div>
-          <div>
-            <h3 className="hero-tab-heading">
-              <h3>15+</h3>
-
-              <span className="hero-tab--mini-heading">
-                Years of <br />
-                Experience
-              </span>
-            </h3>
+          <div className="hero-info">
+            <h3 className="hero-info-head">14+</h3>
+            <span className="hero-info-sub">
+              {" "}
+              Years of <br /> Experience
+            </span>
           </div>
         </motion.div>
-        {/* ///////////////////// */}
-      </AnimatePresence>
-
-      {HERO_SERVICES[index].name == "solar" && (
-        <AnimatePresence mode="wait">
-          <motion.div
-            className="hero-solar-sun"
-            key={index}
-            {...heroSolarSunAnimation}
-          ></motion.div>
-        </AnimatePresence>
-      )}
+      </div>
     </div>
   );
 }

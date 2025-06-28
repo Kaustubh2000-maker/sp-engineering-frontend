@@ -22,8 +22,28 @@ function Navbar(props) {
     <>
       <motion.nav
         className="navbar"
-        {...(props.firstEnter && location.pathname === "/" ? navVisible : {})}
-        {...(location.pathname !== "/" ? navStyle : {})}
+        // {...(props.firstEnter && location.pathname === "/" ? navVisible : {})}
+        // {...(location.pathname !== "/" ? navStyle : {})}
+        initial={
+          props.firstEnter && location.pathname === "/"
+            ? { opacity: 0, y: -20 }
+            : false
+        }
+        animate={
+          props.firstEnter && location.pathname === "/"
+            ? { opacity: 1, y: 0 }
+            : false
+        }
+        transition={
+          props.firstEnter && location.pathname === "/"
+            ? { duration: 0.5, delay: 3.5 }
+            : {}
+        }
+        style={
+          location.pathname !== "/"
+            ? { backgroundColor: "white", position: "relative" }
+            : undefined
+        }
       >
         <div className="navbar-header">
           <img className="navbar-logo" src={logoMain} alt="Logo" />
