@@ -13,7 +13,7 @@ import ProductsAndServicesPage from "./pages/ProductsAndServicesPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import AboutPage from "./pages/AboutPage";
 function App() {
-  const [firstEnter, setfirstEnter] = useState(false);
+  const [firstEnter, setfirstEnter] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
