@@ -22,20 +22,20 @@ export const HERO_SERVICES = [
       path: "/products/fire",
     },
   },
-  {
-    id: "solar",
-    name: "solar",
-    title: "Your business Needs Our Energy",
-    description:
-      "Transition to solar and take control of your energy expenses. Our commercial solar solutions offer significant cost savings by harnessing clean and renewable power, making your business more energy-efficient and environmentally responsible.",
-    image: [solarImage1, solarImage2],
-    alignment: "right",
-    color: "#21549c",
-    button: {
-      label: "Learn More",
-      path: "/products/solar",
-    },
-  },
+  // {
+  //   id: "solar",
+  //   name: "solar",
+  //   title: "Your business Needs Our Energy",
+  //   description:
+  //     "Transition to solar and take control of your energy expenses. Our commercial solar solutions offer significant cost savings by harnessing clean and renewable power, making your business more energy-efficient and environmentally responsible.",
+  //   image: [solarImage1, solarImage2],
+  //   alignment: "right",
+  //   color: "#21549c",
+  //   button: {
+  //     label: "Learn More",
+  //     path: "/products/solar",
+  //   },
+  // },
   // {
   //   id: "hvac",
   //   name: "hvac",

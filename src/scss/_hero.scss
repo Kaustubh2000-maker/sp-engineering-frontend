@@ -29,6 +29,7 @@
 
   animation: heroFireCircle 5s ease-in-out forwards;
 }
+
 @keyframes heroFireCircle {
   0% {
     width: 2100px;
@@ -53,14 +54,18 @@
   width: 100%;
   height: 100%;
   z-index: -100;
+  overflow: hidden; /* hides excess blob curves */
 }
+
 .hero-solar-bg-blob {
   position: absolute;
   width: 100%;
   height: 100%;
   right: 0;
   bottom: 0;
+  object-fit: cover; /* fits shape nicely without distortion */
   z-index: -1;
+  transform-origin: bottom right;
   animation: blobPulse 6s forwards ease-in-out;
 }
 
@@ -299,6 +304,25 @@
   .hero-info-tab {
     width: 100%;
   }
+
+  @keyframes blobPulse {
+    0% {
+      width: 100%;
+      height: 85%;
+    }
+    // 30% {
+    //   width: 80%;
+    //   height: 110%;
+    // }
+    50% {
+      width: 80%;
+      height: 60%;
+    }
+    100% {
+      width: 120%;
+      height: 75%;
+    }
+  }
 }
 
 @media (max-width: 800px) {
@@ -340,6 +364,27 @@
   .hero-info-sub {
     text-align: center;
     font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 560px) {
+  @keyframes heroFireCircle {
+    0% {
+      width: 1400px;
+      height: 1200px; /* Tall oval */
+    }
+    60% {
+      width: 600px;
+      height: 732px; /* Shrinking */
+    }
+    80% {
+      width: 800px;
+      height: 800px; /* Final = perfect circle */
+    }
+    100% {
+      width: 732px;
+      height: 732px; /* Final = perfect circle */
+    }
   }
 }
 
