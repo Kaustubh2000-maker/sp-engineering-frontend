@@ -23,7 +23,7 @@ export const HERO_SERVICES = [
   {
     id: "solar",
     name: "solar",
-    title: "Your business Needs Our Energy",
+    title: "Your business Needs Our",
     description:
       "Transition to solar and take control of your energy expenses. Our commercial solar solutions offer significant cost savings by harnessing clean and renewable power, making your business more energy-efficient and environmentally responsible.",
     image: [solarImage1, solarImage2],

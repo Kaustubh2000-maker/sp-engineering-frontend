@@ -44,3 +44,21 @@ export const heroDataAnimation = (index, firstRender, type) => {
     },
   };
 };
+
+export const heroBgAnimation = () => ({
+  initial: {
+    opacity: 0,
+
+    // scale: 1
+  },
+  animate: {
+    opacity: 1,
+    // scale: 1,
+    transition: { duration: 0.5, ease: "easeInOut", delay: 0 },
+  },
+  exit: {
+    opacity: 0,
+    // scale: 1.05,
+    transition: { duration: 0.5, ease: "easeInOut", delay: 0 },
+  },
+});
