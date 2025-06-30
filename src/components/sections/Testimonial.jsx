@@ -1,5 +1,9 @@
 import React from "react";
+import { motion } from "framer-motion";
+
 import tesimonialBg from "./../../assets/other/fire/fire-7.jpg";
+
+import { nrmlScaleUp } from "@/animations/appAnimation";
 
 function Testimonials() {
   return (
@@ -51,7 +55,7 @@ function Testimonials() {
             </svg>
           </div>
 
-          <div className="c c1">
+          <motion.div className="c c1" {...nrmlScaleUp(0.1)}>
             <div>
               <blockquote>
                 "We look at other consultant and review their capabilities, but
@@ -61,8 +65,8 @@ function Testimonials() {
               </blockquote>
               <p>-Mr. Ashok, Director Amcor</p>
             </div>
-          </div>
-          <div className="c c2">
+          </motion.div>
+          <motion.div className="c c2" {...nrmlScaleUp(0.2)}>
             <div>
               <blockquote>
                 " The new Epoxy Coated tanks will serve this community extremely
@@ -71,8 +75,8 @@ function Testimonials() {
               </blockquote>
               <p>-Mr. Ram Sharma, BVR Consulting</p>
             </div>
-          </div>
-          <div className="c c3">
+          </motion.div>
+          <motion.div className="c c3" {...nrmlScaleUp(0.3)}>
             <div>
               <blockquote>
                 "They consistently build a quality product that’s extremely
@@ -81,8 +85,8 @@ function Testimonials() {
               </blockquote>
               <p>-Mr. Vipul Solanki, MD Shayona</p>
             </div>
-          </div>
-          <div className="c c4">
+          </motion.div>
+          <motion.div className="c c4" {...nrmlScaleUp(0.4)}>
             <div>
               <blockquote>
                 "Project executed with super speed from delivery to installation
@@ -91,7 +95,7 @@ function Testimonials() {
               </blockquote>
               <p>- Mr. Nandlal Panchal, Engg. Manager</p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </>
