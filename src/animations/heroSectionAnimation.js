@@ -13,15 +13,14 @@ export const heroSectionAnimation = (firstEnter) => ({
     transition: { duration: 0.5, ease: "easeInOut", delay: 0 },
   },
 });
-
 export const heroDataAnimation = (index, firstRender, type) => {
-  const baseDelay = firstRender ? 4 : 0; // 5s if first, else 0.3s
+  const baseDelay = firstRender ? 4 : 0; // 4s if first, else 0
   const delayMap = {
-    title: baseDelay, // 5s (first) or 0.3s (next)
+    title: baseDelay,
     other: baseDelay,
-    text: baseDelay + 0.2, // 5.3s (first) or 0.6s (next)
-    mainBtn: baseDelay + 0.3, // 5.6s (first) or 0.9s (next)
-    secBtn: baseDelay + 0.4, // 5.9s (first) or 1.2s (next)
+    text: baseDelay + 0.2,
+    mainBtn: baseDelay + 0.3,
+    secBtn: baseDelay + 0.4,
   };
 
   return {
@@ -31,19 +30,17 @@ export const heroDataAnimation = (index, firstRender, type) => {
       opacity: 1,
       transition: {
         duration: 1,
-        delay: delayMap[type] || baseDelay, // Fallback for unknown types
+        delay: delayMap[type] || baseDelay,
+        ease: "easeInOut",
+      },
+    },
+    exit: {
+      y: -20,
+      opacity: 0,
+      transition: {
+        duration: 0.4,
         ease: "easeInOut",
       },
     },
   };
-};
-
-export const heroSolarSunAnimation = {
-  initial: { left: 10, opacity: 0 },
-  animate: {
-    left: 430,
-    opacity: 1,
-    transition: { duration: 7, delay: 1 },
-  },
-  exit: { opacity: 0, transition: { duration: 0.3 } },
 };

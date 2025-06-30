@@ -7,8 +7,9 @@ import energyImage from "@assets/heroSection/hero-energy-name-1.png";
 import {
   heroSectionAnimation,
   heroDataAnimation,
-  heroSolarSunAnimation,
 } from "@animations/heroSectionAnimation";
+
+import { nrmlVisible } from "@animations/appAnimation";
 
 function HeroSection(props) {
   let firstEnter = props.firstEnter;
@@ -24,7 +25,6 @@ function HeroSection(props) {
 
   return (
     <div className="hero-section">
-      {/* className="hero-bg-div solar" */}
       <div
         className={`hero-bg-div ${
           HERO_SERVICES[index].name === "fire"
@@ -42,7 +42,7 @@ function HeroSection(props) {
         ) : null}
       </div>
       <div className="hero-grid">
-        <div key={index} className={`hero-content`}>
+        <motion.div key={index} className={`hero-content`}>
           <motion.h1
             className="hero-title"
             {...heroDataAnimation(index === 0, firstEnter, "title")}
@@ -105,25 +105,17 @@ function HeroSection(props) {
               <button className="hero-button secondary">Contact Us</button>
             </motion.div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="hero-img-div">
-          <img
+        <motion.div className="hero-img-div" {...nrmlVisible(4)}>
+          <motion.img
             className="hero-img hero-img--1"
+            key={index}
             src={HERO_SERVICES[index].image[0]}
             alt=""
+            {...nrmlVisible()}
           />
-          {/* <img
-            className="hero-img hero-img--2"
-            src={HERO_SERVICES[index].image[1]}
-            alt=""
-          />
-          <img
-            className="hero-img hero-img--3"
-            src={HERO_SERVICES[index].image[2]}
-            alt=""
-          /> */}
-        </div>
+        </motion.div>
 
         <motion.div
           className="hero-info-tab"
