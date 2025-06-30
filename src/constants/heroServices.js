@@ -1,41 +1,39 @@
-import firefightinImage1 from "@assets/heroSection/fire-hero-final.jpg";
-import firefightinImage2 from "@assets/heroSection/fire-hero-2.jpg";
-import firefightinImage3 from "@assets/heroSection/fire-hero-3.jpg";
+import firefightinImage1 from "@assets/heroSection/fire-hero-final.webp";
 
-import solarImage1 from "@assets/heroSection/solar-bg-12.png";
+import solarImage1 from "@assets/heroSection/solar-bg-12.webp";
 import solarImage2 from "@assets/heroSection/blob-haikei.svg";
 
 import hvacImage from "@assets/heroSection/444.jpg";
 
 export const HERO_SERVICES = [
-  {
-    id: "fire",
-    name: "fire",
-    title: "Safeguarding Your Business with Our Expert",
-    description:
-      "Fire hazards don’t wait, and neither should you. Our expert fire protection solutions ensure safety, keeping your workplace, employees, and assets secure at all times.",
-    image: [firefightinImage1, firefightinImage2, firefightinImage3],
-    alignment: "center",
-    color: "#af0000",
-    button: {
-      label: "Learn More",
-      path: "/products/fire",
-    },
-  },
   // {
-  //   id: "solar",
-  //   name: "solar",
-  //   title: "Your business Needs Our Energy",
+  //   id: "fire",
+  //   name: "fire",
+  //   title: "Safeguarding Your Business with Our Expert",
   //   description:
-  //     "Transition to solar and take control of your energy expenses. Our commercial solar solutions offer significant cost savings by harnessing clean and renewable power, making your business more energy-efficient and environmentally responsible.",
-  //   image: [solarImage1, solarImage2],
-  //   alignment: "right",
-  //   color: "#21549c",
+  //     "Fire hazards don’t wait, and neither should you. Our expert fire protection solutions ensure safety, keeping your workplace, employees, and assets secure at all times.",
+  //   image: [firefightinImage1],
+  //   alignment: "center",
+  //   color: "#af0000",
   //   button: {
   //     label: "Learn More",
-  //     path: "/products/solar",
+  //     path: "/products/fire",
   //   },
   // },
+  {
+    id: "solar",
+    name: "solar",
+    title: "Your business Needs Our Energy",
+    description:
+      "Transition to solar and take control of your energy expenses. Our commercial solar solutions offer significant cost savings by harnessing clean and renewable power, making your business more energy-efficient and environmentally responsible.",
+    image: [solarImage1, solarImage2],
+    alignment: "right",
+    color: "#21549c",
+    button: {
+      label: "Learn More",
+      path: "/products/solar",
+    },
+  },
   // {
   //   id: "hvac",
   //   name: "hvac",

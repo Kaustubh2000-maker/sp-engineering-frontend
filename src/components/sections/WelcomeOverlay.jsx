@@ -6,7 +6,7 @@ import {
   textAnimation,
 } from "../../animations/welcomePageAnimation";
 
-import logo from "/src/assets/logos/logo.png";
+import logo from "/src/assets/logos/logo.webp";
 
 function WelcomeOverlay() {
   return (
