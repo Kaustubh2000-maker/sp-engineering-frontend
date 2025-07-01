@@ -32,9 +32,11 @@ function HeroSection(props) {
           key={index}
           className={`hero-bg-div ${
             HERO_SERVICES[index].name === "fire"
-              ? "fire"
+              ? "fire-bg"
               : HERO_SERVICES[index].name === "solar"
-              ? "solar"
+              ? "solar-bg"
+              : HERO_SERVICES[index].name === "hvac"
+              ? "hvac-bg"
               : null
           }`}
         >
@@ -42,6 +44,12 @@ function HeroSection(props) {
             <img
               src={HERO_SERVICES[index].image[1]}
               className="hero-solar-bg-blob"
+            />
+          ) : null}
+          {HERO_SERVICES[index].name === "hvac" ? (
+            <img
+              src={HERO_SERVICES[index].image[3]}
+              className="hero-hvac-bg-blob"
             />
           ) : null}
         </motion.div>
@@ -129,7 +137,6 @@ function HeroSection(props) {
               className="hero-img hero-img--1"
               src={HERO_SERVICES[index].image[0]}
               alt=""
-              // {...nrmlVisible()}
               {...heroDataAnimation(index === 0, firstEnter, "secBtn")}
             />
           </AnimatePresence>
