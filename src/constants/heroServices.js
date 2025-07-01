@@ -10,6 +10,34 @@ import hvacImage4 from "@assets/heroSection/blob-hvac-3.svg";
 
 export const HERO_SERVICES = [
   {
+    id: "fire",
+    name: "fire",
+    title: "Safeguarding Your Business with Our Expert",
+    description:
+      "Fire hazards don’t wait, and neither should you. Our expert fire protection solutions ensure safety, keeping your workplace, employees, and assets secure at all times.",
+    image: [firefightinImage1],
+    alignment: "center",
+    color: "#af0000",
+    button: {
+      label: "Learn More",
+      path: "/products/fire",
+    },
+  },
+  {
+    id: "solar",
+    name: "solar",
+    title: "Your business Needs Our",
+    description:
+      "Transition to solar and take control of your energy expenses. Our commercial solar solutions offer significant cost savings by harnessing clean and renewable power, making your business more energy-efficient and environmentally responsible.",
+    image: [solarImage1, solarImage2],
+    alignment: "right",
+    color: "#21549c",
+    button: {
+      label: "Learn More",
+      path: "/products/solar",
+    },
+  },
+  {
     id: "hvac",
     name: "hvac",
     title: "Optimized Climate Control for Industrial Environments",
