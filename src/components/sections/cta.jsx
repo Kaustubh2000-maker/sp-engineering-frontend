@@ -32,7 +32,7 @@ function CtaForm() {
 
   return (
     <>
-      <div className="cta-sec">
+      <div className="cta-sec" id="cta">
         <div className="cta-bg-div">
           <img className="cta-bg-img" src={ctaBg} alt="" />
         </div>

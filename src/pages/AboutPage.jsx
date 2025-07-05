@@ -1,5 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+
 import aboutImg from "./../assets/other/fire/fire-2.jpg";
 
 import fireImg from "./../assets/other/fire/fire-1.webp";
@@ -15,6 +17,13 @@ import Testimonial from "@/components/sections/Testimonial";
 // import hvacImg from "./../assets/other/hvac-1.jpg";
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 import Testimonials from "@/components/sections/Testimonial";
+
+import {
+  nrmlLeft,
+  nrmlRight,
+  nrmlScaleUp,
+  nrmlVisible,
+} from "@/animations/appAnimation";
 
 function AboutPage() {
   const pieData = [
@@ -57,18 +66,23 @@ function AboutPage() {
   return (
     <>
       <div>
-        <h1 className="au-main-heading">
+        <motion.h1 className="au-main-heading" {...nrmlVisible()}>
           Engineering the Future with Confidence
-        </h1>
+        </motion.h1>
 
         <div className="au-about-sp">
           <div className="au-about-sp-sub-div">
             <div>
-              <h3 className="au-about-sp-sub-heading">About SP Engineering</h3>
-              <h2 className="au-about-sp-heading">
+              <motion.h3
+                {...nrmlScaleUp(0.1)}
+                className="au-about-sp-sub-heading"
+              >
+                About SP Engineering
+              </motion.h3>
+              <motion.h2 {...nrmlScaleUp(0.2)} className="au-about-sp-heading">
                 Powering Progress Across 20+ Sectors
-              </h2>
-              <p className="au-about-sp-text">
+              </motion.h2>
+              <motion.p {...nrmlScaleUp(0.4)} className="au-about-sp-text">
                 SP Engineering, an ISO 9001-certified firm, is a trusted name in
                 delivering turnkey engineering solutions for critical industries
                 including Oil & Gas, Chemical, Pharma, FMCG, Aviation, Power,
@@ -78,7 +92,7 @@ function AboutPage() {
                 client-focused approach have earned us recognition across India
                 and beyond. Every project we deliver reflects our commitment to
                 safety, quality, and engineering excellence.
-              </p>
+              </motion.p>
             </div>
 
             <div className="au-about-sp-pie">
@@ -113,7 +127,7 @@ function AboutPage() {
         <Testimonial />
 
         <div className="au-vision-card-div">
-          <div className="au-vision-goal-card">
+          <motion.div {...nrmlLeft(0.2)} className="au-vision-goal-card">
             <ion-icon class="au-vision-icon" name="eye-outline"></ion-icon>
             <h4 className="au-vision-heading">Our Vision</h4>
             <p className="au-vision-text">
@@ -121,8 +135,8 @@ function AboutPage() {
               reliable engineering solutions that protect lives, assets, and the
               environment across industries worldwide.
             </p>
-          </div>
-          <div className="au-vision-goal-card">
+          </motion.div>
+          <motion.div {...nrmlRight(0.2)} className="au-vision-goal-card">
             <ion-icon class="au-vision-icon" name="earth-outline"></ion-icon>
             <h4 className="au-vision-heading">Our Mission</h4>
             <p className="au-vision-text">
@@ -130,17 +144,17 @@ function AboutPage() {
               quality, safety, and client satisfaction—driving progress through
               technology, expertise, and continuous improvement.
             </p>
-          </div>
+          </motion.div>
           <div className="au-stats">
-            <div className="au-stats-card">
+            <motion.div {...nrmlLeft(0.2)} className="au-stats-card">
               <ion-icon class="au-stats-icon" name="ribbon-outline"></ion-icon>
               <span className="au-stats-text">
                 10+
                 <br />
                 <span>years experience</span>
               </span>
-            </div>{" "}
-            <div className="au-stats-card">
+            </motion.div>{" "}
+            <motion.div {...nrmlRight(0.2)} className="au-stats-card">
               <ion-icon
                 class="au-stats-icon"
                 name="bag-check-outline"
@@ -150,54 +164,54 @@ function AboutPage() {
                 <br />
                 <span>projects completed</span>
               </span>
-            </div>{" "}
-            <div className="au-stats-card">
+            </motion.div>{" "}
+            <motion.div {...nrmlLeft(0.2)} className="au-stats-card">
               <ion-icon class="au-stats-icon" name="people-outline"></ion-icon>
               <span className="au-stats-text">
                 300+
                 <br />
                 <span>Team build</span>
               </span>
-            </div>{" "}
-            <div className="au-stats-card">
+            </motion.div>{" "}
+            <motion.div {...nrmlRight(0.2)} className="au-stats-card">
               <ion-icon class="au-stats-icon" name="happy-outline"></ion-icon>
               <span className="au-stats-text">
                 400+
                 <br />
                 <span>happy clients</span>
               </span>
-            </div>
+            </motion.div>
           </div>
           <div className="au-list-div">
             <ul className="au-list-ul">
-              <li className="au-list-item">
+              <motion.li {...nrmlScaleUp(0.1)} className="au-list-item">
                 <ion-icon name="chevron-forward-outline"></ion-icon>ISO 9001
                 Certified
-              </li>
-              <li className="au-list-item">
+              </motion.li>
+              <motion.li {...nrmlScaleUp(0.2)} className="au-list-item">
                 <ion-icon name="chevron-forward-outline"></ion-icon>End-to-End
                 Solutions
-              </li>
-              <li className="au-list-item">
+              </motion.li>
+              <motion.li {...nrmlScaleUp(0.3)} className="au-list-item">
                 <ion-icon name="chevron-forward-outline"></ion-icon>
                 Industry-Compliant Systems
-              </li>
-              <li className="au-list-item">
+              </motion.li>
+              <motion.li {...nrmlScaleUp(0.4)} className="au-list-item">
                 <ion-icon name="chevron-forward-outline"></ion-icon>Trusted by
                 Global Brands
-              </li>
-              <li className="au-list-item">
+              </motion.li>
+              <motion.li {...nrmlScaleUp(0.5)} className="au-list-item">
                 <ion-icon name="chevron-forward-outline"></ion-icon>Experienced
                 Engineering Team
-              </li>
-              <li className="au-list-item">
+              </motion.li>
+              <motion.li {...nrmlScaleUp(0.6)} className="au-list-item">
                 <ion-icon name="chevron-forward-outline"></ion-icon>Innovation &
                 Co-Creation
-              </li>
-              <li className="au-list-item">
+              </motion.li>
+              <motion.li {...nrmlScaleUp(0.7)} className="au-list-item">
                 <ion-icon name="chevron-forward-outline"></ion-icon>24/7 Support
                 Availability
-              </li>
+              </motion.li>
             </ul>
           </div>
         </div>

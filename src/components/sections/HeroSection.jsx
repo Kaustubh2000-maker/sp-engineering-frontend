@@ -11,6 +11,7 @@ import {
 } from "@animations/heroSectionAnimation";
 
 import { nrmlVisible } from "@animations/appAnimation";
+import { Link } from "react-router-dom";
 
 function HeroSection(props) {
   let firstEnter = props.firstEnter;
@@ -111,12 +112,13 @@ function HeroSection(props) {
                 key={index}
                 {...heroDataAnimation(index === 0, firstEnter, "mainBtn")}
               >
-                <button
+                <Link
                   className="hero-button primary"
                   style={{ backgroundColor: `${HERO_SERVICES[index].color}` }}
+                  to={HERO_SERVICES[index].button.link}
                 >
-                  {HERO_SERVICES[index].button.label}
-                </button>
+                  Learn More
+                </Link>
               </motion.div>
             </AnimatePresence>
             <AnimatePresence mode="wait">
@@ -124,7 +126,9 @@ function HeroSection(props) {
                 key={index}
                 {...heroDataAnimation(index === 0, firstEnter, "secBtn")}
               >
-                <button className="hero-button secondary">Contact Us</button>
+                <a className="hero-button secondary" href="#cta">
+                  Contact Us
+                </a>
               </motion.div>
             </AnimatePresence>
           </div>

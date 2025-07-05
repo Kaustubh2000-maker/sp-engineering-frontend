@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 import RenewSysHyderabadImg from "@assets/projects/RenewSysHyderabad-1.jpg";
 import AmcorImg from "@assets/projects/amcor.png";
 import SieccImg from "@assets/projects/SIECC.jpg";
+
+import ScrollLink from "./ScrollToTop"; // ✅ adjust path as needed
 
 import { projectCard, projectText } from "@animations/projectAnimation";
 
@@ -37,9 +40,9 @@ function ProjectsSection() {
                 Project Management Services & MEP Consulting
               </motion.p>
               <motion.div className="project-btn-div" {...projectText("sub1")}>
-                <motion.a href="#" className="project-more-btn">
+                <ScrollLink to="/projects" className="project-more-btn">
                   more
-                </motion.a>
+                </ScrollLink>
               </motion.div>
             </div>
           </motion.div>
@@ -61,9 +64,9 @@ function ProjectsSection() {
                 Fire Water Storage Tank
               </motion.p>
               <motion.div className="project-btn-div" {...projectText("sub2")}>
-                <motion.a href="#" className="project-more-btn">
+                <ScrollLink to="/projects" className="project-more-btn">
                   more
-                </motion.a>
+                </ScrollLink>
               </motion.div>
             </div>
           </motion.div>
@@ -85,17 +88,17 @@ function ProjectsSection() {
                 MEP Consulting
               </motion.p>
               <motion.div className="project-btn-div" {...projectText("sub3")}>
-                <motion.a href="#" className="project-more-btn">
+                <ScrollLink to="/projects" className="project-more-btn">
                   more
-                </motion.a>
+                </ScrollLink>
               </motion.div>
             </div>
           </motion.div>
         </div>
         <div className="project-more-btn-div">
-          <motion.a href="#" className="project-explore-btn">
+          <ScrollLink className="project-explore-btn" to="/projects">
             Explore Our Work &#8594;
-          </motion.a>
+          </ScrollLink>
         </div>
       </section>
     </>

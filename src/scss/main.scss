@@ -49,6 +49,11 @@ body {
   animation: enableScroll 0s linear 4s forwards;
 }
 
+a {
+  text-decoration: none;
+  display: block;
+}
+
 //handy classes
 .container {
   max-width: 120rem;

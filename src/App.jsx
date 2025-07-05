@@ -24,6 +24,7 @@ function App() {
   return (
     <>
       <Router>
+        {/* <ScrollToTop /> */}
         <Navbar firstEnter={firstEnter} />
         <Routes>
           <Route

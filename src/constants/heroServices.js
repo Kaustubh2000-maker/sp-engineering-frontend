@@ -19,8 +19,7 @@ export const HERO_SERVICES = [
     alignment: "center",
     color: "#af0000",
     button: {
-      label: "Learn More",
-      path: "/products/fire",
+      link: "/products/fireFightingSystems",
     },
   },
   {
@@ -33,8 +32,7 @@ export const HERO_SERVICES = [
     alignment: "right",
     color: "#21549c",
     button: {
-      label: "Learn More",
-      path: "/products/solar",
+      link: "/products/solar",
     },
   },
   {
@@ -47,8 +45,7 @@ export const HERO_SERVICES = [
     alignment: "left",
     color: "#96c2ff",
     button: {
-      label: "Learn More",
-      path: "/products/hvac",
+      link: "/products/hvac",
     },
   },
 ];
