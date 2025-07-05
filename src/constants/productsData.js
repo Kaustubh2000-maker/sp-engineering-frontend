@@ -1,6 +1,6 @@
-import fireImg from "./../assets/other/fire/fire-5.jpg";
+import fireImg from "./../assets/other/fire/fire-12.jpg";
 import solarImg from "./../assets/other/solar/solar-8.jpg";
-import hvacImg from "./../assets/other/hvac//hvac-8.jpg";
+import hvacImg from "./../assets/other/hvac//hvac-11.jpg";
 import tankImg from "./../assets/other/tank/tank-8.jpg";
 
 import fireMulti from "./../assets/other/fire/fire-multi.jpg";

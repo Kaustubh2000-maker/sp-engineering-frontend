@@ -1,0 +1,346 @@
+.consult-form-section {
+  position: relative;
+  //   height: max-content;
+  padding: 2rem;
+  margin-bottom: 12.8rem;
+}
+.consult-form-bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-color: rgb(242, 242, 242);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.consult-form-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(35%);
+}
+
+.consult-form-section-grid {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  // background-color: bisque;
+}
+.consult-content-div {
+  color: white;
+  width: 100%;
+}
+
+.consult-content-heading {
+  margin-top: 3rem;
+  font-size: 8.4rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.4);
+  margin-bottom: 3rem;
+  letter-spacing: 2px;
+}
+.consult-content-img {
+  width: 70%;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.4);
+}
+.consult-content-desc {
+  font-size: 1.6rem;
+  color: rgb(230, 230, 230);
+  margin-bottom: 2rem;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+  text-align: justify;
+}
+.consult-form-div {
+  // min-width: 1px;
+  padding: 4rem;
+  background-color: white;
+
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+.consult-form-heading {
+  text-align: center;
+  // color: #ff8700;
+
+  color: transparent;
+  background: linear-gradient(
+    to right bottom,
+    orange,
+    // orange,
+    // orange,
+    rgba(255, 0, 0, 0.7)
+  );
+  background-clip: text;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 2.4rem;
+  margin-bottom: 4rem;
+}
+
+.consult-form-feild-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem; /* Optional: spacing between buttons */
+  margin-bottom: 3rem;
+  border-radius: 10px;
+  padding: 1rem 0;
+
+  border: 1px solid #bdbdbd;
+  padding: 0.5rem;
+}
+
+.consult-form-feild-type-btn {
+  display: block;
+  font-size: 1.8rem;
+  border-radius: 10px;
+  color: #333;
+  font-weight: 700;
+  border: none;
+  background-color: white;
+  padding: 0.8rem;
+}
+.consult-form-feild-selected-usage-type {
+  background-color: #ff8800;
+  transition: all 0.5s;
+}
+.consult-form-feild-type-btn.consult-form-feild-selected-usage-type {
+  color: white;
+}
+
+.consult-from-contact-pincode-div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  // max-width: fit-content;
+}
+.consult-form-box {
+}
+
+.consult-form-label-input-div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  margin-bottom: 2rem;
+}
+
+.consult-form-label {
+  font-size: 1.6rem;
+  text-indent: 5px;
+  font-weight: 400;
+  color: #333;
+}
+
+.consult-form-select {
+  font-size: 1.6rem;
+  padding: 1rem;
+  // height: 3rem;
+  border-radius: 10px;
+  border: 1px solid #bdbdbd;
+}
+
+.consult-form-option {
+  font-size: 1.6rem;
+  padding: 1rem;
+  color: #555;
+  // margin-bottom: 1rem;
+}
+
+.consult-form-option-default {
+}
+
+.consult-form-input {
+  font-size: 1.8rem;
+  padding: 1rem;
+  color: #555;
+  border-radius: 10px;
+  border: 1px solid #bdbdbd;
+}
+
+.consult-form-submit-btn {
+  font-size: 1.8rem;
+  padding: 1rem;
+  color: white;
+  font-weight: 700;
+  background: linear-gradient(
+    to right bottom,
+    orange,
+    orange,
+    rgb(255, 45, 45)
+  );
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1210px) {
+  .consult-content-heading {
+    font-size: 7.2rem;
+  }
+  .consult-content-img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1150px) {
+  .consult-form-section-grid {
+    grid-template-columns: 1fr;
+  }
+  .consult-content-heading {
+    font-size: 7.2rem;
+  }
+  .consult-content-img {
+    width: 80%;
+  }
+
+  .consult-content-heading {
+    font-size: 4.8rem;
+    text-align: center;
+  }
+
+  .consult-content-img {
+    display: block;
+    width: 70%;
+    margin: 0 auto 2rem auto;
+  }
+  .consult-content-desc {
+    width: 80rem;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+  }
+
+  .consult-form-div {
+    min-width: 80rem;
+
+    margin: 0 auto;
+  }
+
+  .consult-form-section {
+    margin-bottom: 8.4rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .consult-form-div {
+    min-width: 50rem;
+    margin: 0 auto;
+  }
+  .consult-content-desc {
+    max-width: 70rem;
+    margin: 0 auto 2rem auto;
+  }
+}
+
+@media (max-width: 740px) {
+  .consult-content-heading {
+    font-size: 4.2rem;
+    text-align: center;
+  }
+
+  .consult-content-img {
+    display: none;
+  }
+  .consult-content-desc {
+    max-width: 60rem;
+    margin: 0 auto 2rem auto;
+  }
+
+  .consult-form-div {
+    min-width: 60rem;
+
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .consult-content-heading {
+    font-size: 4.2rem;
+    text-align: center;
+  }
+
+  .consult-content-img {
+    display: none;
+  }
+  .consult-content-desc {
+    // display: none;
+    max-width: fit-content;
+  }
+  .consult-content-desc:nth-of-type(2) {
+    display: none;
+  }
+
+  .consult-form-div {
+    min-width: auto;
+    max-width: auto;
+    width: 50rem;
+    margin: 0 auto;
+  }
+
+  .consult-form-feild-div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .consult-from-contact-pincode-div {
+    grid-template-columns: 1fr;
+    gap: 0rem;
+  }
+  .consult-form-section {
+    margin-bottom: 7rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .consult-form-section {
+    padding: 2rem 0;
+  }
+
+  .consult-content-desc {
+    font-size: 1.4rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  .consult-form-div {
+    min-width: auto;
+    max-width: auto;
+    width: 95%;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .consult-form-section {
+    padding: 2rem 0;
+  }
+
+  .consult-form-label {
+    font-size: 1.6rem;
+  }
+  .consult-form-select {
+    font-size: 1.6rem;
+  }
+
+  .consult-form-input {
+    font-size: 1.6rem;
+  }
+
+  .consult-form-feild-type-btn {
+    font-size: 1.6rem;
+  }
+  .consult-form-div {
+    min-width: auto;
+    max-width: auto;
+    width: 95%;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+  }
+}

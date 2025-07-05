@@ -6,6 +6,7 @@ import { nrmlScaleUp } from "../../animations/appAnimation";
 // import { image } from "framer-motion/dist/types/client";
 
 import CtaForm from "./cta";
+import ConsultForm from "./consultForm";
 
 function Products(props) {
   let category = props.category;
@@ -59,14 +60,6 @@ function Products(props) {
       `/src/assets/products/${category.toLowerCase()}/${selectedProduct}.png`
     ]?.default;
 
-  // <motion.img
-  //   src={imagePath}
-  //   alt={selectedProduct}
-  //   className="product-img"
-  //   key={selectedProduct}
-  //   {...imgAni}
-  // />;
-
   return (
     <>
       <AnimatePresence mode="wait">
@@ -75,11 +68,12 @@ function Products(props) {
           key={category}
           exit={{ opacity: 0, transition: { duration: 0.3 } }}
         >
-          <motion.h2 className="product-title" {...nrmlScaleUp()}>
+          {/* <motion.h2 className="product-title" {...nrmlScaleUp()}>
             {title}
-          </motion.h2>
+          </motion.h2> */}
+          <ConsultForm service={category} product={product} />
 
-          <div className="product-disc-box">
+          {/* <div className="product-disc-box">
             <div className="product-text-box">
               <div className="product-text-img-div">
                 <div className="product-image-div">
@@ -115,7 +109,7 @@ function Products(props) {
                 </motion.p>
               ))}
             </div>
-          </div>
+          </div> */}
           <div className="product-adv-box">
             <motion.h3 className="product-section-title" {...nrmlScaleUp()}>
               Smart Solutions, Real Benefits
@@ -150,9 +144,6 @@ function Products(props) {
             </div>
           </div>
           <div className="product-items-sec">
-            {/* <motion.h3 className="product-section-title" {...nrmlScaleUp(0.2)}>
-              All basic {title} service we that we provide
-            </motion.h3> */}
             <div className="product-items-list-div">
               <motion.h3
                 className="product-section-title"
@@ -176,13 +167,6 @@ function Products(props) {
               </div>
               <motion.div className="product-item-img-div" {...nrmlScaleUp()}>
                 <AnimatePresence mode="wait">
-                  {/* <motion.img
-                  src={`/src/assets/products/${category.toLowerCase()}/${selectedProduct}.png`}
-                  alt={selectedProduct}
-                  className="product-img"
-                  key={selectedProduct}
-                  {...imgAni}
-                /> */}
                   <motion.img
                     src={imagePath}
                     alt={selectedProduct}
@@ -196,10 +180,10 @@ function Products(props) {
             </div>
           </div>
         </motion.div>
-
+        {/* 
         <div>
           <CtaForm />
-        </div>
+        </div> */}
       </AnimatePresence>
     </>
   );
