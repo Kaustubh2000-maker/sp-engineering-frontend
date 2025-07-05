@@ -6,7 +6,7 @@ import { nrmlScaleUp } from "../../animations/appAnimation";
 // import { image } from "framer-motion/dist/types/client";
 
 import CtaForm from "./cta";
-import ConsultForm from "./consultForm";
+import ConsultForm from "./ConsultForm";
 
 function Products(props) {
   let category = props.category;
