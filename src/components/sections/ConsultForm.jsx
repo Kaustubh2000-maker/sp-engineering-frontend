@@ -12,7 +12,6 @@ function ConsultForm({ service, product }) {
   const usageOptions = Object.keys(serviceConfig[service] || {});
   const [usageType, setUsageType] = useState(usageOptions[0] || "");
   const fields = usageType ? serviceConfig[service][usageType] : [];
-  console.log(product);
   return (
     <div className="consult-form-section">
       <div className="consult-form-bg">
