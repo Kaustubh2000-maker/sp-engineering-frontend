@@ -201,12 +201,10 @@
   .consult-content-img {
     width: 80%;
   }
-
   .consult-content-heading {
     font-size: 4.8rem;
     text-align: center;
   }
-
   .consult-content-img {
     display: block;
     width: 70%;
@@ -217,13 +215,10 @@
     margin: 0 auto 2rem auto;
     text-align: center;
   }
-
   .consult-form-div {
     min-width: 80rem;
-
     margin: 0 auto;
   }
-
   .consult-form-section {
     margin-bottom: 8.4rem;
   }
@@ -281,7 +276,7 @@
   .consult-form-div {
     min-width: auto;
     max-width: auto;
-    width: 50rem;
+    width: 50rem !important;
     margin: 0 auto;
   }
 
@@ -310,7 +305,7 @@
     text-align: center;
   }
   .consult-form-div {
-    width: 95%;
+    width: 95% !important;
     min-width: auto;
     max-width: auto;
     margin: 0 auto;
@@ -338,9 +333,7 @@
     font-size: 1.6rem;
   }
   .consult-form-div {
-    min-width: auto;
-    max-width: auto;
-    width: 95%;
+    width: 95% !important;
     margin: 0 auto;
     padding: 4rem 1rem;
   }
