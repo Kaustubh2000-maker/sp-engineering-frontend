@@ -216,7 +216,7 @@
     text-align: center;
   }
   .consult-form-div {
-    min-width: 80rem;
+    width: 90%;
     margin: 0 auto;
   }
   .consult-form-section {
@@ -225,10 +225,9 @@
 }
 
 @media (max-width: 850px) {
-  .consult-form-div {
-    min-width: 50rem;
-    margin: 0 auto;
-  }
+  // .consult-form-div {
+  //   margin: 0 auto;
+  // }
   .consult-content-desc {
     max-width: 70rem;
     margin: 0 auto 2rem auto;
@@ -250,7 +249,8 @@
   }
 
   .consult-form-div {
-    min-width: 60rem;
+    // min-width: 60rem;
+    width: 95%;
 
     margin: 0 auto;
   }
@@ -274,9 +274,7 @@
   }
 
   .consult-form-div {
-    min-width: auto;
-    max-width: auto;
-    width: 50rem !important;
+    width: 95%;
     margin: 0 auto;
   }
 
@@ -306,8 +304,6 @@
   }
   .consult-form-div {
     width: 95% !important;
-    min-width: auto;
-    max-width: auto;
     margin: 0 auto;
     padding: 4rem 2rem;
   }
