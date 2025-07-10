@@ -12,7 +12,7 @@ export const HERO_SERVICES = [
   {
     id: "fire",
     name: "fire",
-    title: "SP Engineering Safeguarding Your Business with Our Expert",
+    title: "Safeguarding Your Business with Our Expert",
     description:
       "Fire hazards don’t wait, and neither should you. Our expert fire protection solutions ensure safety, keeping your workplace, employees, and assets secure at all times.",
     image: [firefightinImage1],
