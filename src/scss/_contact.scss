@@ -31,7 +31,7 @@
 }
 
 .contact-icon {
-  font-size: 6.4rem;
+  font-size: 6.4rem !important;
   background: linear-gradient(to left top, orange, red);
   color: transparent;
   -webkit-background-clip: text;
@@ -55,7 +55,7 @@
   }
 
   .contact-icon {
-    font-size: 4.2rem;
+    font-size: 4.2rem !important;
   }
 
   .contact-head {
@@ -80,7 +80,7 @@
     margin: 0 auto;
   }
   .contact-icon {
-    font-size: 5.2rem;
+    font-size: 5.2rem !important;
   }
 
   .contact-head {
