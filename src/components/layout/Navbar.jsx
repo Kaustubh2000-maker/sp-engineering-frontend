@@ -571,7 +571,8 @@ function Navbar(props) {
               ×
             </span>
 
-            <ul className="overlay-links" style={{ marginTop: "10rem" }}>
+            {/* style={{ marginTop: "3rem" }} */}
+            <ul className="overlay-links">
               <li>
                 <Link
                   className="overlay-link--sec"
