@@ -1,40 +1,59 @@
 import { industryData } from "@/constants/industryData";
 import { useParams } from "react-router-dom";
 import Contact from "@/components/sections/contact";
-import img from "./../assets/industry/cable-tunnels.webp";
+import { motion } from "framer-motion";
+
+import {
+  nrmlLeft,
+  nrmlRight,
+  nrmlScaleUp,
+  nrmlVisible,
+} from "@/animations/appAnimation";
 export default function IndustryPage() {
   let { category } = useParams();
-  //   console.log(useParams());
 
   let industry = industryData.find((el) => {
     const slug = el.name.toLowerCase().replace(/ /g, "-");
-    // console.log(slug);
-    // console.log(category);
     return slug === category;
   });
 
   return (
     <>
       <div className="industryPage">
-        <h2 className="industry-title">{industry.name} </h2>
+        <motion.h2 className="industry-title" {...nrmlVisible()}>
+          {industry.name}
+        </motion.h2>
         <div className="industry-text-img">
           <div>
-            <p className="industry-heading">{industry.heading}</p>
+            <motion.p className="industry-heading" {...nrmlScaleUp(0.1)}>
+              {industry.heading}
+            </motion.p>
 
-            <p className="industry-text">{industry.text}</p>
+            <motion.p className="industry-text" {...nrmlScaleUp(0.2)}>
+              {industry.text}
+            </motion.p>
             <ul className="industry-applicaions">
-              <h3 className="industry-appli-heading">Applicaions : </h3>
+              <motion.h3
+                className="industry-appli-heading"
+                {...nrmlScaleUp(0.3)}
+              >
+                Applicaions :{" "}
+              </motion.h3>
               {industry.applications.map((appli, index) => (
-                <li className="industry-appli" key={index}>
+                <motion.li
+                  className="industry-appli"
+                  key={index}
+                  {...nrmlScaleUp(0.3)}
+                >
                   <span className="material-symbols-rounded industry-appli-icon">
                     check
                   </span>
                   <span>{appli}.</span>
-                </li>
+                </motion.li>
               ))}
             </ul>
           </div>
-          <div className="industry-img-div">
+          <motion.div className="industry-img-div" {...nrmlVisible(0.2)}>
             <img
               className="industry-img"
               src={
@@ -43,20 +62,22 @@ export default function IndustryPage() {
               }
               alt={category}
             />
-          </div>
+          </motion.div>
         </div>
 
         <div className="industry-icon-div">
-          <h3 className="industry-icon-heading">Industry's Risks</h3>
+          <motion.h3 className="industry-icon-heading" {...nrmlVisible(0.2)}>
+            Industry's Risks
+          </motion.h3>
           <ul className="industru-icon-ul">
             {industry.industryPoints.map((pointItem, index) => {
               return (
-                <li key={index}>
+                <motion.li key={index} {...nrmlScaleUp(0.2 * index)}>
                   <span className="material-symbols-rounded industry-icon-icon">
                     {pointItem.icon}
                   </span>{" "}
                   <span className="industry-icon-point">{pointItem.point}</span>
-                </li>
+                </motion.li>
               );
             })}
           </ul>
@@ -64,14 +85,14 @@ export default function IndustryPage() {
 
         <div className="why-box">
           <div className="why-head-box">
-            <h3 className="why-heading">
+            <motion.h3 className="why-heading" {...nrmlRight(0.2)}>
               Why <br />
               Sp Engineering <br />
               And Services ?
-            </h3>
+            </motion.h3>
           </div>
           <div className="why-points-box">
-            <ul className="why-ul">
+            <motion.ul className="why-ul" {...nrmlLeft(0.2)}>
               {industry.whyChoose.map((point, index) => (
                 <li className="why-point" key={index}>
                   {" "}
@@ -81,15 +102,15 @@ export default function IndustryPage() {
                   <span>{point}</span>
                 </li>
               ))}
-            </ul>
+            </motion.ul>
           </div>
         </div>
 
-        <div className="dyk-div">
+        <motion.div className="dyk-div" {...nrmlVisible(0.2)}>
           <p className="industry-dyk-heading">Do you know ?</p>
 
           <p className="industry-dyk">{industry.didYouKnow}</p>
-        </div>
+        </motion.div>
 
         <Contact />
       </div>
