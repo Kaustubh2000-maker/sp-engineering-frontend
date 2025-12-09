@@ -186,10 +186,10 @@ function ConsultForm({ service, product }) {
     const result = await response.json();
 
     if (result.success) {
-      alert("Message Sent Successfully!");
+      alert("Sent Successfully!");
       e.target.reset();
     } else {
-      alert("Failed to send message.");
+      alert("Failed to send !");
     }
   };
 
