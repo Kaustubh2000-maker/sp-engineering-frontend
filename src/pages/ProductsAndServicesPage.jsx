@@ -1,6 +1,6 @@
 import Products from "../components/sections/Products";
 import Services from "../components/sections/Services";
-
+import Contact from "@/components/sections/contact";
 import { useLocation, useParams } from "react-router-dom";
 
 function ProductsAndServicesPage() {
@@ -21,6 +21,7 @@ function ProductsAndServicesPage() {
           <Services category={category} />
         )}
       </div>
+      <Contact />
     </>
   );
 }

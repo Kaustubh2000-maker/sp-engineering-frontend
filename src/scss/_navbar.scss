@@ -193,7 +193,7 @@
   color: #777;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .navbar {
     justify-content: flex-start;
     padding: 1rem 2rem;
@@ -256,7 +256,7 @@
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
     font-size: 2rem;
   }
   .overlay-link {
@@ -294,4 +294,27 @@
     padding: 1rem;
     font-size: 1.6rem;
   }
+}
+/* SUB OVERLAY STYLES */
+.sub-title {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.overlay-menu {
+  overflow-y: auto;
+}
+
+.overlay-menu::-webkit-scrollbar {
+  // width: 6px;
+  display: none;
+}
+
+.overlay-link-ins {
+  // margin-bottom: 1rem;
+}
+.overlay-menu::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
 }

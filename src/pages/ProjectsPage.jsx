@@ -7,6 +7,7 @@ import {
   useInView,
 } from "framer-motion";
 
+import Contact from "@/components/sections/contact";
 import { nrmlScaleUp, nrmlVisible } from "@/animations/appAnimation";
 
 // New animated progress bar component
@@ -45,7 +46,8 @@ import { nrmlScaleUp, nrmlVisible } from "@/animations/appAnimation";
 //     </div>
 //   );
 // }
-function AnimatedProgressBar({ label, value, color = "#4caf50", className }) {
+
+function AnimatedProgressBar({ label, value, color, className }) {
   const controls = useAnimation();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.5 });
@@ -239,6 +241,7 @@ function ProjectsPage() {
             </div>
           </div>
         </div>
+        <Contact />
       </AnimatePresence>
     </>
   );

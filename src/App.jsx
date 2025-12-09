@@ -12,6 +12,8 @@ import { useEffect, useState } from "react";
 import ProductsAndServicesPage from "./pages/ProductsAndServicesPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import AboutPage from "./pages/AboutPage";
+import IndustryPage from "./pages/IndustryPage";
+
 function App() {
   const [firstEnter, setfirstEnter] = useState(true);
 
@@ -39,11 +41,15 @@ function App() {
           <Route
             path="/products/:category"
             element={<ProductsAndServicesPage />}
-          />{" "}
+          />
           <Route
             path="/services/:category"
             element={<ProductsAndServicesPage />}
-          />{" "}
+          />
+          <Route
+            path="/IindustrySectors/:category"
+            element={<IndustryPage />}
+          />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/About" element={<AboutPage />} />
         </Routes>
