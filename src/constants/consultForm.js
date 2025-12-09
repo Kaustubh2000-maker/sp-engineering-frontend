@@ -7,7 +7,12 @@ export const serviceConfig = {
         type: "select",
         options: ["Office", "Mall", "Hotel", "School", "Warehouse", "Other"],
       },
-      { label: "Pincode", type: "text" },
+      { label: "Property Name", type: "text" },
+      {
+        label: " Is Construction Done ?",
+        type: "select",
+        options: ["Yes", "No"],
+      },
       {
         label: "Existing Fire System Installed?",
         type: "select",

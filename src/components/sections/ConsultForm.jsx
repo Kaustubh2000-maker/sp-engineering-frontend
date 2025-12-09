@@ -159,6 +159,206 @@
 
 // export default ConsultForm;
 
+// import React, { useState } from "react";
+// import { serviceConfig } from "@/constants/consultForm";
+// import { motion } from "framer-motion";
+// import { nrmlScaleUp, nrmlVisible } from "@/animations/appAnimation";
+
+// function ConsultForm({ service, product }) {
+//   const usageOptions = Object.keys(serviceConfig[service] || {});
+//   const [usageType, setUsageType] = useState(usageOptions[0] || "");
+//   const fields = usageType ? serviceConfig[service][usageType] : [];
+
+//   // =============== WEB3FORMS SUBMIT HANDLER ===============
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+
+//     const formData = new FormData(e.target);
+//     formData.append("access_key", "7fdf2b89-9f0a-4289-8086-771195fb29e0");
+//     formData.append("usage_type", usageType);
+//     formData.append("product", product.title);
+
+//     const response = await fetch("https://api.web3forms.com/submit", {
+//       method: "POST",
+//       body: formData,
+//     });
+
+//     const result = await response.json();
+
+//     if (result.success) {
+//       alert("Sent Successfully!");
+//       e.target.reset();
+//     } else {
+//       alert("Failed to send !");
+//     }
+//   };
+
+//   return (
+//     <div className="consult-form-section">
+//       <div className="consult-form-bg">
+//         <img className="consult-form-bg-img" src={product.image} alt="" />
+//       </div>
+
+//       <div className="consult-form-section-grid">
+//         {/* PRODUCT DETAIL SECTION */}
+//         <div className="consult-content-div">
+//           <motion.h1 className="consult-content-heading" {...nrmlVisible()}>
+//             {product.title}
+//           </motion.h1>
+
+//           <motion.img
+//             className="consult-content-img"
+//             {...nrmlScaleUp(0.2)}
+//             src={product.image}
+//             alt=""
+//           />
+
+//           <motion.p className="consult-content-desc" {...nrmlScaleUp(0.3)}>
+//             {product.description[0]}
+//           </motion.p>
+
+//           <motion.p className="consult-content-desc" {...nrmlScaleUp(0.4)}>
+//             {product.description[1]}
+//           </motion.p>
+//         </div>
+
+//         {/* FORM SECTION */}
+//         <motion.div className="consult-form-div" {...nrmlVisible()}>
+//           <h2 className="consult-form-heading">Inquiry Form</h2>
+
+//           {/* Usage Selector */}
+//           {usageOptions.length > 0 && (
+//             <div className="consult-form-feild-div">
+//               {usageOptions.map((type) => (
+//                 <button
+//                   key={type}
+//                   type="button"
+//                   onClick={() => setUsageType(type)}
+//                   className={`consult-form-feild-type-btn ${
+//                     usageType === type
+//                       ? "consult-form-feild-selected-usage-type"
+//                       : ""
+//                   }`}
+//                 >
+//                   {type}
+//                 </button>
+//               ))}
+//             </div>
+//           )}
+
+//           {/* FORM START */}
+//           <form className="consult-form-box" onSubmit={handleSubmit}>
+//             {/* Name */}
+//             <div className="consult-form-label-input-div">
+//               <label className="consult-form-label">
+//                 Name <span className="cta-required">*</span>
+//               </label>
+//               <input
+//                 name="name"
+//                 type="text"
+//                 placeholder="Name"
+//                 className="consult-form-input"
+//                 required
+//               />
+//             </div>
+
+//             {/* Company / Factory / Building */}
+//             <div className="consult-form-label-input-div">
+//               <label className="consult-form-label">
+//                 {usageType === "Commercial"
+//                   ? "Company Name"
+//                   : usageType === "Industrial"
+//                   ? "Factory / Plant Name"
+//                   : usageType === "HousingSociety"
+//                   ? "Society Name"
+//                   : usageType === "Residential"
+//                   ? "Building Name"
+//                   : "Organization Name"}
+//                 <span className="cta-required">*</span>
+//               </label>
+
+//               <input
+//                 name="organization_name"
+//                 type="text"
+//                 placeholder="Enter Name"
+//                 className="consult-form-input"
+//                 required
+//               />
+//             </div>
+
+//             {/* Contact + Pincode */}
+//             <div className="consult-from-contact-pincode-div">
+//               <div className="consult-form-label-input-div">
+//                 <label className="consult-form-label">
+//                   Contact Number <span className="cta-required">*</span>
+//                 </label>
+//                 <input
+//                   name="contact_number"
+//                   type="text"
+//                   placeholder="Contact Number"
+//                   className="consult-form-input"
+//                   required
+//                 />
+//               </div>
+
+//               <div className="consult-form-label-input-div">
+//                 <label className="consult-form-label">
+//                   Pincode <span className="cta-required">*</span>
+//                 </label>
+//                 <input
+//                   name="pincode"
+//                   type="text"
+//                   placeholder="Pincode"
+//                   className="consult-form-input"
+//                   required
+//                 />
+//               </div>
+//             </div>
+
+//             {/* DYNAMIC FIELDS */}
+//             {fields.map((field, index) => (
+//               <div key={index} className="consult-form-label-input-div">
+//                 <label className="consult-form-label">
+//                   {field.label} <span className="cta-required">*</span>
+//                 </label>
+
+//                 {field.type === "select" ? (
+//                   <select
+//                     name={field.label}
+//                     className="consult-form-select"
+//                     required
+//                   >
+//                     <option value="">--Select--</option>
+//                     {field.options.map((opt, i) => (
+//                       <option key={i} value={opt}>
+//                         {opt}
+//                       </option>
+//                     ))}
+//                   </select>
+//                 ) : (
+//                   <input
+//                     name={field.label}
+//                     type={field.type}
+//                     placeholder={field.label}
+//                     className="consult-form-input"
+//                     required
+//                   />
+//                 )}
+//               </div>
+//             ))}
+
+//             {/* SUBMIT */}
+//             <button type="submit" className="consult-form-submit-btn">
+//               Submit
+//             </button>
+//           </form>
+//         </motion.div>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default ConsultForm;
 import React, { useState } from "react";
 import { serviceConfig } from "@/constants/consultForm";
 import { motion } from "framer-motion";
@@ -169,11 +369,58 @@ function ConsultForm({ service, product }) {
   const [usageType, setUsageType] = useState(usageOptions[0] || "");
   const fields = usageType ? serviceConfig[service][usageType] : [];
 
+  // ------------ FORM STATES ------------
+  const [formValues, setFormValues] = useState({
+    name: "",
+    organization_name: "",
+    contact_number: "",
+    pincode: "",
+  });
+
+  // Dynamic fields state
+  const [dynamicValues, setDynamicValues] = useState({});
+
+  // ------------ INPUT HANDLER ------------
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    // number validation for contact
+    if (name === "contact_number") {
+      if (!/^\d*$/.test(value)) return; // allow only numbers
+      if (value.length > 10) return; // limit 10 digits
+    }
+
+    // number validation for pincode
+    if (name === "pincode") {
+      if (!/^\d*$/.test(value)) return; // allow only numbers
+      if (value.length > 6) return; // limit 6 digits
+    }
+
+    setFormValues((prev) => ({ ...prev, [name]: value }));
+  };
+
+  // Dynamic field handler
+  const handleDynamicChange = (e) => {
+    const { name, value } = e.target;
+    setDynamicValues((prev) => ({ ...prev, [name]: value }));
+  };
+
   // =============== WEB3FORMS SUBMIT HANDLER ===============
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const formData = new FormData(e.target);
+    const formData = new FormData();
+
+    // Add static values
+    Object.entries(formValues).forEach(([key, value]) =>
+      formData.append(key, value)
+    );
+
+    // Add dynamic values
+    Object.entries(dynamicValues).forEach(([key, value]) =>
+      formData.append(key, value)
+    );
+
     formData.append("access_key", "7fdf2b89-9f0a-4289-8086-771195fb29e0");
     formData.append("usage_type", usageType);
     formData.append("product", product.title);
@@ -187,7 +434,16 @@ function ConsultForm({ service, product }) {
 
     if (result.success) {
       alert("Sent Successfully!");
-      e.target.reset();
+
+      // Reset form
+      setFormValues({
+        name: "",
+        organization_name: "",
+        contact_number: "",
+        pincode: "",
+      });
+
+      setDynamicValues({});
     } else {
       alert("Failed to send !");
     }
@@ -200,7 +456,7 @@ function ConsultForm({ service, product }) {
       </div>
 
       <div className="consult-form-section-grid">
-        {/* PRODUCT DETAIL SECTION */}
+        {/* PRODUCT DETAILS */}
         <div className="consult-content-div">
           <motion.h1 className="consult-content-heading" {...nrmlVisible()}>
             {product.title}
@@ -246,7 +502,6 @@ function ConsultForm({ service, product }) {
             </div>
           )}
 
-          {/* FORM START */}
           <form className="consult-form-box" onSubmit={handleSubmit}>
             {/* Name */}
             <div className="consult-form-label-input-div">
@@ -258,11 +513,13 @@ function ConsultForm({ service, product }) {
                 type="text"
                 placeholder="Name"
                 className="consult-form-input"
+                value={formValues.name}
+                onChange={handleChange}
                 required
               />
             </div>
 
-            {/* Company / Factory / Building */}
+            {/* Organization */}
             <div className="consult-form-label-input-div">
               <label className="consult-form-label">
                 {usageType === "Commercial"
@@ -282,6 +539,8 @@ function ConsultForm({ service, product }) {
                 type="text"
                 placeholder="Enter Name"
                 className="consult-form-input"
+                value={formValues.organization_name}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -297,6 +556,8 @@ function ConsultForm({ service, product }) {
                   type="text"
                   placeholder="Contact Number"
                   className="consult-form-input"
+                  value={formValues.contact_number}
+                  onChange={handleChange}
                   required
                 />
               </div>
@@ -310,6 +571,8 @@ function ConsultForm({ service, product }) {
                   type="text"
                   placeholder="Pincode"
                   className="consult-form-input"
+                  value={formValues.pincode}
+                  onChange={handleChange}
                   required
                 />
               </div>
@@ -326,6 +589,8 @@ function ConsultForm({ service, product }) {
                   <select
                     name={field.label}
                     className="consult-form-select"
+                    value={dynamicValues[field.label] || ""}
+                    onChange={handleDynamicChange}
                     required
                   >
                     <option value="">--Select--</option>
@@ -341,13 +606,14 @@ function ConsultForm({ service, product }) {
                     type={field.type}
                     placeholder={field.label}
                     className="consult-form-input"
+                    value={dynamicValues[field.label] || ""}
+                    onChange={handleDynamicChange}
                     required
                   />
                 )}
               </div>
             ))}
 
-            {/* SUBMIT */}
             <button type="submit" className="consult-form-submit-btn">
               Submit
             </button>
